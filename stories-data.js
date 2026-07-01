@@ -199,15 +199,15 @@ const STORIES = [
       <p>她走上樓梯，從包包裡摸出鑰匙，正準備開門，視線突然撇到一旁養了很久的龜背芋。她停了下來。透過那些裂縫般的大葉片，隱約察覺到有什麼東西藏在後面。</p>
       <p>她俯身往葉片後看。</p>
       <p>是一隻貓。</p>
-      <p>不是她的貓，她沒有養貓。是一隻虎斑的、體型不大的貓，蜷縮在花盆和牆壁之間那塊剛剛好的陰影裡，眼睛微微睜著，看她，但沒有要走的意思。</p>
+      <p>不是她的貓，她沒有養貓。是一隻虎斑的、體型不大的貓，蜷縮在花盆和牆壁之間那塊剛剛好的陰影裡，眼睛微微睜著，看著她，但沒有要走的意思。</p>
       <p>陳靜和牠對看了幾秒鐘。</p>
       <p>她不知道牠從哪裡來，也不知道牠在這裡待了多久。但牠看起來不害怕，只是……在這裡。安靜地在這裡，像是覺得這個地方可以待。</p>
       <p>鑰匙還握在她手裡，她忘記要插進鎖孔了。</p>
-      <p>過了片刻，小貓輕輕「喵」了一聲。陳靜終於回過神來。她沒有轉身開門，而是把小貓從葉片後面輕輕抱出來。小貓沒有掙扎，任她抱著，毛摸起來比她想的還要軟，身體也比看起來還要輕，像是一個裝著溫度的小包袱。</p>
+      <p>過了片刻，小貓輕輕「喵」了一聲。陳靜終於回過神來。她沒有轉身開門，而是把小貓從葉片後面輕輕抱出來。小貓沒有掙扎，任她抱著，毛摸起來比她想的還要軟，身體也比看起來還要輕，像是一個會發熱的小抱枕。</p>
       <p>她仔細看了看，沒有項圈，沒有晶片牌，耳朵也沒有剪。她對著小貓說：「你是和家人走散了嗎？」</p>
       <p>小貓「喵」了一聲，像是在回答。</p>
       <p>陳靜便抱著小貓，開門，回家。</p>
-      <p>她把小貓放在沙發上，去廚房倒了一點水在碟子裡，又找出一包昨天沒吃完的鮪魚罐頭，放在牠面前。</p>
+      <p>她把小貓放在沙發上，去廚房倒了一點水在碟子裡，又找出一個昨天沒吃完的鮪魚罐頭，她把罐頭裡的湯汁瀝乾，用熱水汆燙了一下，放在牠面前。</p>
       <p>小貓低頭聞了聞，開始吃。</p>
       <p>陳靜在沙發另一端坐下來，外套還沒脫。她看著牠吃東西，聽著那個細小的、專心的聲音，忽然覺得今天的事情——那些沒做完的、沒說好的、沒想清楚的——好像都退到了很遠的地方。</p>
       <p>不是消失了。只是遠了一點。</p>
@@ -237,11 +237,11 @@ const STORIES = [
       <p>Jing Chen looked at it for a few seconds.</p>
       <p>She had no idea where it had come from, or how long it had been there. But it didn't seem frightened — it was simply here. Quietly here, as if it had decided this was a place worth staying.</p>
       <p>The key was still in her hand. She had forgotten to put it in the lock.</p>
-      <p>After a moment, the cat let out a soft meow. Jing Chen came back to herself. Instead of turning to open the door, she gently lifted the cat out from behind the leaves. It didn't struggle — it let her hold it, the fur softer than she'd imagined, the body lighter than it looked, like a small bundle carrying warmth.</p>
+      <p>After a moment, the cat let out a soft meow. Jing Chen came back to herself. Instead of turning to open the door, she gently lifted the cat out from behind the leaves. It didn't struggle — it let her hold it, the fur softer than she'd imagined, the body lighter than it looked, like a small, warm pillow.</p>
       <p>She looked it over carefully. No collar, no chip tag, no clipped ear. She said quietly: "Did you get separated from your family?"</p>
       <p>The cat meowed back, as if in answer.</p>
       <p>So Jing Chen held the cat, opened the door, and went inside.</p>
-      <p>She set the cat on the sofa, went to the kitchen to fill a small dish with water, and found an unfinished tin of tuna from the day before. She placed it in front of the cat.</p>
+      <p>She set the cat on the sofa, went to the kitchen to fill a small dish with water, and found an unfinished tin of tuna from the day before. She drained the broth, blanched it with hot water, and placed it in front of it.</p>
       <p>The cat sniffed it, then began to eat.</p>
       <p>Jing Chen sat at the other end of the sofa, still in her coat. She watched the cat eat, listened to that small, focused sound, and felt — without quite knowing why — that everything from today, all the unfinished things, the things she hadn't said right, the things she hadn't figured out, had drifted somewhere far away.</p>
       <p>Not gone. Just farther.</p>
