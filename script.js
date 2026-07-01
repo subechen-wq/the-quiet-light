@@ -78,13 +78,13 @@ function renderStoryCards(containerId, storyList) {
 
 /* ── 音樂清單 ── */
 const MUSIC_LIST = [
-  { id: 'music-01', label: 'Relaxing Piano',       artist: 'Konstantin Pazuzu' },
-  { id: 'music-02', label: 'Piano Thư Giãn',        artist: 'Minhquang'         },
-  { id: 'music-03', label: 'Albumleaf B.151',       artist: 'Chopin'            },
-  { id: 'music-04', label: 'Lullaby',               artist: 'Moonpetal Media'   },
-  { id: 'music-05', label: 'Nocturne No.20',        artist: 'Chopin'            },
-  { id: 'music-06', label: 'Piano',                 artist: 'Atlas Audio'       },
-  { id: 'music-07', label: 'Nocturne Op.15 No.1',  artist: 'Chopin'            },
+  { id: 'music-01', label: 'Relaxing Piano',                 artist: 'Konstantin Pazuzu' },
+  { id: 'music-02', label: 'Piano Thư Giãn',                  artist: 'Minhquang'         },
+  { id: 'music-03', label: 'Albumleaf, B.151',                artist: 'Chopin'            },
+  { id: 'music-04', label: 'Lullaby',                         artist: 'Moonpetal Media'   },
+  { id: 'music-05', label: 'Nocturne No.20 in C♯ minor',      artist: 'Chopin'            },
+  { id: 'music-06', label: 'Piano',                           artist: 'Atlas Audio'       },
+  { id: 'music-07', label: 'Nocturne Op.15 No.1 in F major',  artist: 'Chopin'            },
 ];
 
 /* ── 雨聲清單 ── */
@@ -101,7 +101,6 @@ const rainAudio     = new Audio();
 const whiteAudio    = new Audio();
 const fireplaceAudio= new Audio();
 
-musicAudio.loop     = true;
 rainAudio.loop      = true;
 whiteAudio.loop     = true;
 fireplaceAudio.loop = true;
@@ -109,6 +108,10 @@ fireplaceAudio.loop = true;
 let musicPlaying    = false;
 let currentMusicIdx = 0;
 let currentRainIdx  = 0;
+
+/* ── 循環模式：'single' 單曲循環／'all' 整張歌單循環 ── */
+let loopMode = 'single';
+musicAudio.loop = true; // 預設單曲循環，與原本行為一致
 
 function audioPath(filename) {
   return `audio/${filename}.mp3`;
@@ -153,8 +156,39 @@ function initSoundPanel() {
   fireplaceAudio.src= audioPath('fireplace');
   fireplaceAudio.volume = 0.35;
 
+  insertLoopToggle();
   updateNowPlaying();
 }
+
+/* ── 插入「循環模式」切換按鈕（不需要改 HTML，自動插入到播放按鈕下方）── */
+function insertLoopToggle() {
+  const playBtn = document.getElementById('play-btn');
+  if (!playBtn || document.getElementById('loop-toggle-btn')) return;
+  const btn = document.createElement('button');
+  btn.id = 'loop-toggle-btn';
+  btn.className = 'loop-toggle-btn';
+  btn.type = 'button';
+  btn.onclick = toggleLoopMode;
+  btn.innerHTML = `<span id="loop-icon">🔂</span><span id="loop-label">單曲循環</span>`;
+  playBtn.insertAdjacentElement('afterend', btn);
+}
+
+/* ── 切換循環模式 ── */
+function toggleLoopMode() {
+  loopMode = (loopMode === 'single') ? 'all' : 'single';
+  musicAudio.loop = (loopMode === 'single');
+  document.getElementById('loop-icon').textContent  = (loopMode === 'single') ? '🔂' : '🔁';
+  document.getElementById('loop-label').textContent = (loopMode === 'single') ? '單曲循環' : '整張循環';
+  showToast(loopMode === 'single' ? '已切換為單曲循環' : '已切換為整張歌單循環');
+}
+
+/* ── 整張循環模式下：一首播完自動接下一首 ── */
+musicAudio.addEventListener('ended', () => {
+  if (loopMode === 'all') {
+    const next = (currentMusicIdx + 1) % MUSIC_LIST.length;
+    selectMusic(next);
+  }
+});
 
 /* ── 選擇音樂 ── */
 function selectMusic(idx) {
