@@ -16,7 +16,7 @@
   <nav>
     <a class="nav-brand" href="index.html">
       <h1>The Quiet Light</h1>
-      <span>故事圖書館 · Story Library</span>
+      <span>短篇故事館 · Short Story Collection</span>
     </a>
     <div class="nav-links">
       <a href="index.html" data-page="home">首頁</a>
@@ -37,10 +37,6 @@
 
   <footer>
     <p class="footer-copy">© The Quiet Light · 所有故事版權歸作者所有</p>
-    <div class="footer-links">
-      <a href="about.html">關於這裡</a>
-      <a href="contact.html">聯絡</a>
-    </div>
   </footer>
 
 </div>
@@ -163,9 +159,11 @@
 
   if (story) {
     document.getElementById('page-title').textContent = story.title + ' · The Quiet Light';
-    document.getElementById('r-tag').textContent = story.tag;
+    document.getElementById('r-tag').textContent = story.date;
     document.getElementById('r-title').textContent = story.title;
-    document.getElementById('r-date').textContent = story.date;
+    document.getElementById('r-date').innerHTML = story.titleEn
+      ? `<span style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:300;color:rgba(251,246,238,0.75);display:block;margin-top:.2rem;">${story.titleEn}</span>`
+      : '';
     document.getElementById('r-body').innerHTML = story.body;
   } else {
     document.getElementById('reader-main').innerHTML = `

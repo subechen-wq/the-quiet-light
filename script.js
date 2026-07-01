@@ -65,8 +65,8 @@ function renderStoryCards(containerId, storyList) {
   if (!grid) return;
   grid.innerHTML = storyList.map(s => `
     <a class="story-card" href="story.html?id=${s.id}">
-      <p class="card-tag">${s.tag}</p>
       <h3 class="card-title">${s.title}</h3>
+      <p style="font-size:.95rem;font-style:italic;color:rgba(217,165,92,0.6);margin-bottom:.9rem;font-family:'Cormorant Garamond',serif;font-weight:300;">${s.titleEn || ''}</p>
       <p class="card-excerpt">${s.excerpt}</p>
       <div class="card-footer">
         <span class="card-date">${s.date}</span>
