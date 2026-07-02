@@ -485,12 +485,13 @@ input[type=range].panel-range::-moz-range-thumb {
   color: rgba(251,246,238,0.85);
 }
 
-/* ── 中文副標「靜謐之光」樣式 ── */
+/* ── 中文副標「靜謐之光」樣式：與主標題同大小、同顏色 ── */
 .nav-brand-zh {
-  font-size: .78rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
   font-weight: 300;
   font-style: italic;
-  color: rgba(217,165,92,0.6);
+  color: #fbf6ee;
   margin-left: .5rem;
-  letter-spacing: .04em;
+  letter-spacing: .12em;
 }
