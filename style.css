@@ -486,7 +486,7 @@ input[type=range].panel-range::-moz-range-thumb {
 }
 
 /* ── 中文副標「靜謐之光」樣式：與主標題同大小、同顏色 ── */
-.nav-brand-zh {
+.nav-brand h1 span.nav-brand-zh {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -494,4 +494,5 @@ input[type=range].panel-range::-moz-range-thumb {
   color: #fbf6ee;
   margin-left: .5rem;
   letter-spacing: .12em;
+  text-transform: none;
 }
