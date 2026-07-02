@@ -484,3 +484,13 @@ input[type=range].panel-range::-moz-range-thumb {
   border-color: rgba(217,165,92,0.4);
   color: rgba(251,246,238,0.85);
 }
+
+/* ── 中文副標「靜謐之光」樣式 ── */
+.nav-brand-zh {
+  font-size: .78rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(217,165,92,0.6);
+  margin-left: .5rem;
+  letter-spacing: .04em;
+}
