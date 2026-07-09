@@ -11,6 +11,63 @@
    ============================================ */
 
 const STORIES = [
+     {
+    id: "story-004",
+    title: "雨天的書店",
+    titleEn: "The Bookshop on a Rainy Day",
+    date: "2026.07",
+    excerpt: "雨是從上午就開始下的，到了下午還沒有停的意思。蘇曉彤走進那家書店的時候，鞋子已經濕了……",
+    body: `
+      <p>雨是從上午就開始下的，到了下午還沒有停的意思。</p>
+      <p>蘇曉彤走進那家書店的時候，鞋子已經濕了。</p>
+      <p>她其實沒有特別想進來，只是雨突然變大，而這扇門剛好開著。書店很小，窄窄的，兩排木頭書架把空間切成一條走廊，盡頭有一盞黃燈，亮著。店裡有一種氣味——舊紙、木頭、還有某種說不清楚的東西，像是很多個下雨天疊在一起的味道。</p>
+      <p>老闆是個中年男人，坐在角落看書，抬頭看了她一眼，又低下去了。沒有說歡迎光臨，也沒有說隨便看。</p>
+      <p>蘇曉彤在書架前站定，開始漫無目的地看書脊上的字。她不是來買書的。她只是需要一個地方，讓自己在雨停之前，有個可以待著的理由。</p>
+      <p>然後她抽出了那本書。不是刻意的，只是手指劃過去，停在了那裡。</p>
+      <p>書很舊，封面是褪色的墨綠，書名她沒有認出來。她翻開——扉頁上有字。不是印刷的字，是手寫的，鋼筆，墨水有些暈開了，像是寫的時候那個地方也在下雨。</p>
+      <p>「你也在等雨停嗎？別著急，你聽，這是讓你停下來好好休息的聲音。」蘇曉彤努力辨認著模糊的字跡。</p>
+      <p>她愣了一下，嘴角輕輕動了一下。然後小心地繼續翻著已泛黃的脆弱書頁。</p>
+      <p>書裡夾著一張紙條，差點掉出來。她用兩根手指捏住，展開。同一支鋼筆，同一個人的字，但這張紙條上只有一句話，寫在正中央，像是想了很久才決定寫下來的：</p>
+      <p>「我把這本書留在這裡，是希望它找到一個比我更需要它的人。」</p>
+      <p>蘇曉彤站在那裡，窗外的雨聲一陣大一陣小。她不知道這本書在這家店裡放了多久，也不知道那個人現在在哪裡。但她想著，那個人當年選擇把這本書放走——這件事本身，就需要一點勇氣。</p>
+      <p>她走向老闆，把書放到桌上。「這本書多少錢？」</p>
+      <p>老闆抬起頭，目光移向那本墨綠色封面的書，嘴角抿成一條直線。「小姐，這本書在那個書架上放了二十幾年，至今還沒有任何人把它取下來看過。」他帶著複雜的眼神說。</p>
+      <p>「那麼這本書一定是在等著我的到來。」蘇曉彤帶著堅定的眼神笑著說。</p>
+      <p>老闆看了她一會兒，那條直線慢慢鬆開了，變成一個很淡的弧度。他沒有說話，只是報了一個價，接過她遞來的錢，又低下頭去看自己的書。</p>
+      <p>蘇曉彤把那本墨綠色的書放進包包，推開門走出去。</p>
+      <p>雨已經停了。石板路還是濕的，積著淺淺的水，把天空的顏色接住了。彩虹掛在遠處樓頂的上方，淡淡的，像是有人用水彩隨手畫上去的，不確定它會在那裡多久。</p>
+      <p>她沒有急著走。包包裡那本書的重量，她感覺得到——一本舊書能有多重？但今天，它好像比平常的書都重一點點。裡面裝著的，不只是書頁。</p>
+      <p>她想起扉頁上那行字。你也在等雨停嗎？別著急，你聽，這是讓你停下來好好休息的聲音。</p>
+      <p>她聽了聽。街道上有水滴從樹葉落下的聲音，有遠處車輪碾過濕路的聲音，有風吹過來帶著雨後泥土氣息的聲音。</p>
+      <p>都是很普通的聲音。但今天，她都聽見了。</p>
+      <p>有些東西，等了二十年，等的就是你路過的那一天。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The rain had started in the morning and showed no sign of stopping by afternoon.</p>
+      <p>By the time Xiao-Tong Su stepped into the bookshop, her shoes were already wet.</p>
+      <p>She hadn't particularly meant to come in — the rain had simply grown heavier, and the door happened to be open. The shop was small and narrow, two wooden shelves dividing the space into a single corridor, a yellow lamp burning at the far end. The air carried a particular smell — old paper, wood, and something harder to name, like the accumulation of many rainy days layered one over another.</p>
+      <p>The owner, a middle-aged man, sat reading in the corner. He glanced up once, then looked back down. No welcome. No feel free to browse.</p>
+      <p>Xiao-Tong Su stood before the shelves and let her eyes drift across the spines. She wasn't here to buy a book. She just needed somewhere to be — a reason to stay somewhere until the rain stopped.</p>
+      <p>Then she pulled out a book. Not deliberately — her fingers simply slid along the shelf and stopped there.</p>
+      <p>It was old, the cover a faded olive green, the title unfamiliar. She opened it. The title page held writing — not printed, but handwritten in fountain pen, the ink slightly blurred, as if wherever that person had sat when they wrote it, it had been raining there too.</p>
+      <p>"Are you waiting for the rain to stop too? Don't rush. Listen — this is the sound telling you to slow down and rest." Xiao-Tong Su leaned in, tracing the faded words.</p>
+      <p>She went still for a moment. The corner of her mouth moved, just slightly. Then she carefully turned the fragile, yellowed pages.</p>
+      <p>A slip of paper was tucked inside, nearly falling out. She caught it between two fingers and unfolded it. The same pen, the same hand — but this note held only one sentence, written at the center of the page, as though the person had thought for a long time before deciding to write it down:</p>
+      <p>"I am leaving this book here, hoping it will find someone who needs it more than I do."</p>
+      <p>Xiao-Tong Su stood there as the rain outside rose and fell. She didn't know how long the book had been in this shop, or where that person was now. But she thought about the act itself — choosing to leave something behind — and how that must have taken a certain kind of courage.</p>
+      <p>She carried the book to the counter. "How much is this one?"</p>
+      <p>The owner looked up, his gaze moving to the olive-green cover. His mouth pressed into a straight line. "Miss," he said, something complicated in his expression, "that book has been on that shelf for over twenty years. No one has ever taken it down."</p>
+      <p>"Then it must have been waiting for me," Xiao-Tong Su said, with a steady smile.</p>
+      <p>He looked at her for a moment. The straight line softened gradually into something faint and curved. He said nothing — just named a price, took her money, and lowered his eyes back to his book.</p>
+      <p>Xiao-Tong Su tucked the olive-green book into her bag and pushed open the door.</p>
+      <p>The rain had stopped. The stone path was still wet, holding shallow pools that caught the color of the sky. A rainbow hung above the distant rooftops, pale, like something painted quickly in watercolor — uncertain how long it would stay.</p>
+      <p>She didn't hurry. She could feel the weight of the book in her bag — how heavy could an old book be? And yet today it felt heavier than usual. What it carried was more than pages.</p>
+      <p>She thought of the words on the title page. Are you waiting for the rain to stop too? Don't rush. Listen — this is the sound telling you to slow down and rest.</p>
+      <p>She listened. There was the drip of water falling from leaves, the sound of distant wheels on a wet road, the wind carrying the scent of rain-soaked earth.</p>
+      <p>All ordinary sounds. But today, she heard every one of them.</p>
+      <p>Some things wait twenty years. They are waiting for the day you happen to walk past.</p>
+    `
+  },
   {
     id: "story-003",
     title: "最後一班車",
