@@ -50,11 +50,11 @@
     font-family:"LXGW WenKai TC","Noto Serif TC",serif;
     font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
   }
-  header.site-nav nav a{
+  header.site-nav .nav-list a{
     margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
     color:#c3cdd6;
   }
-  header.site-nav nav a.active{color:#f2c383;}
+  header.site-nav .nav-list a.active{color:#f2c383;}
 
   .hero{
     position:relative;
@@ -264,6 +264,7 @@
   }
 
   footer.site-footer{
+    display:block;
     text-align:center;
     padding:4vh 6vw 6vh;
     font-size:0.82rem; color:#5c5240;
@@ -285,7 +286,7 @@
 
   @media (max-width:640px){
     header.site-nav{ padding:20px 5vw; flex-direction:column; align-items:flex-start; gap:.6rem; }
-    header.site-nav nav a{ margin-left:0; margin-right:1.4rem; }
+    header.site-nav .nav-list a{ margin-left:0; margin-right:1.4rem; }
     .hero-copy{ padding-bottom:7vh; }
   }
 
@@ -295,6 +296,7 @@
 
   .page-header{
     position:relative;
+    max-width:none; margin:0;
     padding:150px 6vw 6vh;
     overflow:hidden;
   }
@@ -344,13 +346,13 @@
 <div class="page-content">
 <header class="site-nav">
   <div class="brand">The Quiet Light · 靜謐之光</div>
-  <nav>
+  <div class="nav-list">
     <a href="index.html">首頁</a>
     <a href="stories.html">故事集</a>
     <a href="classics.html" class="active">讀古人</a>
     <a href="about.html">關於</a>
     <a href="contact.html">聯絡</a>
-  </nav>
+  </div>
 </header>
 
 <section class="page-header">
