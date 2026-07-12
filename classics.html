@@ -25,6 +25,12 @@
     background-size:cover;
     background-position:center 38%;
   }
+  #canvas{
+    position:fixed !important; inset:0 !important;
+    width:100vw !important; height:100vh !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
   .page-bg::after{
     content:"";
     position:absolute; inset:0;
@@ -449,6 +455,7 @@
   <div class="label">關於這個系列</div>
   <p>這裡不是傳統的國學解讀，而是一場心理學與古典文本的嫁接實驗——借莊子的寓言、詩詞的意象，重新看見那個時常被誤解、卻始終敏銳而深情的自己。</p>
   <p>每一篇文章都可以獨立閱讀，也彼此呼應，如同一圈一圈漾開的水紋。</p>
+  <p style="margin-top:1.4rem; font-size:0.88rem; opacity:0.8;">本系列文字寫作由「小小聲」構思與撰寫，過程中使用 AI 協作發想、編輯與校對；封面與插圖為 AI 輔助生成。</p>
 </section>
 
 <section class="essays">
