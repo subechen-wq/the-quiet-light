@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>庖丁解牛｜與莊子的靜夜絮語｜The Quiet Light · 靜謐之光</title>
+<meta name="description" content="如果不必用蠻力硬撐，你會怎麼過今天？">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=3">
+<style>
+
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; background:#141d29;}
+  body{
+    background-color:#e9e2d0;
+    color:#3a3226;
+    font-family:"Noto Serif TC", serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  .page-bg{
+    position:fixed; inset:0; z-index:0;
+    background-size:cover;
+    background-position:center 38%;
+  }
+  #canvas{
+    position:fixed !important; inset:0 !important;
+    width:100vw !important; height:100vh !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+  .page-bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background:rgba(20,17,13,0.16);
+  }
+  .page-content{
+    position:relative; z-index:1;
+  }
+  a{color:inherit; text-decoration:none;}
+
+  header.site-nav{
+    position:absolute; top:0; left:0; right:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 6vw;
+  }
+  header.site-nav .brand{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
+  }
+  header.site-nav .nav-list a{
+    margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
+    color:#c3cdd6;
+  }
+  header.site-nav .nav-list a.active{color:#f2c383;}
+
+  .hero{
+    position:relative;
+    height:100vh; min-height:640px; max-height:1000px;
+    display:flex; align-items:flex-end; justify-content:center;
+    overflow:hidden;
+    background-color:#141d29;
+  }
+  .hero-bg{
+    position:absolute; inset:-6%;
+    overflow:hidden;
+  }
+  .hero-bg-layer, .page-bg{
+    background-image:url("../hero-willow.jpg");
+  }
+  .hero-bg-layer{
+    position:absolute; inset:0;
+    background-size:cover;
+    background-position:center 32%;
+    filter:saturate(0.92) brightness(0.82) contrast(1.03);
+    animation:kenburns 42s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{
+    0%{ transform:scale(1) translate(0,0); }
+    100%{ transform:scale(1.14) translate(-2.2%,-1.4%); }
+  }
+  .hero-overlay{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(15,20,28,0.6) 0%, rgba(15,20,28,0.12) 32%, rgba(15,20,28,0.2) 55%, rgba(15,20,28,0.82) 100%),
+      linear-gradient(90deg, rgba(15,20,28,0.35) 0%, rgba(15,20,28,0) 22%, rgba(15,20,28,0) 78%, rgba(15,20,28,0.35) 100%);
+  }
+  .hero-sparkle{
+    position:absolute; inset:0; width:100%; height:100%; display:block;
+    mix-blend-mode:screen; opacity:0.75;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-bg-layer{ animation:none; }
+  }
+  .hero-copy{
+    position:relative; z-index:5;
+    text-align:center;
+    padding-bottom:9vh;
+    max-width:640px;
+    padding-left:1.2rem; padding-right:1.2rem;
+  }
+  .hero-eyebrow{
+    font-size:0.82rem; letter-spacing:0.4em; color:#f2c383;
+    margin-bottom:1.1rem;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+  }
+  .hero h1{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:40px;
+    color:#f4efe2;
+    letter-spacing:0.1em;
+    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .hero p.sub{
+    margin-top:1.1rem;
+    font-size:16px;
+    color:#e6ded0;
+    letter-spacing:0.06em;
+    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+  }
+
+  .category-nav{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem;
+    max-width:720px; margin:5vh auto 0;
+    padding:0 6vw;
+  }
+  .category-nav a{
+    font-size:0.86rem; letter-spacing:0.14em;
+    color:#3a3226; font-weight:600;
+    padding:0.7rem 1.4rem;
+    background:rgba(247,242,230,0.66);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border:1px solid rgba(255,255,255,0.55);
+    border-radius:999px;
+    box-shadow:0 10px 26px rgba(60,45,25,0.14);
+    transition:background .3s ease, transform .3s ease;
+  }
+  .category-nav a:hover{
+    background:rgba(247,242,230,0.88);
+    transform:translateY(-2px);
+  }
+
+  .essay-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    gap:1.4rem;
+  }
+  .view-all{
+    display:inline-flex; align-items:center; gap:.5rem;
+    margin:0.4rem 0 0.6rem;
+    font-size:0.9rem; letter-spacing:0.1em; color:#a5622a; font-weight:600;
+  }
+
+  .intro{
+    max-width:720px; margin:0 auto;
+    padding:2.8rem 2.2rem;
+    margin-top:4vh; margin-bottom:6vh;
+    text-align:center;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+  .intro .label{
+    font-size:0.8rem; letter-spacing:0.4em; color:#a5622a;
+    font-weight:700;
+    margin-bottom:1.4rem;
+  }
+  .intro p{
+    font-size:1.02rem; color:#4a4030; letter-spacing:0.02em;
+  }
+  .intro p + p{ margin-top:1rem; }
+
+  .essays{
+    max-width:1180px; margin:0 auto;
+    padding:5vh 6vw 14vh;
+    display:flex; flex-direction:column; gap:1.6rem;
+  }
+  .group-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.55rem;
+    font-weight:700;
+    letter-spacing:0.16em;
+    color:#2e2417;
+    text-shadow:0 1px 10px rgba(255,255,255,0.7), 0 1px 3px rgba(255,255,255,0.5);
+    margin:2.2rem 0 -0.4rem;
+    padding-left:0.2rem;
+    scroll-margin-top:110px;
+  }
+  .group-title:first-child{ margin-top:0.4rem; }
+  .group-title::after{
+    content:"";
+    display:block;
+    width:36px; height:2px;
+    margin-top:0.7rem;
+    background:#b5763a;
+    opacity:0.7;
+  }
+  .essay-card{
+    position:relative;
+    padding:2.6rem 2.2rem;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .essay-card:not(.upcoming):hover{
+    transform:translateY(-8px);
+    box-shadow:0 32px 64px rgba(60,45,25,0.24), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .essay-card{ transition:none; }
+    .essay-card:not(.upcoming):hover{ transform:none; }
+  }
+
+  .essay-callback{
+    font-size:0.78rem; letter-spacing:0.3em; color:#5c6b52;
+    font-weight:700;
+    margin-bottom:0.9rem;
+  }
+  .essay-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:28px;
+    color:#2e2417;
+    font-weight:700;
+    letter-spacing:0.06em;
+  }
+  .essay-quote{
+    margin-top:1rem;
+    padding-left:1.1rem;
+    border-left:2px solid #b5763a;
+    font-size:0.95rem;
+    color:#6b5f4d;
+    letter-spacing:0.04em;
+  }
+  .essay-desc{
+    margin-top:1.1rem;
+    font-size:0.98rem;
+    color:#4a4030;
+    max-width:56ch;
+  }
+  .essay-link{
+    display:inline-flex; align-items:center; gap:.5rem;
+    margin-top:1.4rem;
+    font-size:0.9rem; letter-spacing:0.08em; color:#a5622a;
+    border-bottom:1px solid rgba(165,98,42,0.4);
+    padding-bottom:2px;
+  }
+
+  .essay-card.upcoming{ opacity:.68; }
+  .essay-card.upcoming .essay-link{
+    color:#9c917d; border-color:transparent;
+  }
+
+  footer.site-footer{
+    display:block;
+    text-align:center;
+    padding:4vh 6vw 6vh;
+    font-size:0.82rem; color:#5c5240;
+    text-shadow:0 1px 6px rgba(255,255,255,0.4);
+  }
+
+  .reveal{ opacity:1; transform:none; }
+  html.js-ready .reveal{
+    opacity:0; transform:translateY(24px);
+    transition:opacity .9s ease, transform .9s ease;
+  }
+  html.js-ready .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+  @media (min-width:640px){
+    .hero h1{ font-size:56px; }
+    .hero p.sub{ font-size:19px; }
+    .essay-title{ font-size:32px; }
+  }
+
+  @media (max-width:640px){
+    header.site-nav{ padding:20px 5vw; flex-direction:column; align-items:flex-start; gap:.6rem; }
+    header.site-nav .nav-list a{ margin-left:0; margin-right:1.4rem; }
+    .hero-copy{ padding-bottom:7vh; }
+  }
+
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+    .intro, .essay-card{ background:rgba(240,233,216,0.95); }
+  }
+
+  .page-header{
+    position:relative;
+    max-width:none; margin:0;
+    padding:150px 6vw 6vh;
+    overflow:hidden;
+  }
+  .page-header::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,20,28,0.62) 0%, rgba(15,20,28,0.28) 55%, rgba(15,20,28,0) 100%);
+    pointer-events:none;
+  }
+  .page-header-inner{
+    position:relative; max-width:820px;
+  }
+  .back-link{
+    display:inline-flex; align-items:center; gap:.4rem;
+    font-size:0.85rem; letter-spacing:0.06em; color:#e6ded0; font-weight:600;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom:1.6rem;
+  }
+  .page-header-eyebrow{
+    font-size:0.8rem; letter-spacing:0.35em; color:#f2c383; font-weight:700;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom:0.9rem;
+  }
+  .page-header-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:2.1rem; font-weight:700; color:#f4efe2;
+    letter-spacing:0.06em;
+    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .page-header-sub{
+    margin-top:0.9rem; font-size:1rem; color:#e6ded0;
+    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+    max-width:60ch;
+  }
+  @media (min-width:640px){
+    .page-header-title{ font-size:2.6rem; }
+    .page-header{ padding:170px 6vw 7vh; }
+  }
+
+
+  .article-wrap{
+    max-width:740px; margin:0 auto;
+    padding:2vh 6vw 14vh;
+  }
+  .article-card{
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    padding:2.6rem 2.2rem;
+  }
+  @media (min-width:640px){
+    .article-card{ padding:3.4rem 3.6rem; }
+  }
+  .article-disclosure{
+    font-size:0.84rem; line-height:1.9; color:#6b5f4d;
+    border-left:2px solid #b5763a;
+    padding-left:1.1rem;
+    margin-bottom:2.2rem;
+    font-style:italic;
+  }
+  .article-citation{
+    text-align:center; font-size:0.86rem; color:#8a7c60;
+    font-style:italic; margin-bottom:1.6rem;
+  }
+  .article-pullquote{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:1.3rem; line-height:1.7;
+    color:#2e2417; text-align:center;
+    margin:0 0 2.4rem;
+  }
+  @media (min-width:640px){
+    .article-pullquote{ font-size:1.55rem; }
+  }
+  .article-body p{
+    margin-bottom:1.5rem;
+    font-size:1.02rem; line-height:2.15;
+    color:#3a3226;
+  }
+  .article-body strong{ color:#a5622a; font-weight:700; }
+  .article-closing{
+    margin-top:3rem; padding-top:1.8rem;
+    border-top:1px solid rgba(60,45,25,0.15);
+    font-size:0.85rem; color:#6b5f4d;
+    text-align:center; line-height:2;
+  }
+  .article-closing a{
+    color:#a5622a; text-decoration:none;
+    border-bottom:1px solid rgba(165,98,42,0.4);
+  }
+
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div class="page-bg"></div>
+
+<div class="page-content">
+<header class="site-nav">
+  <div class="brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-list">
+    <a href="../index.html">首頁</a>
+    <a href="../stories.html">故事集</a>
+    <a href="index.html" class="active">讀古人</a>
+    <a href="../about.html">關於</a>
+    <a href="../contact.html">聯絡</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <a class="back-link" href="zhuangzi.html">← 與莊子的靜夜絮語</a>
+    <div class="page-header-eyebrow">高敏感三部曲・之二</div>
+    <h1 class="page-header-title">庖丁解牛</h1>
+  </div>
+</section>
+
+<section class="article-wrap">
+  <article class="article-card">
+    <p class="article-disclosure">這系列文章，是我讀古籍、也與AI工具（Claude、ChatGPT）對話，一起梳理陌生的心理學理論，再用自己的方式，把古典的意象和現代人的處境放在一起理解。文字是我一字一句寫下的，配圖則是與AI工具一起完成的視覺呈現，但這段學習的路，我沒有獨自走。</p>
+    
+    <p class="article-pullquote">如果不必用蠻力硬撐，你會怎麼過今天？</p>
+    <div class="article-body">
+    <p>莊子有一篇很有名的故事，叫〈庖丁解牛〉，出自《養生主》。</p>
+    <p>有一天，文惠君看見一位叫丁的廚師正在解牛。</p>
+    <p>手起刀落，肩膀跟著手臂的節奏微微傾斜，腳步踩著看不見的拍子，刀鋒劃過筋骨交錯的地方，發出的聲音竟像一首曲子。刀子在牛身上遊走，動作流暢得，不像是在殺牛，倒像是在跳舞。</p>
+    <p>文惠君看得入神，忍不住問：「技術怎麼能到這種地步？」</p>
+    <p>庖丁放下刀，說：「我真正追求的，不是技術，是『道』。」</p>
+    <p>「道」聽起來玄，其實不是什麼神祕哲學，比較接近------事情本來運作的規律。就像我們讀懂一門學科，靠的不是死背名詞，而是理解它如何運作。</p>
+    <p>庖丁說，剛開始學解牛時，他看到的，是一整頭牛------就像一個人第一次學英文，看到的是一整頁陌生的單字；第一次學寫程式，看到的全是密密麻麻的符號。因為，還沒有建立起理解。</p>
+    <p>三年之後，他不再看見「一整頭牛」，而是看見牛的肌肉、筋膜、關節、骨頭之間的空隙。整頭牛，在他眼裡，變成了結構。</p>
+    <p>我們理解人心的時候，也是類似的過程。一開始，我們只看到「他脾氣不好」；理解得更深一點，才慢慢看見背後的依附模式、羞愧感，或是童年留下的痕跡------那些一直都在，卻要花時間才看得見的結構。</p>
+    <p>庖丁接著說：「依乎天理，批大郤，導大窾，因其固然。」我是沿著牛本來的身體構造，順著它的空隙走，刀子自然就滑進去了。</p>
+    <p>他沒有跟牛對抗，而是順著牛。就像一扇原本設計成往外推的門，你偏偏一直用力往內拉------再怎麼使勁，門也不會開；旁邊的人輕輕一推，門就開了。不是他比較有力，而是方向對了。庖丁做的，就是找到事情本來運作的方向。</p>
+    <p>有一個男生，曾經很認真地想把自己變成「一個很會社交的人」。</p>
+    <p>他逼自己主動加入每一場聚會，逼自己下班後還要參加各種聯誼、社群活動，因為他相信，只要夠努力練習，內向和敏感這種事，是可以被「矯正」的。</p>
+    <p>那陣子，他確實變得很「厲害」------很會聊天、很會炒熱氣氛，大家都說他變開朗了。</p>
+    <p>直到某一天，他坐在一場熱鬧的聚餐裡，忽然覺得，自己好像已經很久，沒有真正休息過了。那種疲憊，不是身體上的累，而是一種------連自己都快認不出自己的累。</p>
+    <p>明明社交場合已經讓自己耗到快喘不過氣，還是逼自己再撐半小時，因為「這樣才禮貌」；明知道那份工作方式不適合自己的節奏，還是咬著牙用「別人的方法」硬做，因為「大家都是這樣過來的」。我們像一把用來砍骨頭的刀，一個月就鈍了，卻還是不斷地砍下去，覺得只要夠努力，刀就不會壞------長期下來，就容易形成職業倦怠（burnout）。</p>
+    <p>心理學裡有個說法，叫認知僵化（Cognitive Rigidity）：一種方法明明失敗了，我們卻一直重複同一種方法。越焦慮，越逼自己；越逼自己，越做不好；越做不好，越焦慮------形成一個惡性循環，那就是「硬撐」。</p>
+    <p>但這不代表遇到困難就該放棄，這其實是很多人誤會莊子的地方。</p>
+    <p>庖丁說：「每至於族，吾見其難為，怵然為戒，視為止，行為遲。」每當遇到筋骨交錯、特別難處理的地方，他反而會停下來，放慢動作，專心觀察，找到空隙，刀子才自然過去。</p>
+    <p>很多人越緊張、動作越快，反而越亂、越容易出錯；真正熟練的人，遇到阻力時，是先理解，再行動------就像一位成熟的鋼琴家，演奏速度雖快，每個音卻很穩，因為他靠的不是速度，是理解。</p>
+    <p>庖丁的刀，用了十九年，解過數千頭牛，刀刃卻還像剛磨過一樣，鋒利如新。不是因為他手下的牛特別軟，也不是他運氣特別好，而是因為他從來不跟牛的紋理對抗------骨頭與骨頭之間，本來就有縫隙；筋肉與筋肉之間，本來就有適合下刀的角度。他只是，順著那些原本就存在的紋路走。</p>
+    <p>我們常常以為，讓自己變得「厲害」，就是要學會跟自己的天性對抗------逼內向的自己外向，逼敏感的自己遲鈍一點，逼疲憊的自己再撐一下。但也許，真正的厲害，是像庖丁一樣，先看清楚自己身上，那些原本就存在的紋理。知道哪裡該用力，哪裡該順勢，哪裡，本來就不需要用刀去砍。</p>
+    <p>有一片落葉，逆著水流，拼命往前，卻怎麼也走不了。</p>
+    <p>旁邊另一片葉子，順著河流，安安靜靜，卻走得很遠。</p>
+    <p>第一片葉子比較努力，第二片葉子，比較理解水。</p>
+    <p>人生很多時候，問題不是不夠努力，而是還沒看清楚，事情真正流動的方向。</p>
+    <p>如果要把〈庖丁解牛〉濃縮成一句話，也許是------成熟，不是越來越會用力，而是越來越懂得，順著事物本來的結構去行動。</p>
+    <p>庖丁解牛的故事裡，文惠君聽完，說了一句話：「吾聞庖丁之言，得養生焉。」</p>
+    <p>他從一個廚師解牛的技藝裡，聽懂的不是刀法，而是怎麼「養生」------怎麼活著，才不會把自己耗損殆盡。</p>
+    <p>那麼，你呢？</p>
+    <p>這些年，你有沒有也一直在用一把砍骨頭的刀，去對付本來就屬於你的紋理------逼自己合群、逼自己堅強、逼自己「正常」一點？</p>
+    <p>今夜，如果你也累了，也許不是你不夠努力。也許，只是還沒找到，那條屬於你自己的、下刀的方向。</p>
+    </div>
+    <div class="article-closing">
+      文字版權為作者「小小聲」所有。如欲轉載、引用或改作，請先來信取得同意，謝謝。<br>
+      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
+      文字 ©小小聲
+    </div>
+  </article>
+</section>
+
+<footer class="site-footer">
+  © The Quiet Light · 所有故事版權歸作者所有
+</footer>
+
+</div>
+
+<!-- 隱藏式聲音控制面板（與主站共用） -->
+<div class="panel-tab" id="panel-tab" onclick="openPanel()">
+  <span class="panel-tab-icon">♪</span>
+  <span class="panel-tab-text">聲音</span>
+</div>
+<aside class="sound-panel" id="sound-panel" aria-label="聲音控制面板">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div class="panel-header">
+    <p class="panel-title">環境音效</p>
+    <p class="panel-subtitle">音樂盒 · Music Box</p>
+  </div>
+  <div class="now-playing" id="now-playing">
+    <div class="np-dot"></div>
+    <span class="np-text" id="np-text"></span>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">背景音樂</p>
+    <div id="music-list"></div>
+    <button class="play-btn" id="play-btn" onclick="togglePlay()">
+      <span id="play-icon">▶</span>
+      <span id="play-label">播放音樂</span>
+    </button>
+    <div class="slider-group">
+      <div class="slider-label-row">
+        <span class="slider-name">音樂音量</span>
+        <span class="slider-value" id="music-vol-val">60%</span>
+      </div>
+      <input type="range" class="panel-range" min="0" max="100" value="60" oninput="updateSlider(this,'music-vol-val')">
+    </div>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">環境氛圍</p>
+    <button class="ambient-btn" id="btn-rain" onclick="toggleAmbient('rain',this)">
+      <span class="ambient-icon">🌧</span>
+      <span class="ambient-label">雨聲</span>
+      <span class="ambient-tag" id="tag-rain">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-rain">
+      <div id="rain-list" style="padding:.2rem .5rem .4rem;"></div>
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">雨聲音量</span>
+          <span class="slider-value" id="rain-vol-val">50%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="50" oninput="updateSlider(this,'rain-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-white" onclick="toggleAmbient('white',this)">
+      <span class="ambient-icon">🌊</span>
+      <span class="ambient-label">白噪音</span>
+      <span class="ambient-tag" id="tag-white">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-white">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">白噪音音量</span>
+          <span class="slider-value" id="white-vol-val">40%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="40" oninput="updateSlider(this,'white-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-fire" onclick="toggleAmbient('fire',this)">
+      <span class="ambient-icon">🕯</span>
+      <span class="ambient-label">壁爐火聲</span>
+      <span class="ambient-tag" id="tag-fire">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-fire">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">火聲音量</span>
+          <span class="slider-value" id="fire-vol-val">35%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="35" oninput="updateSlider(this,'fire-vol-val')">
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <p class="panel-footer-text">所有音樂為免費授權作品<br>適合深夜靜讀使用</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="../script.js"></script>
+<script>
+  document.documentElement.classList.add('js-ready');
+</script>
+
+</body>
+</html>

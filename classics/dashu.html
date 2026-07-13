@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>大樗｜與莊子的靜夜絮語｜The Quiet Light · 靜謐之光</title>
+<meta name="description" content="如果有一天，你不再需要證明自己有用，你會是什麼樣子？">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=3">
+<style>
+
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; background:#141d29;}
+  body{
+    background-color:#e9e2d0;
+    color:#3a3226;
+    font-family:"Noto Serif TC", serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  .page-bg{
+    position:fixed; inset:0; z-index:0;
+    background-size:cover;
+    background-position:center 38%;
+  }
+  #canvas{
+    position:fixed !important; inset:0 !important;
+    width:100vw !important; height:100vh !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+  .page-bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background:rgba(20,17,13,0.16);
+  }
+  .page-content{
+    position:relative; z-index:1;
+  }
+  a{color:inherit; text-decoration:none;}
+
+  header.site-nav{
+    position:absolute; top:0; left:0; right:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 6vw;
+  }
+  header.site-nav .brand{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
+  }
+  header.site-nav .nav-list a{
+    margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
+    color:#c3cdd6;
+  }
+  header.site-nav .nav-list a.active{color:#f2c383;}
+
+  .hero{
+    position:relative;
+    height:100vh; min-height:640px; max-height:1000px;
+    display:flex; align-items:flex-end; justify-content:center;
+    overflow:hidden;
+    background-color:#141d29;
+  }
+  .hero-bg{
+    position:absolute; inset:-6%;
+    overflow:hidden;
+  }
+  .hero-bg-layer, .page-bg{
+    background-image:url("../hero-willow.jpg");
+  }
+  .hero-bg-layer{
+    position:absolute; inset:0;
+    background-size:cover;
+    background-position:center 32%;
+    filter:saturate(0.92) brightness(0.82) contrast(1.03);
+    animation:kenburns 42s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{
+    0%{ transform:scale(1) translate(0,0); }
+    100%{ transform:scale(1.14) translate(-2.2%,-1.4%); }
+  }
+  .hero-overlay{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(15,20,28,0.6) 0%, rgba(15,20,28,0.12) 32%, rgba(15,20,28,0.2) 55%, rgba(15,20,28,0.82) 100%),
+      linear-gradient(90deg, rgba(15,20,28,0.35) 0%, rgba(15,20,28,0) 22%, rgba(15,20,28,0) 78%, rgba(15,20,28,0.35) 100%);
+  }
+  .hero-sparkle{
+    position:absolute; inset:0; width:100%; height:100%; display:block;
+    mix-blend-mode:screen; opacity:0.75;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-bg-layer{ animation:none; }
+  }
+  .hero-copy{
+    position:relative; z-index:5;
+    text-align:center;
+    padding-bottom:9vh;
+    max-width:640px;
+    padding-left:1.2rem; padding-right:1.2rem;
+  }
+  .hero-eyebrow{
+    font-size:0.82rem; letter-spacing:0.4em; color:#f2c383;
+    margin-bottom:1.1rem;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+  }
+  .hero h1{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:40px;
+    color:#f4efe2;
+    letter-spacing:0.1em;
+    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .hero p.sub{
+    margin-top:1.1rem;
+    font-size:16px;
+    color:#e6ded0;
+    letter-spacing:0.06em;
+    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+  }
+
+  .category-nav{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem;
+    max-width:720px; margin:5vh auto 0;
+    padding:0 6vw;
+  }
+  .category-nav a{
+    font-size:0.86rem; letter-spacing:0.14em;
+    color:#3a3226; font-weight:600;
+    padding:0.7rem 1.4rem;
+    background:rgba(247,242,230,0.66);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border:1px solid rgba(255,255,255,0.55);
+    border-radius:999px;
+    box-shadow:0 10px 26px rgba(60,45,25,0.14);
+    transition:background .3s ease, transform .3s ease;
+  }
+  .category-nav a:hover{
+    background:rgba(247,242,230,0.88);
+    transform:translateY(-2px);
+  }
+
+  .essay-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    gap:1.4rem;
+  }
+  .view-all{
+    display:inline-flex; align-items:center; gap:.5rem;
+    margin:0.4rem 0 0.6rem;
+    font-size:0.9rem; letter-spacing:0.1em; color:#a5622a; font-weight:600;
+  }
+
+  .intro{
+    max-width:720px; margin:0 auto;
+    padding:2.8rem 2.2rem;
+    margin-top:4vh; margin-bottom:6vh;
+    text-align:center;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+  .intro .label{
+    font-size:0.8rem; letter-spacing:0.4em; color:#a5622a;
+    font-weight:700;
+    margin-bottom:1.4rem;
+  }
+  .intro p{
+    font-size:1.02rem; color:#4a4030; letter-spacing:0.02em;
+  }
+  .intro p + p{ margin-top:1rem; }
+
+  .essays{
+    max-width:1180px; margin:0 auto;
+    padding:5vh 6vw 14vh;
+    display:flex; flex-direction:column; gap:1.6rem;
+  }
+  .group-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.55rem;
+    font-weight:700;
+    letter-spacing:0.16em;
+    color:#2e2417;
+    text-shadow:0 1px 10px rgba(255,255,255,0.7), 0 1px 3px rgba(255,255,255,0.5);
+    margin:2.2rem 0 -0.4rem;
+    padding-left:0.2rem;
+    scroll-margin-top:110px;
+  }
+  .group-title:first-child{ margin-top:0.4rem; }
+  .group-title::after{
+    content:"";
+    display:block;
+    width:36px; height:2px;
+    margin-top:0.7rem;
+    background:#b5763a;
+    opacity:0.7;
+  }
+  .essay-card{
+    position:relative;
+    padding:2.6rem 2.2rem;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .essay-card:not(.upcoming):hover{
+    transform:translateY(-8px);
+    box-shadow:0 32px 64px rgba(60,45,25,0.24), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .essay-card{ transition:none; }
+    .essay-card:not(.upcoming):hover{ transform:none; }
+  }
+
+  .essay-callback{
+    font-size:0.78rem; letter-spacing:0.3em; color:#5c6b52;
+    font-weight:700;
+    margin-bottom:0.9rem;
+  }
+  .essay-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:28px;
+    color:#2e2417;
+    font-weight:700;
+    letter-spacing:0.06em;
+  }
+  .essay-quote{
+    margin-top:1rem;
+    padding-left:1.1rem;
+    border-left:2px solid #b5763a;
+    font-size:0.95rem;
+    color:#6b5f4d;
+    letter-spacing:0.04em;
+  }
+  .essay-desc{
+    margin-top:1.1rem;
+    font-size:0.98rem;
+    color:#4a4030;
+    max-width:56ch;
+  }
+  .essay-link{
+    display:inline-flex; align-items:center; gap:.5rem;
+    margin-top:1.4rem;
+    font-size:0.9rem; letter-spacing:0.08em; color:#a5622a;
+    border-bottom:1px solid rgba(165,98,42,0.4);
+    padding-bottom:2px;
+  }
+
+  .essay-card.upcoming{ opacity:.68; }
+  .essay-card.upcoming .essay-link{
+    color:#9c917d; border-color:transparent;
+  }
+
+  footer.site-footer{
+    display:block;
+    text-align:center;
+    padding:4vh 6vw 6vh;
+    font-size:0.82rem; color:#5c5240;
+    text-shadow:0 1px 6px rgba(255,255,255,0.4);
+  }
+
+  .reveal{ opacity:1; transform:none; }
+  html.js-ready .reveal{
+    opacity:0; transform:translateY(24px);
+    transition:opacity .9s ease, transform .9s ease;
+  }
+  html.js-ready .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+  @media (min-width:640px){
+    .hero h1{ font-size:56px; }
+    .hero p.sub{ font-size:19px; }
+    .essay-title{ font-size:32px; }
+  }
+
+  @media (max-width:640px){
+    header.site-nav{ padding:20px 5vw; flex-direction:column; align-items:flex-start; gap:.6rem; }
+    header.site-nav .nav-list a{ margin-left:0; margin-right:1.4rem; }
+    .hero-copy{ padding-bottom:7vh; }
+  }
+
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+    .intro, .essay-card{ background:rgba(240,233,216,0.95); }
+  }
+
+  .page-header{
+    position:relative;
+    max-width:none; margin:0;
+    padding:150px 6vw 6vh;
+    overflow:hidden;
+  }
+  .page-header::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,20,28,0.62) 0%, rgba(15,20,28,0.28) 55%, rgba(15,20,28,0) 100%);
+    pointer-events:none;
+  }
+  .page-header-inner{
+    position:relative; max-width:820px;
+  }
+  .back-link{
+    display:inline-flex; align-items:center; gap:.4rem;
+    font-size:0.85rem; letter-spacing:0.06em; color:#e6ded0; font-weight:600;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom:1.6rem;
+  }
+  .page-header-eyebrow{
+    font-size:0.8rem; letter-spacing:0.35em; color:#f2c383; font-weight:700;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom:0.9rem;
+  }
+  .page-header-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:2.1rem; font-weight:700; color:#f4efe2;
+    letter-spacing:0.06em;
+    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .page-header-sub{
+    margin-top:0.9rem; font-size:1rem; color:#e6ded0;
+    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+    max-width:60ch;
+  }
+  @media (min-width:640px){
+    .page-header-title{ font-size:2.6rem; }
+    .page-header{ padding:170px 6vw 7vh; }
+  }
+
+
+  .article-wrap{
+    max-width:740px; margin:0 auto;
+    padding:2vh 6vw 14vh;
+  }
+  .article-card{
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    padding:2.6rem 2.2rem;
+  }
+  @media (min-width:640px){
+    .article-card{ padding:3.4rem 3.6rem; }
+  }
+  .article-disclosure{
+    font-size:0.84rem; line-height:1.9; color:#6b5f4d;
+    border-left:2px solid #b5763a;
+    padding-left:1.1rem;
+    margin-bottom:2.2rem;
+    font-style:italic;
+  }
+  .article-citation{
+    text-align:center; font-size:0.86rem; color:#8a7c60;
+    font-style:italic; margin-bottom:1.6rem;
+  }
+  .article-pullquote{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:1.3rem; line-height:1.7;
+    color:#2e2417; text-align:center;
+    margin:0 0 2.4rem;
+  }
+  @media (min-width:640px){
+    .article-pullquote{ font-size:1.55rem; }
+  }
+  .article-body p{
+    margin-bottom:1.5rem;
+    font-size:1.02rem; line-height:2.15;
+    color:#3a3226;
+  }
+  .article-body strong{ color:#a5622a; font-weight:700; }
+  .article-closing{
+    margin-top:3rem; padding-top:1.8rem;
+    border-top:1px solid rgba(60,45,25,0.15);
+    font-size:0.85rem; color:#6b5f4d;
+    text-align:center; line-height:2;
+  }
+  .article-closing a{
+    color:#a5622a; text-decoration:none;
+    border-bottom:1px solid rgba(165,98,42,0.4);
+  }
+
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div class="page-bg"></div>
+
+<div class="page-content">
+<header class="site-nav">
+  <div class="brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-list">
+    <a href="../index.html">首頁</a>
+    <a href="../stories.html">故事集</a>
+    <a href="index.html" class="active">讀古人</a>
+    <a href="../about.html">關於</a>
+    <a href="../contact.html">聯絡</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <a class="back-link" href="zhuangzi.html">← 與莊子的靜夜絮語</a>
+    <div class="page-header-eyebrow">高敏感三部曲・之三</div>
+    <h1 class="page-header-title">大樗</h1>
+  </div>
+</section>
+
+<section class="article-wrap">
+  <article class="article-card">
+    <p class="article-disclosure">這系列文章，是我讀古籍、也與AI工具（Claude、ChatGPT）對話，一起梳理陌生的心理學理論，再用自己的方式，把古典的意象和現代人的處境放在一起理解。文字是我一字一句寫下的，配圖則是與AI工具一起完成的視覺呈現，但這段學習的路，我沒有獨自走。</p>
+    <p class="article-citation">選自《莊子．內篇．逍遙遊》</p>
+    <p class="article-pullquote">如果有一天，你不再需要證明自己有用，你會是什麼樣子？</p>
+    <div class="article-body">
+    <p>惠子對莊子說：「我有一棵大樹，人們都叫它『樗』。」</p>
+    <p>「它的樹幹，木瘤盤結，扭曲得裝不上一條墨線；它的枝椏，彎彎曲曲，量不出一個方正的角度。長在路邊，過往的木匠，看都不看它一眼。」</p>
+    <p>惠子說：「你說的那些道理，就像這棵樹，大是大，卻沒有用，所以大家都不理它。」</p>
+    <p>莊子聽完，沒有反駁，只是說：「你沒見過野貓嗎？牠壓低身子，靈巧地埋伏、跳躍，卻也常常一腳踩進獵人設下的機關，死在羅網裡。你也看過斄牛吧？龐大得像天邊垂下的一片雲，卻連一隻老鼠都抓不到。」</p>
+    <p>「你有這麼一棵大樹，何不把它種在什麼都沒有的地方，種在無邊無際的曠野？」</p>
+    <p>我們成長過程中，或許多多少少，有被說過，或是聽過別人說「沒用」------台語裡，則是那句更直接的「沒路用」。</p>
+    <p>想太多，被說是「杞人憂天」；心太軟，被說是「沒有魄力」；做決定前總要反覆思考，被說是「效率太差」。這個世界有一套隱形的量尺，量的是「你能不能被派上用場」、「你能不能立刻看見成果」------而那些不合乎這把尺的部分，就被歸類成，「無用」。</p>
+    <p>於是我們開始學著，把自己修剪整齊。把想太多的自己，剪成一眼就能看穿的樣子；把心太軟的自己，磨成一敲就有回音的樣子。像一棵努力想被木匠看上眼的樹，拼命把自己的枝椏，扳直。就像，有一種人很容易得到大家喜歡，因為他：很會照顧人、很會幫忙、很會犧牲、很可靠、永遠說好。你猜，他快樂嗎？很多時候，不一定。因為他的價值感，全部建立在：「我有用，所以我值得被愛。」這就是心理學常說的：People Pleasing（討好型人格），也是在渾沌之死裡面談過的：False Self（假我），「有用」慢慢變成他的身份。</p>
+    <p>小雨在會議室裡，又把手上的筆轉了三圈。</p>
+    <p>大家已經在討論下一步了，她卻還停在剛才那個方案------如果客戶臨時抽單怎麼辦？如果供應商延遲怎麼辦？這些「如果」，在她腦中一個接一個冒出來，同事已經拍板定案，她還在想「那如果遇到這種情況呢」。主管私下說過，她「有點太敏感，抗壓性可能不太夠」。</p>
+    <p>直到某一天，公司臨時出了一個重大差錯，其他人都急著找解法，只有她，因為早就設想過類似的狀況，冷靜地說出了一個沒人想到的備案。</p>
+    <p>也是在那之後，她才慢慢想起，那些曾經被說「想太多」的時刻，其實從來不是缺點，只是還沒被放在，對的位置上。</p>
+    <p>那棵大樗樹，因為「無用」，木匠看都不看它一眼------也因為這樣，它從沒被砍去做成桌椅棟樑，得以在原野上，一年一年，長成一棵真正的巨木。</p>
+    <p>莊子說：「今子有大樹，患其無用，何不樹之於無何有之鄉，廣莫之野？彷徨乎無為其側，逍遙乎寢臥其下。不夭斤斧，物無害者，無所可用，安所困苦哉！」------與其嫌棄它沒用，不如把它種在什麼都沒有的曠野，讓人可以在樹下，無所事事地徘徊，安安穩穩地躺著休息。它也因此不會被斧頭砍，沒有東西傷害它，既然不會被人利用，它又怎麼會受苦呢？</p>
+    <p>那些總被說「想太多」「太敏感」的特質，會不會也是這樣------正因為不合乎「有效率」「馬上見成果」的規矩，才沒有被磨得只剩下一種用途，反而保留了更完整的自己，也才有餘裕，去看見別人看不見的細節，接住別人接不住的情緒。</p>
+    <p>有用的樹，一棵一棵，被砍去蓋房子。沒有用的那棵，還站在原野上，讓人乘涼。<strong>因為，每個生命都有自己的樣子。</strong></p>
+    <p>惠子從頭到尾，都沒有懷疑過「有用」這件事。他只是認定：有用就是好，沒用就是差。</p>
+    <p>莊子也沒有急著替大樗辯護，他先鬆動的是評價的尺。</p>
+    <p>如果尺本身值得懷疑，那麼很多我們一直以為的失敗、落後、不夠好，也許都需要重新理解。</p>
+    <p>「大樗」教我的就是：「誰規定，你一定要按照那套標準來評價自己？」</p>
+    <p>不是證明自己有多有用；而是<strong>不再讓自己的價值，只由別人的用途來決定。</strong></p>
+    <p>如果你的價值，不需要一直由別人來定義，會怎麼樣？</p>
+    <p>我認為這才是「無何有之鄉」。它不是一個地理位置，而是一種內在狀態：沒有功利比較的地方，沒有「你一定要證明自己」。</p>
+    <p>一個人不再一直活在：我有沒有價值？我夠不夠成功？我是不是輸了？我是不是落後？而是：我好好活成自己的樣子。</p>
+    <p>惠子聽完莊子的話，大概還是半信半疑------一棵「沒有用」的樹，真的比一棵「有用」的樹，更值得留著嗎？</p>
+    <p>但莊子沒有再多說什麼，故事就停在那裡，停在那棵大樹，靜靜地，站在無邊無際的曠野上。</p>
+    <p>那麼，你呢？</p>
+    <p>這些年，你有沒有也一直在把自己修剪整齊，剪成一眼就能被看懂、被派上用場的樣子，只因為害怕，「沒有用」這三個字？</p>
+    <p>如果今天，你不需要證明自己有用，你會不會，反而更像自己一點？也許不是每一棵樹，都要長成棟樑；有些樹，天生就是要用來，讓人乘涼的。</p>
+    </div>
+    <div class="article-closing">
+      文字版權為作者「小小聲」所有。如欲轉載、引用或改作，請先來信取得同意，謝謝。<br>
+      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
+      文字 ©小小聲
+    </div>
+  </article>
+</section>
+
+<footer class="site-footer">
+  © The Quiet Light · 所有故事版權歸作者所有
+</footer>
+
+</div>
+
+<!-- 隱藏式聲音控制面板（與主站共用） -->
+<div class="panel-tab" id="panel-tab" onclick="openPanel()">
+  <span class="panel-tab-icon">♪</span>
+  <span class="panel-tab-text">聲音</span>
+</div>
+<aside class="sound-panel" id="sound-panel" aria-label="聲音控制面板">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div class="panel-header">
+    <p class="panel-title">環境音效</p>
+    <p class="panel-subtitle">音樂盒 · Music Box</p>
+  </div>
+  <div class="now-playing" id="now-playing">
+    <div class="np-dot"></div>
+    <span class="np-text" id="np-text"></span>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">背景音樂</p>
+    <div id="music-list"></div>
+    <button class="play-btn" id="play-btn" onclick="togglePlay()">
+      <span id="play-icon">▶</span>
+      <span id="play-label">播放音樂</span>
+    </button>
+    <div class="slider-group">
+      <div class="slider-label-row">
+        <span class="slider-name">音樂音量</span>
+        <span class="slider-value" id="music-vol-val">60%</span>
+      </div>
+      <input type="range" class="panel-range" min="0" max="100" value="60" oninput="updateSlider(this,'music-vol-val')">
+    </div>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">環境氛圍</p>
+    <button class="ambient-btn" id="btn-rain" onclick="toggleAmbient('rain',this)">
+      <span class="ambient-icon">🌧</span>
+      <span class="ambient-label">雨聲</span>
+      <span class="ambient-tag" id="tag-rain">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-rain">
+      <div id="rain-list" style="padding:.2rem .5rem .4rem;"></div>
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">雨聲音量</span>
+          <span class="slider-value" id="rain-vol-val">50%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="50" oninput="updateSlider(this,'rain-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-white" onclick="toggleAmbient('white',this)">
+      <span class="ambient-icon">🌊</span>
+      <span class="ambient-label">白噪音</span>
+      <span class="ambient-tag" id="tag-white">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-white">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">白噪音音量</span>
+          <span class="slider-value" id="white-vol-val">40%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="40" oninput="updateSlider(this,'white-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-fire" onclick="toggleAmbient('fire',this)">
+      <span class="ambient-icon">🕯</span>
+      <span class="ambient-label">壁爐火聲</span>
+      <span class="ambient-tag" id="tag-fire">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-fire">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">火聲音量</span>
+          <span class="slider-value" id="fire-vol-val">35%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="35" oninput="updateSlider(this,'fire-vol-val')">
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <p class="panel-footer-text">所有音樂為免費授權作品<br>適合深夜靜讀使用</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="../script.js"></script>
+<script>
+  document.documentElement.classList.add('js-ready');
+</script>
+
+</body>
+</html>
