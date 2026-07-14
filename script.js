@@ -114,7 +114,7 @@ let loopMode = 'single';
 musicAudio.loop = true; // 預設單曲循環，與原本行為一致
 
 function audioPath(filename) {
-  return `audio/${filename}.mp3`;
+  return `/audio/${filename}.mp3`;
 }
 
 /* ── 初始化面板 ── */
