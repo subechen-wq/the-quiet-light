@@ -11,7 +11,68 @@
    ============================================ */
 
 const STORIES = [
-     {
+  {
+    id: "story-005",
+    title: "深夜的關東煮店",
+    titleEn: "The Late-Night Oden Stand",
+    date: "2026.07",
+    excerpt: "那家店沒有名字。招牌上只有三個字：關東煮，紅色的燈管，有一個字的燈快燒壞了，閃了又閃……",
+    body: `
+      <p>那家店沒有名字。</p>
+      <p>招牌上只有三個字：關東煮，紅色的燈管，有一個字的燈快燒壞了，閃了又閃，但老闆娘說不定是沒注意到，也說不定是懶得換。</p>
+      <p>鍋子裡的湯頭是從早上就開始熬的，到了深夜，已經熬出了一種很深的顏色，琥珀色，透著亮，像是把今天所有的氣味都收進去了。</p>
+      <p>剩下的料不多了——幾塊蘿蔔、兩串貢丸、一塊豆腐、幾支竹輪。老闆娘用長夾子把它們整理了一下位置，讓鍋子看起來不那麼空。</p>
+      <p>門簾掀起來的時候，她沒有抬頭。「歡迎，想吃什麼？」</p>
+      <p>進來的是一個年輕人，二十多歲，外套袖子拉得很低，帽子也壓著。他在門口站了一秒，看了看鍋子，又看了看老闆娘，然後在吧台前坐了下來。</p>
+      <p>老闆娘這才看了他一眼。她什麼都沒說，只是轉身去拿了一個碗，盛了一些湯放到他面前。</p>
+      <p>「年輕人，先喝點熱湯暖暖身體，想吃什麼慢慢跟我說。」說完便走到一旁整理東西，給他一個人待著的空間。</p>
+      <p>年輕人怔怔地看了老闆娘一會兒。鍋裡的湯滾起來，咕嘟一聲，他才回過神來，吸了吸鼻子。「不好意思，請給我一份蘿蔔、一塊豆腐和兩支竹輪。」</p>
+      <p>老闆娘沒有應聲，只是走回鍋子前，用夾子慢慢把料一樣一樣夾進碗裡。她夾料的時候，多夾了一塊豆腐。沒有說什麼，就這樣放進去了，像是沒有注意到自己多夾了一塊。</p>
+      <p>碗推到他面前的時候，熱氣升起來，蘿蔔燉得很透，顏色深，切口的地方吸飽了湯汁，看起來很柔軟。</p>
+      <p>年輕人低下頭，拿起湯匙，挖了一口蘿蔔放進嘴裡。他沒有說好吃，但他的肩膀，在那一口之後，慢慢落下來了一點點。</p>
+      <p>老闆娘背對著他，繼續整理東西，嘴角動了一下，沒有人看見。</p>
+      <p>「今天終於不下雨了，這麼好的天氣，明天要把棉被搬出來曬太陽才行！」老闆娘突然說，像是在自言自語。</p>
+      <p>年輕人愣了一下，突然咧開嘴笑了出來。「是啊！雨終於停了，我也得把新買的棉被搬出來曬一曬。」他帶著微笑繼續享用他的食物。</p>
+      <p>鍋子裡的湯輕輕滾著，發出一種很穩的聲音。年輕人把碗裡的湯喝到只剩一點點，放下湯匙，靜靜坐了一會兒。店裡沒有音樂，但不覺得安靜——湯的聲音、偶爾一輛車從外面開過去的聲音、老闆娘把東西放回架子上的聲音，這些加在一起，像是一種很輕的背景，把人托著。</p>
+      <p>「老闆娘，」他開口，聲音比剛進來的時候穩了一點，「你這個湯頭熬了多久？」</p>
+      <p>「從早上，」她頭也沒回，「熬一整天才有這個味道。」</p>
+      <p>年輕人「嗯」了一聲，沒再說什麼。</p>
+      <p>他把錢放在桌上，站起來，把帽子往下壓了壓，走向門口。到了門簾前，他停了一下，回頭說：「謝謝。」</p>
+      <p>老闆娘用夾子敲了敲鍋邊，沒有看他。「慢走，路上小心。」</p>
+      <p>他掀開門簾走出去。夜風是涼的，但不像進來之前那麼涼了——或者是他自己暖起來了，說不清楚。他把外套拉鏈拉上，往前走。</p>
+      <p>街燈把路照得很清楚。</p>
+      <p>他想著，明天要把棉被搬出來曬。就這樣一件小事，想起來，覺得明天還是可以到的。</p>
+      <p>深夜的熱湯什麼都沒有說，卻什麼都說了。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The shop had no name.</p>
+      <p>The sign just said: Oden. Red neon tubing, one character flickering on the edge of burning out. The owner probably hadn't noticed, or couldn't be bothered to replace it.</p>
+      <p>The broth had been simmering since morning. By this hour, it had deepened into something amber and luminous, as if it had absorbed every scent the day had to offer.</p>
+      <p>Not much left in the pot — a few pieces of daikon, two skewers of fish balls, a block of tofu, a handful of chikuwa. The owner rearranged them with her long tongs so the pot wouldn't look quite so empty.</p>
+      <p>When the curtain lifted, she didn't look up. "Welcome. What would you like?"</p>
+      <p>The person who came in was young — mid-twenties, sleeves pulled low, cap pulled down. He stood in the doorway for a second, looked at the pot, looked at the owner, then took a seat at the counter.</p>
+      <p>Only then did she glance at him. Without a word, she turned, picked up a bowl, and ladled some broth into it, setting it in front of him.</p>
+      <p>"Here, have some hot broth first. Warm yourself up. Tell me what you want when you're ready." Then she moved to the side to tidy up — giving him space to just be.</p>
+      <p>He stared at her back for a moment. The broth bubbled softly, a quiet sound that seemed to pull him back. He sniffed. "Sorry — can I get some daikon, a piece of tofu, and two chikuwa?"</p>
+      <p>She said nothing, just walked back to the pot and began lifting the pieces into his bowl one by one. When she got to the tofu, she added an extra piece. No comment. Just placed it in, as though she hadn't noticed she'd done it.</p>
+      <p>When the bowl reached him, steam rose from the surface. The daikon had stewed through completely — deep in color, the cut edges swollen with broth, soft all the way down.</p>
+      <p>He picked up his spoon and took a bite of daikon. He didn't say anything. But his shoulders, after that one bite, came down a little.</p>
+      <p>The owner had her back to him, still tidying. The corner of her mouth moved, just slightly. No one saw.</p>
+      <p>"Finally no rain today," she said, as if to herself. "Weather this good — I'll have to bring the quilts out to air in the sun tomorrow."</p>
+      <p>He blinked. Then laughed — a real one, sudden. "You're right, the rain finally stopped. I should air out my new quilt too." He was still smiling as he went back to his food.</p>
+      <p>The pot simmered on, steady and low. He drank the broth down to almost nothing, set his spoon aside, and sat quietly for a while. There was no music, but the shop didn't feel silent — the sound of the broth, the occasional car passing outside, the soft thud of the owner setting things back on the shelf. Together they made something like a gentle undercurrent, holding him up.</p>
+      <p>"How long have you been making this broth?" he asked. His voice was steadier than when he'd come in.</p>
+      <p>"Since morning," she said, without turning. "Takes a whole day to get it there."</p>
+      <p>He made a small sound of understanding and said nothing more.</p>
+      <p>He set his money on the counter, stood up, pulled his cap down, and walked toward the door. At the curtain, he paused and looked back. "Thank you."</p>
+      <p>She tapped the edge of the pot with her tongs, not looking at him. "Take care. Watch your step."</p>
+      <p>He pushed through the curtain and stepped outside. The night air was cool — but not as cold as it had felt coming in. Or maybe he was warmer now. Hard to say. He zipped up his jacket and walked on.</p>
+      <p>The streetlights made the road ahead clear.</p>
+      <p>He thought about airing out the quilt tomorrow. A small thing. But thinking of it, he felt that tomorrow was somewhere he could reach.</p>
+      <p>The late-night broth said nothing at all, and yet said everything.</p>
+    `
+  },
+  {
     id: "story-004",
     title: "雨天的書店",
     titleEn: "The Bookshop on a Rainy Day",
