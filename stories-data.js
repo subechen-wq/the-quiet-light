@@ -11,6 +11,69 @@
    ============================================ */
 
 const STORIES = [
+   {
+    id: "story-006",
+    title: "植物園的守夜人",
+    titleEn: "The Night Keeper of the Botanical Garden",
+    date: "2026.07",
+    excerpt: "植物園在夜裡會變成另一個地方。阿伯在這裡守夜二十二年了，今晚，他的手電筒照到了一雙鞋子……",
+    body: `
+      <p>植物園在夜裡會變成另一個地方。</p>
+      <p>白天進來的人，看見的是解說牌、修剪整齊的步道、拍照打卡的角落。但到了深夜，燈光只剩下幾盞，路變窄了，樹變大了，連空氣都不一樣——濃郁的，帶著泥土和草葉的氣息，像是植物們趁人不注意的時候，把自己攤開來透透氣。</p>
+      <p>阿伯叫大家叫他阿伯就好，他在這裡守夜二十二年了。每晚十點到早上六點，他拿著手電筒，按固定的路線走一圈又一圈。他認識這裡每一棵樹——哪棵最近長了新芽、哪棵根部開始有點問題、哪棵在下雨天之後會有特別的氣味。他不需要解說牌。</p>
+      <p>今晚走到大榕樹那裡，他的手電筒照到了一雙鞋子。鞋子的主人坐在榕樹最大的那條根上，背靠著樹幹，膝蓋抱著，頭埋下去，不知道是睡著了還是只是不想被看見。是個年輕女孩，大概二十歲出頭。</p>
+      <p>阿伯站在那裡，手電筒沒有再往上照，就停在她的鞋子那裡。他清了清嗓子。</p>
+      <p>「咦，我剛稍早放在這裡的水管呢？妳有看見嗎？黑色的。」阿伯揮著手電筒往地上照了照。</p>
+      <p>沒有等來預想中的責備，女孩愣了一下，趕緊回覆道：「沒、沒有，我沒看見。」</p>
+      <p>「真是奇怪了，我明明記得放在這裡的。」阿伯停下手電筒，抬頭看了看那棵樹。「妳知道這棵大榕樹幾歲嗎？」</p>
+      <p>女孩茫然地搖搖頭。「不知道。」</p>
+      <p>「這棵大榕樹今年一百二十歲了喔！是這裡最年長、最有智慧的植物。」阿伯沒等她回答，繼續看著榕樹說，「我偶爾路過這裡時會停下來和它分享我的秘密。」他笑了笑。</p>
+      <p>「哎呀，這個時間了，我得去下一個地方巡邏了。」</p>
+      <p>阿伯說完，真的就往前走了，手電筒的光在草地上晃著。走了幾步，他停下來，沒有回頭。</p>
+      <p>「妳知道榕樹的氣根嗎？」他對著前方說，「從樹上垂下來，看起來像是在往下掉，其實是往土裡長。」他頓了一下，「有時候一個人需要先往下，才能站穩。」</p>
+      <p>他沒有等她回答，繼續往前走了。手電筒的光漸漸遠了，消失在轉角的樹叢後面。</p>
+      <p>女孩一個人坐在榕樹下，重新抱起膝蓋，但這次背脊沒有剛才那麼緊了。她抬頭往上看，榕樹的枝葉在夜風裡輕輕動著，樹幹太粗了，她一個人根本抱不住。</p>
+      <p>一百二十歲。她想，一棵樹活了一百二十年，不知道見過多少個像她這樣的深夜。也許它見過，也沒有覺得奇怪。</p>
+      <p>不知道時間過去了多久，阿伯又揮著手電筒回到了這裡。女孩看著他緩緩走到她身旁不遠處坐了下來，兩個人就這麼靜靜地坐著，誰也沒說一句話。</p>
+      <p>直到遠處的鐘敲響了十聲，女孩站了起來，正邁出腳步，身後傳來阿伯的聲音。</p>
+      <p>「從大門離開吧。」</p>
+      <p>女孩回頭看著阿伯，抿了抿嘴唇。「謝謝你。」便轉身往大門的方向走去。</p>
+      <p>阿伯看著她的背影，沒有說話。她走得不快，沿著步道往大門去，路燈把她的影子拉得細細長長的。快走到轉角的時候，她回頭看了一眼，阿伯還坐在那裡，手電筒放在膝蓋上，沒有開，就這樣坐著。</p>
+      <p>她舉起手，輕輕揮了一下。阿伯也舉起手，揮了一下。然後她轉過轉角，不見了。</p>
+      <p>阿伯在榕樹根上又坐了一會兒，仰頭看著黑暗裡的樹冠，風吹過來，葉子沙沙地響。「你也看見了嗎？」他對著樹低聲說。</p>
+      <p>他站起來，拍了拍褲子，重新拿起手電筒，繼續往下一站走去。步道還是那條步道，樹還是那些樹。但今晚的空氣裡有什麼東西不一樣——每一個這樣的深夜，都會有一點點不一樣，只是大部分的人不知道。</p>
+      <p>阿伯知道。這也是他在這裡守了二十二年的原因之一。</p>
+      <p>有些地方，在夜裡會為需要它的人，悄悄開著。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>At night, the botanical garden becomes a different place.</p>
+      <p>The people who come during the day see information signs, neatly trimmed paths, corners made for photographs. But at night, only a few lamps remain, the paths grow narrower, the trees grow larger, and even the air is different — dense, carrying the scent of soil and leaves, as though the plants take advantage of the quiet to stretch and breathe.</p>
+      <p>Everyone called him Uncle. He had been keeping watch here for twenty-two years. Every night from ten until six in the morning, he walked his fixed route, torch in hand, round after round. He knew every tree — which one had put out new shoots lately, which one's roots were beginning to trouble him, which one carried a particular scent after rain. He had no need for information signs.</p>
+      <p>Tonight, when he reached the great banyan, his torchlight found a pair of shoes. The person wearing them was sitting on the banyan's largest root, back against the trunk, knees drawn up, head down — asleep, or simply not wanting to be seen. A young woman, somewhere in her early twenties.</p>
+      <p>Uncle stood there. He didn't move the light upward. He left it resting on her shoes. Then he cleared his throat.</p>
+      <p>"Funny — I left a hose here earlier. Black one. You haven't seen it, have you?" He swept the torchlight across the ground.</p>
+      <p>She had been bracing for a scolding. Instead she blinked, startled. "No — no, I haven't seen it."</p>
+      <p>"Strange. I was sure I left it here." He stopped moving the light and looked up at the tree. "Do you know how old this banyan is?"</p>
+      <p>She shook her head blankly. "No idea."</p>
+      <p>"One hundred twenty years old this year. The oldest, wisest thing in this whole garden." He didn't wait for her to respond — just kept looking at the tree. "Sometimes when I pass by, I stop and share my secrets with it." He smiled.</p>
+      <p>"Anyway — getting late. I've got the next section to check."</p>
+      <p>And he walked on, just like that, the torchlight swaying across the grass. A few steps out, he stopped. He didn't turn around.</p>
+      <p>"You know about the aerial roots?" he said, toward the darkness ahead. "They hang down from the branches — looks like they're falling. But they're growing into the ground." A pause. "Sometimes a person has to go down first, before they can find their footing."</p>
+      <p>He didn't wait for an answer. He walked on. The light grew smaller, then disappeared behind the trees at the bend.</p>
+      <p>The young woman sat alone under the banyan, pulled her knees back in — but her spine wasn't quite as rigid as before. She tilted her head back and looked up. The leaves moved softly in the night wind. The trunk was far too wide for one person to wrap their arms around.</p>
+      <p>One hundred twenty years. She thought about a tree that had lived one hundred twenty years, and how many nights like this one it must have witnessed. Maybe it had seen all of them. Maybe it didn't find any of them strange.</p>
+      <p>She wasn't sure how much time passed before Uncle's torchlight appeared again. She watched him walk slowly back and settle himself nearby, not too close. The two of them sat in silence. Neither said a word.</p>
+      <p>Then a distant clock struck ten. She stood up, took a step — and heard his voice behind her.</p>
+      <p>"Use the front gate on your way out."</p>
+      <p>She turned and looked at him. Pressed her lips together. "Thank you." Then she turned toward the gate and walked.</p>
+      <p>Uncle watched her go without speaking. She wasn't in a hurry — she followed the path toward the entrance, the lamps drawing her shadow out long and thin. Near the bend, she glanced back. Uncle was still sitting there, torch resting on his knees, unlit.</p>
+      <p>She raised her hand and gave a small wave. He raised his hand too. Then she turned the corner and was gone.</p>
+      <p>Uncle sat on the banyan root a little longer, looking up into the dark canopy. Wind moved through, and the leaves rustled. "Did you see that too?" he said to the tree, quietly.</p>
+      <p>He stood, brushed off his trousers, picked up the torch, and walked on to the next stop. The same path, the same trees. But something in tonight's air was different — as it always was, a little, on nights like this. Most people never knew.</p>
+      <p>Uncle knew. It was one of the reasons he had stayed twenty-two years.</p>
+      <p>Some places keep a light on at night, quietly, for whoever needs it.</p>
+    `
+  },
   {
     id: "story-005",
     title: "深夜的關東煮店",
