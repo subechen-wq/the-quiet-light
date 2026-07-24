@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>聲聲慢｜詩詞裡的心靈風景｜The Quiet Light · 靜謐之光</title>
+<meta name="description" content="李清照的〈聲聲慢〉裡，七組疊字寫出的不只是悲傷，是情緒粒度的細膩——當一種感受大到說不清，也許我們需要的，不是更少的字，而是更多。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=3">
+<style>
+
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; background:#141d29;}
+  body{
+    background-color:#e9e2d0;
+    color:#3a3226;
+    font-family:"Noto Serif TC", serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  .page-bg{
+    position:fixed; inset:0; z-index:0;
+    background-size:cover;
+    background-position:center 38%;
+  }
+  #canvas{
+    position:fixed !important; inset:0 !important;
+    width:100vw !important; height:100vh !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+  .page-bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background:rgba(20,17,13,0.16);
+  }
+  .page-content{
+    position:relative; z-index:1;
+  }
+  a{color:inherit; text-decoration:none;}
+
+  header.site-nav{
+    position:absolute; top:0; left:0; right:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 6vw;
+  }
+  header.site-nav .brand{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
+  }
+  header.site-nav .nav-list a{
+    margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
+    color:#c3cdd6;
+  }
+  header.site-nav .nav-list a.active{color:#f2c383;}
+
+  .hero{
+    position:relative;
+    height:100vh; min-height:640px; max-height:1000px;
+    display:flex; align-items:flex-end; justify-content:center;
+    overflow:hidden;
+    background-color:#141d29;
+  }
+  .hero-bg{
+    position:absolute; inset:-6%;
+    overflow:hidden;
+  }
+  .hero-bg-layer, .page-bg{
+    background-image:url("../hero-willow.jpg");
+  }
+  .hero-bg-layer{
+    position:absolute; inset:0;
+    background-size:cover;
+    background-position:center 32%;
+    filter:saturate(0.92) brightness(0.82) contrast(1.03);
+    animation:kenburns 42s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{
+    0%{ transform:scale(1) translate(0,0); }
+    100%{ transform:scale(1.14) translate(-2.2%,-1.4%); }
+  }
+  .hero-overlay{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(15,20,28,0.6) 0%, rgba(15,20,28,0.12) 32%, rgba(15,20,28,0.2) 55%, rgba(15,20,28,0.82) 100%),
+      linear-gradient(90deg, rgba(15,20,28,0.35) 0%, rgba(15,20,28,0) 22%, rgba(15,20,28,0) 78%, rgba(15,20,28,0.35) 100%);
+  }
+  .hero-sparkle{
+    position:absolute; inset:0; width:100%; height:100%; display:block;
+    mix-blend-mode:screen; opacity:0.75;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-bg-layer{ animation:none; }
+  }
+  .hero-copy{
+    position:relative; z-index:5;
+    text-align:center;
+    padding-bottom:9vh;
+    max-width:640px;
+    padding-left:1.2rem; padding-right:1.2rem;
+  }
+  .hero-eyebrow{
+    font-size:0.82rem; letter-spacing:0.4em; color:#f2c383;
+    margin-bottom:1.1rem;
+    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+  }
+  .hero h1{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:40px;
+    color:#f4efe2;
+    letter-spacing:0.1em;
+    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .hero p.sub{
+    margin-top:1.1rem;
+    font-size:16px;
+    color:#e6ded0;
+    letter-spacing:0.06em;
+    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+  }
+
+  .category-nav{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem;
+    max-width:720px; margin:5vh auto 0;
+    padding:0 6vw;
+  }
+  .category-nav a{
+    font-size:0.86rem; letter-spacing:0.14em;
+    color:#3a3226; font-weight:600;
+    padding:0.7rem 1.4rem;
+    background:rgba(247,242,230,0.66);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border:1px solid rgba(255,255,255,0.55);
+    border-radius:999px;
+    box-shadow:0 10px 26px rgba(60,45,25,0.14);
+    transition:background .3s ease, transform .3s ease;
+  }
+  .category-nav a:hover{
+    background:rgba(247,242,230,0.88);
+    transform:translateY(-2px);
+  }
+
+  .essay-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    gap:1.4rem;
+  }
+  .view-all{
+    display:inline-flex; align-items:center; gap:.5rem;
+    margin:0.4rem 0 0.6rem;
+    font-size:0.9rem; letter-spacing:0.1em; color:#a5622a; font-weight:600;
+  }
+
+  .intro{
+    max-width:720px; margin:0 auto;
+    padding:2.8rem 2.2rem;
+    margin-top:4vh; margin-bottom:6vh;
+    text-align:center;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+  .intro .label{
+    font-size:0.8rem; letter-spacing:0.4em; color:#a5622a;
+    font-weight:700;
+    margin-bottom:1.4rem;
+  }
+  .intro p{
+    font-size:1.02rem; color:#4a4030; letter-spacing:0.02em;
+  }
+  .intro p + p{ margin-top:1rem; }
+
+  .essays{
+    max-width:1180px; margin:0 auto;
+    padding:5vh 6vw 14vh;
+    display:flex; flex-direction:column; gap:1.6rem;
+  }
+  .group-title{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-size:1.55rem;
+    font-weight:700;
+    letter-spacing:0.16em;
+    color:#2e2417;
+    text-shadow:0 1px 10px rgba(255,255,255,0.7), 0 1px 3px rgba(255,255,255,0.5);
+    margin:2.2rem 0 -0.4rem;
+    padding-left:0.2rem;
+    scroll-margin-top:110px;
+  }
+  .group-title:first-child{ margin-top:0.4rem; }
+  .group-title::after{
+    content:"";
+    display:block;
+    width:36px; height:2px;
+    margin-top:0.7rem;
+    background:#b5763a;
+    opacity:0.7;
+  }
+  .essay-card{
+    position:relative;
+    padding:2.6rem 2.2rem;
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .essay-card:not(.upcoming):hover{
+    transform:translateY(-8px);
+    box-shadow:0 32px 64px rgba(60,45,25,0.24), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .essay-card{ transition:none; }
+    .essay-card:not(.upcoming):hover{ transform:none; }
+  }
+
+
+  .article-wrap{
+    max-width:740px; margin:0 auto;
+    padding:2vh 6vw 14vh;
+  }
+  .article-card{
+    background:rgba(247,242,230,0.8);
+    backdrop-filter:blur(26px) saturate(150%);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+    border:1px solid rgba(255,255,255,0.5);
+    border-top-color:rgba(255,255,255,0.75);
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
+    padding:2.6rem 2.2rem;
+  }
+  @media (min-width:640px){
+    .article-card{ padding:3.4rem 3.6rem; }
+  }
+  .article-disclosure{
+    font-size:0.84rem; line-height:1.9; color:#6b5f4d;
+    border-left:2px solid #b5763a;
+    padding-left:1.1rem;
+    margin-bottom:2.2rem;
+    font-style:italic;
+  }
+  .article-citation{
+    text-align:center; font-size:0.86rem; color:#8a7c60;
+    font-style:italic; margin-bottom:1.6rem;
+  }
+  .article-pullquote{
+    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
+    font-weight:700;
+    font-size:1.3rem; line-height:1.7;
+    color:#2e2417; text-align:center;
+    margin:0 0 2.4rem;
+  }
+  @media (min-width:640px){
+    .article-pullquote{ font-size:1.55rem; }
+  }
+  .article-body p{
+    margin-bottom:1.5rem;
+    font-size:1.02rem; line-height:2.15;
+    color:#3a3226;
+  }
+  .article-body strong{ color:#a5622a; font-weight:700; }
+  .article-nextup{
+    margin-top:2.6rem; padding-top:1.8rem;
+    border-top:1px solid rgba(60,45,25,0.15);
+    font-size:0.95rem; color:#4a4030;
+    text-align:center; line-height:1.9;
+  }
+  .article-nextup .next-label{
+    display:block;
+    font-size:0.78rem; letter-spacing:0.3em; color:#a5622a; font-weight:700;
+    margin-bottom:0.9rem;
+  }
+  .article-nextup p{ margin-bottom:0.6rem; }
+  .article-closing{
+    margin-top:2.4rem; padding-top:1.8rem;
+    border-top:1px solid rgba(60,45,25,0.15);
+    font-size:0.85rem; color:#6b5f4d;
+    text-align:center; line-height:2;
+  }
+  .article-closing a{
+    color:#a5622a; text-decoration:none;
+    border-bottom:1px solid rgba(165,98,42,0.4);
+  }
+
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div class="page-bg"></div>
+
+<div class="page-content">
+<header class="site-nav">
+  <div class="brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-list">
+    <a href="../index.html">首頁</a>
+    <a href="../stories.html">故事集</a>
+    <a href="index.html" class="active">讀古人</a>
+    <a href="../about.html">關於</a>
+    <a href="../contact.html">聯絡</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <a class="back-link" href="poetry.html">← 詩詞裡的心靈風景</a>
+    <div class="page-header-eyebrow">詩詞裡的心靈風景・之一</div>
+    <h1 class="page-header-title">有些思念，不會消失；我們能不能，帶著它繼續生活？<span class="page-header-title-sub">——聲聲慢</span></h1>
+  </div>
+</section>
+
+<section class="article-wrap">
+  <article class="article-card">
+    <p class="article-disclosure">這系列文章，是我一邊讀古籍、一邊對照自己生命裡的困惑，慢慢寫下來的。心理學的理論對我來說也是陌生的領域，這段梳理的過程裡，我借助了 AI 工具的協助整理資料，但每一句文字，都是我自己的體會與詮釋。</p>
+    <p class="article-citation">選自李清照〈聲聲慢〉</p>
+    <p class="article-pullquote">有些思念，不會消失；我們能不能，帶著它繼續生活？</p>
+    <div class="article-body">
+    <p>真正的悲傷，不需要被急著趕走。它可以像黃昏的細雨，一滴一滴落下；當你願意陪著它，它終究會成為生命的一部分，而不是生命的全部。</p>
+    <p>南宋，臨安城外。李清照獨自坐在窗邊。</p>
+    <p>丈夫趙明誠病逝了，半生蒐集的金石字畫，也在戰亂南遷的路上，散佚了大半。從山東一路逃到江南，身邊能留下的，只剩幾卷殘書，和一個人。她提筆寫下：「尋尋覓覓，冷冷清清，淒淒慘慘戚戚。」</p>
+    <p>尋尋覓覓，她其實不知道自己在找什麼——大腦不停地想找回過去熟悉的人、事、物，卻怎麼也找不著。冷冷清清，淒淒慘慘戚戚，情緒一層一層往下沉。七組疊字，不是文字遊戲，是她真的找不到，哪一個詞，夠精確地說出此刻的自己。這闋詞，寫的從來不是「難過」兩個字，可以概括的東西。</p>
+    <p>心理學上有一個概念，叫<strong>情緒粒度（Emotional Granularity）</strong>，指的是一個人能不能精確區分、辨認自己細微情緒差異的能力。粒度低的人，情緒只有「好」跟「不好」兩種顏色；粒度高的人，能分辨出「這是失落，還是空虛，還是說不出的悵然」，就像相機的畫素，畫素越高，看見的細節越多。</p>
+    <p>李清照的疊字句，其實就是情緒粒度極高的展現——「尋尋覓覓」是若有所失的動作，「冷冷清清」是環境跟內心的雙重描述，「淒淒慘慘戚戚」則是三種層次遞進的悲傷。她把自己感受到的每一層，都精確地寫了出來。</p>
+    <p>心理學家麗莎．費德曼．巴瑞特（Lisa Feldman Barrett）做過長期研究，發現<strong>情緒粒度越高的人，情緒調節能力反而越好</strong>——因為當一個人能精確辨認「這是失落，不是憤怒」、「這是不安，不是討厭」，才知道下一步該怎麼安放它。籠統地說「我很不好」，反而不知道從何處理起；但如果知道「我現在是因為被否定而委屈，加上一點不確定對方是不是真的在生氣而不安」，就能分開處理——先回應委屈，再確認關係。</p>
+    <p>「乍暖還寒時候，最難將息。三杯兩盞淡酒，怎敵他、晚來風急？」天氣忽冷忽熱，人心也是——情緒並非穩定好轉，而是時好時壞，今天平靜，明天又突然陷入悲傷。一杯酒也擋不住那陣風，不是酒太淡，是內心的淒寒，酒也暖不了。「雁過也，正傷心，卻是舊時相識。」北方飛來的雁，曾經替她捎過家書，如今卻只讓她想起，那些再也回不去的日子。外在世界依然如常，真正改變的是自己看世界的方式。</p>
+    <p>「滿地黃花堆積，憔悴損，如今有誰堪摘？」黃花，指的是菊花。李清照年輕時寫過另一首詞，也提到菊花：「東籬把酒黃昏後，有暗香盈袖。」那時候的菊花，是秋天，是文人雅趣，是夫妻賞花的悠閒時光。但到了〈聲聲慢〉，同樣是菊花，卻完全變了——滿地黃花堆積，不是一片漂亮花海，而是秋天快結束了，花瓣落了一地，沒有人整理，風吹過，花越積越多。那是一種，時間已經過去了的感覺。</p>
+    <p>中國文學很少直接說情緒，而是，景，就是情。憔悴損，可以是花，也可以是人——她自己其實也和花一樣，曾經盛開，如今歷經風霜。如今有誰堪摘，問的其實是：還有誰，能陪我分享這些美好？</p>
+    <p>「守著窗兒，獨自怎生得黑？」她沒有出去，只是一直坐在窗前，不知道一個人要怎麼熬過這漫長的時間。很多失去摯愛的人，都說過類似的話：「時間怎麼過得這麼慢？」心理學發現，人在重大悲傷時，對時間的感受會改變——平常，時間是被事情推著走；但當生活突然失去重心，時間就停止了。所以，怎生得黑，不是希望天黑，而是，今天怎麼還沒過去？</p>
+    <p>我最喜歡〈聲聲慢〉的地方，其實不只是「懷念丈夫」這麼簡單。它其實在問一個每個人終究都會遇見的問題：當生命中最重要的人離開以後，那些曾經熱愛的事物，還值得繼續熱愛嗎？</p>
+    <p>講一個小故事。有位老先生，每天都會替院子裡的一株玫瑰澆水。</p>
+    <p>鄰居問：「你太太不是已經過世很多年了嗎？她最喜歡這株玫瑰，現在還照顧它做什麼？」</p>
+    <p>老人沉默了一下，笑著說：「一開始，我是替她澆水。後來，我是替回憶澆水。再後來，我發現，我是在替自己澆水。」</p>
+    <p>也許有一天，我們仍然會看見菊花盛開，只是那時摘花，不再是為了回到過去，而是因為我們願意帶著思念，繼續走向未來。</p>
+    <p>「梧桐更兼細雨，到黃昏、點點滴滴。」到了黃昏，下起綿綿細雨，滴滴答答地打在梧桐葉上。在之前分享過的〈庖丁解牛〉裡，我們看過古人如何用刀與牛講「順勢」；而〈聲聲慢〉，則是透過雨與黃昏講「悲傷」。「這次第，怎一箇愁字了得！」眼前這一切，怎麼是一個「愁」字，可以說完？有些悲傷，大到語言裝不下。</p>
+    <p>那麼，你呢？</p>
+    <p>上一次，有人問你「怎麼了」，你是不是也在「我沒事」跟「一整段解釋」之間，選了比較省事的那一個？如果你也曾經因為講不清楚自己的感受，而覺得是自己有問題——也許問題，從來不在你身上。也許你只是，跟李清照一樣，需要更多的字，才裝得下，你真正感受到的東西。</p>
+    <p><strong>而那不是缺陷。那是一種，很少人擁有的，精確。</strong></p>
+    </div>
+    <div class="article-nextup">
+      <span class="next-label">延伸閱讀</span>
+      <p>李清照，把那些說不清、道不明的心情，一個一個，慢慢分辨出來。</p>
+      <p>可是，能說出悲傷，只是開始。</p>
+      <p>當風雨真的來了，我們還要學會另一件事——不是急著讓雨停，而是在雨裡，慢慢走下去。</p>
+      <p style="margin-top:1rem;"><strong>下一篇｜〈定風波〉：風雨來了，我們如何繼續前行？</strong></p>
+    </div>
+    <div class="article-closing">
+      文字版權為作者「小小聲」所有。如欲轉載、引用或改作，請先來信取得同意，謝謝。<br>
+      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
+      文字 ©小小聲
+    </div>
+  </article>
+</section>
+
+<footer class="site-footer">
+  © The Quiet Light · 所有故事版權歸作者所有
+</footer>
+
+</div>
+
+<!-- 隱藏式聲音控制面板（與主站共用） -->
+<div class="panel-tab" id="panel-tab" onclick="openPanel()">
+  <span class="panel-tab-icon">♪</span>
+  <span class="panel-tab-text">聲音</span>
+</div>
+<aside class="sound-panel" id="sound-panel" aria-label="聲音控制面板">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div class="panel-header">
+    <p class="panel-title">環境音效</p>
+    <p class="panel-subtitle">音樂盒 · Music Box</p>
+  </div>
+  <div class="now-playing" id="now-playing">
+    <div class="np-dot"></div>
+    <span class="np-text" id="np-text"></span>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">背景音樂</p>
+    <div id="music-list"></div>
+    <button class="play-btn" id="play-btn" onclick="togglePlay()">
+      <span id="play-icon">▶</span>
+      <span id="play-label">播放音樂</span>
+    </button>
+    <div class="slider-group">
+      <div class="slider-label-row">
+        <span class="slider-name">音樂音量</span>
+        <span class="slider-value" id="music-vol-val">60%</span>
+      </div>
+      <input type="range" class="panel-range" min="0" max="100" value="60" oninput="updateSlider(this,'music-vol-val')">
+    </div>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">環境氛圍</p>
+    <button class="ambient-btn" id="btn-rain" onclick="toggleAmbient('rain',this)">
+      <span class="ambient-icon">🌧</span>
+      <span class="ambient-label">雨聲</span>
+      <span class="ambient-tag" id="tag-rain">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-rain">
+      <div id="rain-list" style="padding:.2rem .5rem .4rem;"></div>
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">雨聲音量</span>
+          <span class="slider-value" id="rain-vol-val">50%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="50" oninput="updateSlider(this,'rain-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-white" onclick="toggleAmbient('white',this)">
+      <span class="ambient-icon">🌊</span>
+      <span class="ambient-label">白噪音</span>
+      <span class="ambient-tag" id="tag-white">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-white">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">白噪音音量</span>
+          <span class="slider-value" id="white-vol-val">40%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="40" oninput="updateSlider(this,'white-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-fire" onclick="toggleAmbient('fire',this)">
+      <span class="ambient-icon">🕯</span>
+      <span class="ambient-label">壁爐火聲</span>
+      <span class="ambient-tag" id="tag-fire">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-fire">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">火聲音量</span>
+          <span class="slider-value" id="fire-vol-val">35%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="35" oninput="updateSlider(this,'fire-vol-val')">
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <p class="panel-footer-text">所有音樂為免費授權作品<br>適合深夜靜讀使用</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="../script.js"></script>
+<script>
+  document.documentElement.classList.add('js-ready');
+</script>
+
+</body>
+</html>
