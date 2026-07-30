@@ -12,6 +12,49 @@
 
 const STORIES = [
    {
+    id: "story-007",
+    title: "候鳥",
+    titleEn: "Migratory Birds",
+    date: "2026.07",
+    excerpt: "秋天的傍晚，她開車到海堤邊，只為了看一群南飛的候鳥。風裡，一個拿著相機的男人，一句「每年都來？」，讓她終於問出了心裡藏了很久的那句話——不是問他，是問自己。",
+    body: `
+      <p>窗外的天空已經染上橘光。</p>
+      <p>她抿完最後一口格雷伯爵茶，拿起包，走出那家她一週至少來三次的咖啡館。</p>
+      <p>車裡，她隨手按下播放鍵。是《田園》，第一樂章。塗著酒紅色指甲油的手指在方向盤上輕輕敲了敲。街景在車窗外化為一道道被拉長的光線，然後，漸漸稀疏了。</p>
+      <p>車停在防波堤旁的空地。她下車，海風立刻撲上來，帶著鹹味和某種她說不清楚的氣息——像是舊木頭，像是遠方。</p>
+      <p>她在堤上站定，望向海面。</p>
+      <p>天色還沒完全暗，海是深藍和橘紅混在一起的顏色。候鳥的事她是三週前聽說的，說這個季節牠們會從這裡經過，往南飛。她不知道自己為什麼要來。或者說，她知道，只是還沒想好怎麼對自己承認。</p>
+      <p>風陣陣吹來，深秋的溫度變化很快，她拉緊了風衣。就在這時，不遠處的天空出現了星星點點的黑色身影。不一會兒，那些黑影越來越近，在空中盤旋。她目不轉睛地盯著，直到身邊突然傳來快門的聲音。</p>
+      <p>她轉過頭。</p>
+      <p>一個男人站在離她兩三步遠的地方，手裡握著相機，鏡頭還對著天空。年紀看起來比她稍長，頭髮灰了一半，圍巾鬆鬆地掛在脖子上。他沒有看她，眼睛跟著鳥群移動。</p>
+      <p>「每年都來？」她開口，自己也沒料到。</p>
+      <p>男人放下相機，看了她一眼。「第七年了。」</p>
+      <p>她沒有再說話。風又吹過來，候鳥的隊形在空中緩緩變換，像一筆寫到一半的字。</p>
+      <p>她想，也許今晚可以說出口了。不是對這個男人。是對自己。</p>
+      <p>她緩緩閉上眼睛，耳裡迴盪著《田園》第一樂章的旋律。</p>
+      <p>再睜開眼，天色已經暗了。候鳥還在，在夜色裡盤旋。</p>
+      <p>她笑了笑，眼裡有光，轉身回到車裡。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The sky outside had turned orange.</p>
+      <p>She finished the last sip of her Earl Grey, picked up her bag, and stepped out of the café she visited at least three times a week.</p>
+      <p>In the car, she reached over and pressed play. Beethoven's Pastoral — the first movement. Her fingers, nails painted wine-red, tapped lightly against the steering wheel. The city streets dissolved into streaks of light outside the window, then gradually thinned away.</p>
+      <p>She parked on the open ground beside the breakwater. When she stepped out, the sea wind hit her at once — salt, and something else she couldn't name. Old wood, maybe. Or distance.</p>
+      <p>She stood at the edge of the seawall and looked out at the water.</p>
+      <p>The sky hadn't fully darkened yet. The sea was a mix of deep blue and burnt orange. She had heard about the birds three weeks ago — that every autumn they passed through here on their way south. She didn't know why she had come. Or rather, she did. She just hadn't figured out how to admit it to herself.</p>
+      <p>The wind came in gusts. The temperature had dropped fast, the way it does in late autumn, and she pulled her coat tighter. Then, in the sky not far away, small dark shapes began to appear. They grew closer, circling overhead. She stared without blinking — until a shutter clicked beside her.</p>
+      <p>She turned.</p>
+      <p>A man stood a few steps away, camera raised, lens still pointed at the sky. He looked a little older than her, his hair half-grey, a scarf hanging loose around his neck. He wasn't looking at her. His eyes followed the birds.</p>
+      <p>"Do you come every year?" she asked. She hadn't planned to say anything.</p>
+      <p>The man lowered his camera and glanced at her. "Seven years now."</p>
+      <p>She didn't say anything more. The wind came again. Above them, the flock shifted slowly, like a brushstroke left unfinished.</p>
+      <p>She thought: maybe tonight she could say it out loud. Not to him. To herself.</p>
+      <p>She closed her eyes slowly. The first movement of the Pastoral drifted through her mind.</p>
+      <p>When she opened them again, the sky had gone dark. The birds were still there, circling in the night.</p>
+      <p>She smiled — just a little — and walked back to the car.</p>
+    `
+  },
+   {
     id: "story-006",
     title: "植物園的守夜人",
     titleEn: "The Night Keeper of the Botanical Garden",
