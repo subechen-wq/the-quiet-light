@@ -12,6 +12,63 @@
 
 const STORIES = [
    {
+    id: "story-008",
+    title: "左鄰右舍",
+    titleEn: "Next Door",
+    date: "2026.08",
+    excerpt: "深夜的公寓走廊，鄰居的門口放著一盆植物，還有一張沒有署名的字條——「麻煩幫我曬太陽」。住了八個月不曾說過一句話的鄰居，因為一盆植物，第一次有了交集。",
+    body: `
+      <p>手錶的時針指向十二點，尚恩換下工作服，離開了仍燈火通明的醫院大樓。</p>
+      <p>深夜的街道只剩稀疏的車聲。他在便利商店買了一個微波便當，繼續往家的方向走。</p>
+      <p>老公寓的走廊很暗。他開著手機手電筒照路，快到門前時，牆上突然亮起一盞燈——感應的，裝在他和隔壁門之間的牆角。他愣了一下。</p>
+      <p>這盞燈以前不在這裡的。</p>
+      <p>感應燈的光圈剛好照到隔壁的門口。</p>
+      <p>那裡放著一盆植物——不大，陶土的舊盆，葉子是深綠色的，有幾片邊緣有點乾，但整體看起來還活著。盆邊壓著一張便利貼，字跡很小，用原子筆寫的：</p>
+      <p>「最近出差，麻煩幫我曬太陽。」</p>
+      <p>下面沒有署名。</p>
+      <p>尚恩站在走廊裡，手裡提著還有點燙的便當，看著那張便利貼。他不知道這張紙條是寫給他的，還是寫給走廊，還是寫給任何一個碰巧路過、碰巧看見的人。</p>
+      <p>他和隔壁住了八個月，沒有說過一句話。他甚至不確定那扇門後面住的是男是女。</p>
+      <p>尚恩看了一會兒植物，轉身掏出鑰匙開門進屋。把便當放到茶几上，又轉身走向門口。打開門的瞬間，感應燈亮起，尚恩抱起植物走回屋裡。</p>
+      <p>他摸了摸有點皺了的葉片和乾澀的土壤，先給植物澆了一點水，再把植物抱到了陽台，找了個能曬得到太陽的位置安頓它。做完這些，便回到廚房洗淨雙手，享用他的便當。</p>
+      <p>那天晚上他睡得比平常好一點。他自己沒有注意到。</p>
+      <p>隔天早上，他難得在七點前就醒了。不是鬧鐘，是光——陽台的那個方向，陽光進來的角度剛好不一樣。</p>
+      <p>他去陽台看了一眼植物。葉子還是有幾片皺的，但整體看起來精神好了一點，或者只是他這樣覺得。他又澆了一點點水，不多，怕澆壞了。</p>
+      <p>出門前，他在便利貼的背面寫了幾個字，回到走廊，把便利貼貼回盆邊。</p>
+      <p>「水澆了。陽台曬太陽。放心。— 八號」</p>
+      <p>然後他背起包，去上班了。走廊的感應燈亮了一下，又滅了。</p>
+      <p>鄰居不在的這幾天，尚恩一如往常——起床先去陽台看植物，澆水，回家也會順手去看一眼。他沒有特別想這件事，只是做了。</p>
+      <p>今天因為事情耽誤，回到公寓時將近凌晨一點。感應燈亮起，他往門口一看，盆栽不見了。</p>
+      <p>門上貼著一張便利貼。</p>
+      <p>「謝謝八號。植物帶回來了。有空按門鈴。— 七號」</p>
+      <p>尚恩站在走廊裡，看了那張紙條一會兒。感應燈的時間到了，滅掉了。黑暗裡，他嘴角動了一下，掏出鑰匙，開門回家。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The hour hand on his watch pointed to twelve. Sean changed out of his scrubs and left the hospital building, still blazing with light.</p>
+      <p>The streets were quiet at this hour, only the occasional car passing through. He stopped at a convenience store, picked up a microwave meal, and walked on toward home.</p>
+      <p>The corridor of the old apartment block was dark. He turned on his phone's torch and made his way along the hall. Just before he reached his door, a light came on — motion-activated, mounted on the wall between his door and the neighbor's. He stopped.</p>
+      <p>That light hadn't been there before.</p>
+      <p>The glow fell squarely on the neighbor's doorstep.</p>
+      <p>There was a plant there — small, in an old clay pot, leaves a deep green with a few dry edges, but still alive. A sticky note was tucked against the rim, written in ballpoint pen in small, careful letters:</p>
+      <p>"Away on a work trip. Could someone help put this in the sun?"</p>
+      <p>No name.</p>
+      <p>Sean stood in the corridor, warm takeaway in hand, looking at the note. He didn't know if it was meant for him, or for the hallway, or for anyone who happened to pass by and happen to see it.</p>
+      <p>He had lived next to this neighbor for eight months. They had never exchanged a single word. He didn't even know if the person behind that door was a man or a woman.</p>
+      <p>He looked at the plant for a moment. Then he turned, unlocked his own door, and went inside. He set the takeaway on the coffee table — and then turned around and went back out. The motion light came on as he opened the door. He picked up the plant and carried it inside.</p>
+      <p>He pressed a finger gently against the soil. Dry. He watered it a little, then carried it to the balcony and found a spot where the sun would reach it in the morning. When he was done, he went to the kitchen, washed his hands, and sat down with his meal.</p>
+      <p>He slept a little better than usual that night. He didn't notice.</p>
+      <p>The next morning he woke before seven without an alarm. It was the light — the angle of the sun coming in from the balcony was different somehow.</p>
+      <p>He went to check on the plant. A few leaves were still creased, but it seemed a little better overall. Or maybe he just thought so. He gave it a little more water — not too much. He didn't want to get it wrong.</p>
+      <p>Before leaving for work, he wrote a few words on the back of the sticky note and walked back to the corridor, pressing it against the pot.</p>
+      <p>"Watered. Getting sun on the balcony. Don't worry. — No. 8"</p>
+      <p>Then he shouldered his bag and headed out. The motion light came on once, then went off.</p>
+      <p>In the days that followed, Sean fell into a small routine — checking on the plant in the morning, watering it, glancing at it again when he got home. He didn't think much about it. He just did it.</p>
+      <p>Tonight something had run late at work. By the time he got back to the apartment, it was nearly one in the morning. The motion light came on. He looked toward the neighbor's door — the pot was gone.</p>
+      <p>There was a sticky note on the door.</p>
+      <p>"Thank you, No. 8. I've got it back. Ring the bell whenever. — No. 7"</p>
+      <p>Sean stood in the corridor and looked at the note for a moment. The motion light timed out and went dark. In the darkness, the corner of his mouth moved — just slightly. He took out his key, unlocked his door, and went home.</p>
+    `
+  },
+   {
     id: "story-007",
     title: "候鳥",
     titleEn: "Migratory Birds",
