@@ -3,539 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
 <title>讀古人，懂自己｜The Quiet Light · 靜謐之光</title>
-<meta name="description" content="敏感，是被誤解的天賦：從古典智慧看見內在的自己。以心理學重新解讀古典文本的系列文章。">
+<meta name="description" content="這裡不是傳統的國學解讀，而是一場心理學與古典文本的嫁接實驗——借莊子的寓言、詩詞的意象，重新看見那個時常被誤解、卻始終敏銳而深情的自己。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Noto+Serif+TC:wght@400;500;600;700&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=3">
 <style>
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth; background:#141d29;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --page:#efe6d1; --paper:#faf5e7;
+    --ink:#2a2318; --ink-soft:rgba(42,35,24,.66); --ink-faint:rgba(42,35,24,.44);
+    --seal:#9c3826; --gold:#bd9455; --gold-soft:rgba(189,148,85,.35);
+    --jade:#55624c; --line:rgba(42,35,24,.11);
+    --shadow: 0 14px 34px rgba(42,35,24,.07), 0 2px 8px rgba(42,35,24,.04);
+  }
+  html{scroll-behavior:smooth;}
   body{
-    background-color:#e9e2d0;
-    color:#3a3226;
-    font-family:"Noto Serif TC", serif;
+    background-color:var(--page);
+    background-image:
+      radial-gradient(ellipse at 15% 0%, rgba(255,255,255,.35), transparent 55%),
+      radial-gradient(ellipse at 100% 30%, rgba(255,255,255,.2), transparent 50%);
+    color:var(--ink);
+    font-family:'Noto Serif TC',serif;
     line-height:1.9;
-    overflow-x:hidden;
   }
-  .page-bg{
-    position:fixed; inset:0; z-index:0;
-    background-size:cover;
-    background-position:center 38%;
-  }
+  a{color:inherit;text-decoration:none;}
   #canvas{
     position:fixed !important; inset:0 !important;
     width:100vw !important; height:100vh !important;
     z-index:1 !important;
     pointer-events:none !important;
   }
-  .page-bg::after{
-    content:"";
-    position:absolute; inset:0;
-    background:rgba(20,17,13,0.16);
-  }
-  .page-content{
-    position:relative; z-index:1;
-  }
-  a{color:inherit; text-decoration:none;}
 
-  header.site-nav{
-    position:absolute; top:0; left:0; right:0; z-index:20;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:28px 6vw;
-  }
-  header.site-nav .brand{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
-  }
-  header.site-nav .nav-list a{
-    margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
-    color:#c3cdd6;
-  }
-  header.site-nav .nav-list a.active{color:#f2c383;}
-
-  .hero{
-    position:relative;
-    height:100vh; min-height:640px; max-height:1000px;
-    max-width:none; padding:0; margin:0;
-    display:flex; align-items:flex-end; justify-content:center;
-    overflow:hidden;
-    background-color:#141d29;
-  }
-  .hero-bg{
-    position:absolute; inset:-6%;
-    overflow:hidden;
-  }
-  .hero-bg-layer, .page-bg{
-    background-image:url("../hero-willow.jpg");
-  }
-  .hero-bg-layer{
-    position:absolute; inset:0;
-    background-size:cover;
-    background-position:center 32%;
-    filter:saturate(0.92) brightness(0.82) contrast(1.03);
-    animation:kenburns 42s ease-in-out infinite alternate;
-  }
-  @keyframes kenburns{
-    0%{ transform:scale(1) translate(0,0); }
-    100%{ transform:scale(1.14) translate(-2.2%,-1.4%); }
-  }
-  .hero-overlay{
-    position:absolute; inset:0;
-    background:
-      linear-gradient(180deg, rgba(15,20,28,0.6) 0%, rgba(15,20,28,0.12) 32%, rgba(15,20,28,0.2) 55%, rgba(15,20,28,0.82) 100%),
-      linear-gradient(90deg, rgba(15,20,28,0.35) 0%, rgba(15,20,28,0) 22%, rgba(15,20,28,0) 78%, rgba(15,20,28,0.35) 100%);
-  }
-  .hero-sparkle{
-    position:absolute; inset:0; width:100%; height:100%; display:block;
-    mix-blend-mode:screen; opacity:0.75;
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero-bg-layer{ animation:none; }
-  }
-  .hero-copy{
+  /* ── NAV：用 div 不用 nav 標籤 ── */
+  .nav-list{
     position:relative; z-index:5;
-    text-align:center;
-    padding-bottom:9vh;
-    max-width:900px;
-    padding-left:1.2rem; padding-right:1.2rem;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.9rem 3.4rem;
+    border-bottom:1px solid var(--gold-soft);
+    background:var(--paper);
   }
+  .nav-brand{font-family:'Noto Serif TC',serif; font-size:1.08rem; letter-spacing:.14em; font-weight:600;}
+  .nav-links{display:flex; gap:2.6rem;}
+  .nav-links a{font-size:.8rem; letter-spacing:.18em; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:4px; transition:color .3s,border-color .3s;}
+  .nav-links a:hover{color:var(--seal);}
+  .nav-links a.active{color:var(--seal); border-color:var(--seal);}
+
+  /* ── HERO ── */
+  .classics-hero{
+    position:relative; z-index:2;
+    display:flex; align-items:center; gap:4rem;
+    padding:7rem 3.4rem 6rem; max-width:1180px; margin:0 auto;
+  }
+  .hero-spine-wrap{display:flex; flex-direction:column; align-items:center; gap:1rem; flex-shrink:0;}
+  .hero-spine-dot{width:6px; height:6px; border-radius:50%; background:var(--seal);}
+  .hero-spine{
+    writing-mode:vertical-rl; text-orientation:mixed;
+    font-family:'LXGW WenKai TC',serif;
+    font-size:1rem; letter-spacing:.62em; color:var(--ink);
+    opacity:.82; padding:.2rem 0;
+  }
+  .hero-spine-line{width:1px; flex:1; min-height:60px; background:linear-gradient(var(--gold-soft),transparent);}
   .hero-eyebrow{
-    font-size:1rem; letter-spacing:0.4em; color:#f2c383;
-    margin-bottom:1.1rem;
-    text-shadow:0 2px 12px rgba(0,0,0,0.5);
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:1rem; letter-spacing:.32em; color:var(--seal);
+    margin-bottom:1.5rem;
   }
-  .hero h1{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-weight:700;
-    font-size:40px;
-    color:#f4efe2;
-    letter-spacing:0.1em;
-    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  .classics-hero h1{
+    font-family:'LXGW WenKai TC',serif; font-weight:700;
+    font-size:clamp(2.6rem,4.6vw,3.7rem); line-height:1.55; letter-spacing:.03em;
+    margin-bottom:1.6rem;
   }
-  .hero p.sub{
-    margin-top:1.1rem;
-    font-size:16px;
-    color:#e6ded0;
-    letter-spacing:0.06em;
-    text-shadow:0 2px 14px rgba(0,0,0,0.5);
+  .hero-desc{font-size:.95rem; color:var(--ink-soft); max-width:480px; line-height:2.05;}
+  .hero-disclosure{
+    font-size:.83rem; line-height:1.95; color:var(--ink-soft); font-style:italic;
+    border-left:2px solid var(--seal); padding-left:1.1rem; margin-top:1.6rem; max-width:480px;
   }
 
-  .category-nav{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem;
-    max-width:720px; margin:5vh auto 0;
-    padding:0 6vw;
+  .ornament-divider{
+    position:relative; z-index:2;
+    display:flex; align-items:center; gap:1rem;
+    max-width:1180px; margin:0 auto; padding:0 3.4rem;
   }
-  .category-nav a{
-    font-size:0.86rem; letter-spacing:0.14em;
-    color:#3a3226; font-weight:600;
-    padding:0.7rem 1.4rem;
-    background:rgba(247,242,230,0.66);
-    backdrop-filter:blur(18px) saturate(140%);
-    -webkit-backdrop-filter:blur(18px) saturate(140%);
-    border:1px solid rgba(255,255,255,0.55);
-    border-radius:999px;
-    box-shadow:0 10px 26px rgba(60,45,25,0.14);
-    transition:background .3s ease, transform .3s ease;
-  }
-  .category-nav a:hover{
-    background:rgba(247,242,230,0.88);
-    transform:translateY(-2px);
-  }
+  .ornament-divider::before,.ornament-divider::after{content:''; flex:1; height:1px; background:var(--line);}
+  .ornament-dot{width:5px; height:5px; border-radius:50%; background:var(--gold);}
 
-  .essay-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
-    gap:1.4rem;
+  /* ── 分類大卡（相片卡）── */
+  .category-section{position:relative; z-index:2; padding:5rem 3.4rem 5.5rem; max-width:1180px; margin:0 auto;}
+  .category-grid{display:grid; grid-template-columns:1fr 1fr; gap:2rem;}
+  .category-card{
+    position:relative; aspect-ratio:4/3; border-radius:18px; overflow:hidden;
+    background-size:cover; background-position:center;
+    box-shadow:0 18px 40px rgba(42,35,24,.16), 0 4px 12px rgba(42,35,24,.08);
+    transition:transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s;
   }
-  .view-all{
-    display:inline-flex; align-items:center; gap:.5rem;
-    margin:0.4rem 0 1.2rem;
-    padding:0.6rem 1.2rem;
-    font-size:0.9rem; letter-spacing:0.1em; color:#a5622a; font-weight:600;
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(20px) saturate(150%);
-    -webkit-backdrop-filter:blur(20px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-radius:999px;
-    box-shadow:0 10px 26px rgba(60,45,25,0.14);
-    transition:transform .3s ease, box-shadow .3s ease;
+  .category-card:hover{transform:translateY(-6px); box-shadow:0 26px 54px rgba(42,35,24,.22), 0 6px 16px rgba(42,35,24,.1);}
+  .category-card.zhuangzi{background-image:url('images/與莊子的靜夜絮語.png');}
+  .category-card.poetry{background-image:url('images/詩詞裡的心靈風景.png');}
+  .category-card::before{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,16,10,0) 32%, rgba(20,16,10,.42) 66%, rgba(15,12,7,.82) 100%);
   }
-  .view-all:hover{
-    transform:translateY(-3px);
-    box-shadow:0 16px 34px rgba(60,45,25,0.2);
+  .card-copy{position:absolute; left:2.2rem; right:2.2rem; bottom:2rem; z-index:2;}
+  .card-copy .cat-en{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:.86rem; letter-spacing:.28em; color:#e9d9b8; margin-bottom:.7rem;
   }
+  .card-copy h2{
+    font-family:'LXGW WenKai TC',serif; font-size:1.7rem; font-weight:700;
+    letter-spacing:.04em; color:#faf5e7; margin-bottom:1.2rem;
+    text-shadow:0 2px 14px rgba(0,0,0,.3);
+  }
+  .category-link{
+    font-size:.78rem; letter-spacing:.16em; color:#faf5e7;
+    display:inline-flex; align-items:center; gap:.6rem;
+    border-bottom:1px solid rgba(250,245,231,.5); padding-bottom:3px;
+    transition:gap .3s;
+  }
+  .category-card:hover .category-link{gap:.9rem;}
 
-  .intro{
-    max-width:720px; margin:0 auto;
-    padding:2.8rem 2.2rem;
-    margin-top:4vh; margin-bottom:6vh;
-    text-align:center;
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(26px) saturate(150%);
-    -webkit-backdrop-filter:blur(26px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-top-color:rgba(255,255,255,0.75);
-    border-radius:20px;
-    box-shadow:0 24px 50px rgba(60,45,25,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
-  }
-  .intro .label{
-    font-size:0.8rem; letter-spacing:0.4em; color:#a5622a;
-    font-weight:700;
-    margin-bottom:1.4rem;
-  }
-  .intro p{
-    font-size:1.02rem; color:#4a4030; letter-spacing:0.02em;
-  }
-  .intro p + p{ margin-top:1rem; }
-
-  .essays{
-    max-width:1180px; margin:0 auto;
-    padding:2vh 6vw 14vh;
-    display:flex; flex-direction:column; gap:1.6rem;
-  }
-  .group-title{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:1.55rem;
-    font-weight:700;
-    letter-spacing:0.16em;
-    color:#2e2417;
-    text-shadow:0 1px 10px rgba(255,255,255,0.7), 0 1px 3px rgba(255,255,255,0.5);
-    margin:2.2rem 0 -0.4rem;
-    padding-left:0.2rem;
-    scroll-margin-top:110px;
-  }
-  .group-title:first-child{ margin-top:0.4rem; }
-  .group-title::after{
-    content:"";
-    display:block;
-    width:36px; height:2px;
-    margin-top:0.7rem;
-    background:#b5763a;
-    opacity:0.7;
-  }
+  /* ── 文章卡片 ── */
+  .essay-section{position:relative; z-index:2; padding:0 3.4rem 6.5rem; max-width:1180px; margin:0 auto;}
+  .section-label{display:flex; align-items:center; gap:1.2rem; margin-bottom:2.4rem;}
+  .section-label span{font-size:.8rem; letter-spacing:.4em; color:var(--ink); opacity:.72; text-transform:uppercase;}
+  .section-label::after{content:''; flex:1; height:1px; background:var(--line);}
+  .essay-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.8rem;}
   .essay-card{
+    background:var(--paper);
+    border:1px solid rgba(42,35,24,.05);
+    border-radius:16px; padding:2.4rem 2.2rem 2rem;
+    box-shadow:0 12px 28px rgba(42,35,24,.09), 0 3px 8px rgba(42,35,24,.05);
+    transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s;
     position:relative;
-    padding:2.6rem 2.2rem;
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(26px) saturate(150%);
-    -webkit-backdrop-filter:blur(26px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-top-color:rgba(255,255,255,0.75);
-    border-radius:20px;
-    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
-    transition:transform .4s ease, box-shadow .4s ease;
   }
-  .essay-card:not(.upcoming):hover{
-    transform:translateY(-8px);
-    box-shadow:0 32px 64px rgba(60,45,25,0.24), inset 0 1px 0 rgba(255,255,255,0.6);
-  }
-  @media (prefers-reduced-motion: reduce){
-    .essay-card{ transition:none; }
-    .essay-card:not(.upcoming):hover{ transform:none; }
-  }
+  .essay-card::before{content:''; position:absolute; top:2.1rem; left:2.2rem; width:22px; height:2px; background:var(--gold);}
+  .essay-card:hover{transform:translateY(-6px); box-shadow:0 22px 44px rgba(42,35,24,.14), 0 6px 14px rgba(42,35,24,.07);}
+  .essay-title{font-family:'LXGW WenKai TC',serif; font-size:1.24rem; font-weight:700; line-height:1.7; letter-spacing:.01em; margin:.6rem 0 1.8rem;}
+  .essay-title-sub{display:block; font-size:.82rem; font-weight:400; color:var(--seal); margin-top:.5rem; letter-spacing:.04em;}
+  .essay-footer{display:flex; justify-content:flex-end; align-items:center; border-top:1px solid var(--line); padding-top:1.1rem;}
+  .essay-read{font-size:.76rem; letter-spacing:.12em; color:var(--seal); display:inline-flex; align-items:center; gap:.5rem; transition:gap .3s;}
+  .essay-card:hover .essay-read{gap:.8rem;}
 
-  .essay-callback{
-    font-size:0.78rem; letter-spacing:0.3em; color:#5c6b52;
-    font-weight:700;
-    margin-bottom:0.9rem;
-  }
-  .essay-title{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:22px;
-    line-height:1.5;
-    color:#2e2417;
-    font-weight:700;
-    letter-spacing:0.04em;
-  }
-  .essay-title-sub{
-    display:block;
-    font-size:15px;
-    font-weight:500;
-    letter-spacing:0.06em;
-    color:#6b5f4d;
-    margin-top:0.35rem;
-  }
-  .essay-quote{
-    margin-top:1rem;
-    padding-left:1.1rem;
-    border-left:2px solid #b5763a;
-    font-size:0.95rem;
-    color:#6b5f4d;
-    letter-spacing:0.04em;
-  }
-  .essay-desc{
-    margin-top:1.1rem;
-    font-size:0.98rem;
-    color:#4a4030;
-    max-width:56ch;
-  }
-  .essay-link{
-    display:inline-flex; align-items:center; gap:.5rem;
-    margin-top:1.4rem;
-    font-size:0.9rem; letter-spacing:0.08em; color:#a5622a;
-    border-bottom:1px solid rgba(165,98,42,0.4);
-    padding-bottom:2px;
-  }
+  .site-footer{position:relative; z-index:2; display:block; text-align:center; padding:2.6rem 1rem 3.4rem; font-size:.82rem; color:var(--ink-faint);}
 
-  .essay-card.upcoming{ opacity:.68; }
-  .essay-card.upcoming .essay-link{
-    color:#9c917d; border-color:transparent;
-  }
-
-  footer.site-footer{
-    display:block;
-    text-align:center;
-    padding:4vh 6vw 6vh;
-    font-size:0.82rem; color:#5c5240;
-    text-shadow:0 1px 6px rgba(255,255,255,0.4);
-  }
-
-  .reveal{ opacity:1; transform:none; }
-  html.js-ready .reveal{
-    opacity:0; transform:translateY(24px);
-    transition:opacity .9s ease, transform .9s ease;
-  }
-  html.js-ready .reveal.in-view{ opacity:1; transform:translateY(0); }
-
-  @media (min-width:640px){
-    .hero h1{ font-size:52px; letter-spacing:0.06em; }
-    .hero p.sub{ font-size:19px; }
-    .essay-title{ font-size:32px; }
-  }
-  @media (min-width:900px){
-    .hero h1{ white-space:nowrap; }
-  }
-
-  @media (max-width:640px){
-    header.site-nav{ padding:20px 5vw; flex-direction:column; align-items:flex-start; gap:.6rem; }
-    header.site-nav .nav-list a{ margin-left:0; margin-right:1.4rem; }
-    .hero-copy{ padding-bottom:7vh; }
-  }
-
-  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-    .intro, .essay-card, .view-all{ background:rgba(240,233,216,0.95); }
+  @media(max-width:760px){
+    .classics-hero{flex-direction:column; align-items:flex-start; padding:4rem 1.6rem;}
+    .hero-spine-wrap{display:none;}
+    .category-grid{grid-template-columns:1fr;}
+    .nav-list, .category-section, .essay-section, .ornament-divider{padding-left:1.6rem; padding-right:1.6rem;}
   }
 </style>
 </head>
 <body>
 <canvas id="canvas"></canvas>
 
-<div class="page-bg"></div>
-
-<div class="page-content">
-<header class="site-nav">
-  <div class="brand">The Quiet Light · 靜謐之光</div>
-  <div class="nav-list">
+<div class="nav-list">
+  <div class="nav-brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-links">
     <a href="../index.html">首頁</a>
     <a href="../stories.html">故事集</a>
     <a href="index.html" class="active">讀古人</a>
     <a href="../about.html">關於</a>
     <a href="../contact.html">聯絡</a>
   </div>
-</header>
-
-<section class="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-layer"></div>
-  </div>
-  <div class="hero-overlay"></div>
-
-  <svg class="hero-sparkle" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.85">
-      <circle cx="586.1" cy="745.4" r="2.1" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.1s" begin="0.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="782.9" cy="847.8" r="1.5" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.4s" begin="0.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="408.9" cy="782.3" r="2.4" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.3s" begin="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="783.1" cy="733.4" r="2.0" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.4s" begin="0.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="992.4" cy="764.1" r="1.4" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.6s" begin="2.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="858.3" cy="738.9" r="2.0" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.3s" begin="2.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="387.7" cy="733.0" r="1.5" fill="#d98a52">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.6s" begin="3.1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="693.9" cy="849.7" r="1.7" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.0s" begin="2.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="525.5" cy="802.5" r="1.9" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.9s" begin="1.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1084.9" cy="740.9" r="1.8" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.9s" begin="2.0s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="369.8" cy="815.2" r="2.3" fill="#d98a52">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.0s" begin="3.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="598.5" cy="772.3" r="1.9" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.7s" begin="0.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="545.2" cy="819.1" r="1.3" fill="#d98a52">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.9s" begin="2.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1094.8" cy="836.0" r="1.6" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.2s" begin="1.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="1054.9" cy="773.0" r="2.1" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.7s" begin="3.1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="438.3" cy="758.4" r="1.7" fill="#e7b64d">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.7s" begin="1.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="757.6" cy="844.3" r="2.3" fill="#d98a52">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.1s" begin="1.7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="612.7" cy="844.4" r="2.5" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.7s" begin="0.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="840.5" cy="726.6" r="2.4" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.1s" begin="0.0s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="658.4" cy="774.8" r="2.0" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="3.8s" begin="2.1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="809.4" cy="816.3" r="1.3" fill="#d98a52">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.0s" begin="1.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="643.2" cy="739.0" r="2.1" fill="#f2c383">
-        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.9s" begin="3.9s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-    <circle cx="691.4" cy="829.2" r="2.3" fill="#e7b64d" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="7.8s" begin="6.8s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="829.2;722.1" dur="7.8s" begin="6.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="902.3" cy="823.3" r="2.0" fill="#f2c383" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="6.4s" begin="2.4s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="823.3;725.0999999999999" dur="6.4s" begin="2.4s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="905.8" cy="838.5" r="1.4" fill="#e7b64d" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="9.9s" begin="5.2s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="838.5;693.1" dur="9.9s" begin="5.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="514.5" cy="791.1" r="1.9" fill="#f2c383" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="6.1s" begin="7.0s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="791.1;647.1" dur="6.1s" begin="7.0s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="886.9" cy="812.8" r="2.0" fill="#f2c383" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="8.1s" begin="5.1s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="812.8;677.8" dur="8.1s" begin="5.1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="817.5" cy="822.0" r="1.7" fill="#f2c383" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="8.8s" begin="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="822.0;711.3" dur="8.8s" begin="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="593.4" cy="794.9" r="2.2" fill="#e7b64d" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="6.4s" begin="2.3s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="794.9;698.9" dur="6.4s" begin="2.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="430.1" cy="837.9" r="1.6" fill="#f2c383" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="7.9s" begin="7.8s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="837.9;712.1" dur="7.9s" begin="7.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="463.8" cy="834.1" r="2.2" fill="#e7b64d" opacity="0">
-        <animate attributeName="opacity" values="0;0.9;0.5;0" keyTimes="0;0.15;0.7;1" dur="7.3s" begin="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="834.1;742.7" dur="7.3s" begin="2.5s" repeatCount="indefinite"/>
-      </circle>
-  </svg>
-
-  <div class="hero-copy">
-    <div class="hero-eyebrow">讀古人，懂自己</div>
-    <h1>敏感，是被誤解的天賦</h1>
-    <p class="sub">從古典智慧看見內在的自己</p>
-  </div>
-</section>
-
-<div class="category-nav">
-  <a href="zhuangzi.html">與莊子的靜夜絮語</a>
-  <a href="poetry.html">詩詞裡的心靈風景</a>
 </div>
 
-<section class="intro">
-  <div class="label">關於這個系列</div>
-  <p>這裡不是傳統的國學解讀，而是一場心理學與古典文本的嫁接實驗——借莊子的寓言、詩詞的意象，重新看見那個時常被誤解、卻始終敏銳而深情的自己。</p>
-  <p>每一篇文章都可以獨立閱讀，也彼此呼應，如同一圈一圈漾開的水紋。</p>
-  <p style="margin-top:1.4rem; font-size:0.88rem; opacity:0.8;">這系列文章，是我一邊讀古籍、一邊對照生命裡的困惑寫下的，每一句文字，都是我自己的體會與詮釋；過程中借助 AI 工具協作發想、整理與校對，封面與插圖則由 AI 輔助生成。</p>
-</section>
-
-<section class="essays">
-
-  <div class="group-title reveal" id="zhuangzi">與莊子的靜夜絮語</div>
-
-  <div class="essay-grid">
-    <article class="essay-card reveal">
-      <div class="essay-callback">高敏感三部曲・之一</div>
-      <h2 class="essay-title">那些「為你好」，是否一點一滴把你鑿成了別人喜歡的樣子？<span class="essay-title-sub">——渾沌之死</span></h2>
-      <p class="essay-quote">「日鑿一竅，七日而渾沌死。」</p>
-      <p class="essay-desc">有些傷害，不是來自惡意，而是來自太多「都是為你好」——這篇文章想陪你看見，那些好意背後，你可能正在一點一滴失去自己的樣子。</p>
-      <a class="essay-link" href="hundun.html">閱讀全文 →</a>
-    </article>
-
-    <article class="essay-card reveal">
-      <div class="essay-callback">高敏感三部曲・之二</div>
-      <h2 class="essay-title">越用力，不一定越靠近。有時候，你只是還沒看見那條縫。<span class="essay-title-sub">——庖丁解牛</span></h2>
-      <p class="essay-quote">「臣之所好者道也，進乎技矣。」</p>
-      <p class="essay-desc">有些人做事總是特別費力，有些人卻好像毫不費力就把事情做好了。差別不在天分，而在有沒有看見那條別人看不見的縫。</p>
-      <a class="essay-link" href="paoding.html">閱讀全文 →</a>
-    </article>
-
-    <article class="essay-card reveal">
-      <div class="essay-callback">高敏感三部曲・之三</div>
-      <h2 class="essay-title">如果一直努力證明自己，你還能好好長成自己嗎？<span class="essay-title-sub">——大樗</span></h2>
-      <p class="essay-quote">「不夭斤斧，物無害者，無所可用，安所困苦哉！」</p>
-      <p class="essay-desc">如果你也曾經害怕自己不夠有用、不夠好，才會被留下來——這篇文章想告訴你，一棵沒有用處的樹，也可以好好活著。</p>
-      <a class="essay-link" href="dashu.html">閱讀全文 →</a>
-    </article>
+<div class="classics-hero">
+  <div class="hero-spine-wrap">
+    <div class="hero-spine-dot"></div>
+    <div class="hero-spine">讀古人，懂自己</div>
+    <div class="hero-spine-line"></div>
   </div>
-
-  <a class="view-all" href="zhuangzi.html">查看「與莊子的靜夜絮語」全部文章 →</a>
-
-  <div class="group-title reveal" id="poetry">詩詞裡的心靈風景</div>
-
-  <div class="essay-grid">
-    <article class="essay-card reveal">
-      <div class="essay-callback">詩詞裡的心靈風景・之一</div>
-      <h2 class="essay-title">有些思念，不會消失；我們能不能，帶著它繼續生活？<span class="essay-title-sub">——聲聲慢</span></h2>
-      <p class="essay-quote">「尋尋覓覓，冷冷清清，淒淒慘慘戚戚。」</p>
-      <p class="essay-desc">李清照用七組疊字寫出的，是情緒粒度的細膩——當悲傷大到說不清，也許我們需要的，不是更少的字，而是更多。</p>
-      <a class="essay-link" href="shengshengman.html">閱讀全文 →</a>
-    </article>
-    <article class="essay-card reveal">
-      <div class="essay-callback">詩詞裡的心靈風景・之二</div>
-      <h2 class="essay-title">如果雨一直沒有停，你還願意出發嗎？<span class="essay-title-sub">——定風波</span></h2>
-      <p class="essay-quote">「莫聽穿林打葉聲，何妨吟嘯且徐行。」</p>
-      <p class="essay-desc">蘇軾沒有等雨停，才決定要不要往前走——關於心理學的「接納」，與那個我們一直在等、也許永遠不會來的「雨停的那一刻」。</p>
-      <a class="essay-link" href="dingfengbo.html">閱讀全文 →</a>
-    </article>
-    <article class="essay-card reveal">
-      <div class="essay-callback">詩詞裡的心靈風景・之三</div>
-      <h2 class="essay-title">如果有一天，你還是沒有好起來，也沒關係。<span class="essay-title-sub">——武陵春</span></h2>
-      <p class="essay-quote">「物是人非事事休，欲語淚先流。」</p>
-      <p class="essay-desc">李清照的眼淚，先於理由到達——關於心理學的「自我疼惜」，與那個還沒有好起來，也沒關係的自己。</p>
-      <a class="essay-link" href="wulingchun.html">閱讀全文 →</a>
-    </article>
+  <div>
+    <div class="hero-eyebrow">Reading the Ancients, Understanding Ourselves</div>
+    <h1>借古人的眼睛，<br>看見自己的心事</h1>
+    <p class="hero-desc">這裡不是傳統的國學解讀，而是一場心理學與古典文本的嫁接實驗——借莊子的寓言、詩詞的意象，重新看見那個時常被誤解、卻始終敏銳而深情的自己。</p>
+    <p class="hero-disclosure">這系列文章，是我讀古籍、也與AI工具（Claude、ChatGPT）對話，一起梳理陌生的心理學理論，再用自己的方式，把古典的意象和現代人的處境放在一起理解。文字是我一字一句寫下的，但這段學習的路，我沒有獨自走。</p>
   </div>
-
-  <a class="view-all" href="poetry.html">查看「詩詞裡的心靈風景」全部文章 →</a>
-
-</section>
-
-<footer class="site-footer">
-  © The Quiet Light · 所有故事版權歸作者所有
-</footer>
-
 </div>
+
+<div class="ornament-divider"><span class="ornament-dot"></span></div>
+
+<div class="category-section">
+  <div class="category-grid">
+    <a class="category-card zhuangzi" href="zhuangzi.html">
+      <div class="card-copy">
+        <div class="cat-en">Zhuangzi · Night Whispers</div>
+        <h2>與莊子的靜夜絮語</h2>
+        <span class="category-link">查看全部文章 →</span>
+      </div>
+    </a>
+    <a class="category-card poetry" href="poetry.html">
+      <div class="card-copy">
+        <div class="cat-en">Poetry · Landscapes of the Heart</div>
+        <h2>詩詞裡的心靈風景</h2>
+        <span class="category-link">查看全部文章 →</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="essay-section">
+  <div class="section-label"><span>最新文章 · Latest</span></div>
+  <div class="essay-grid">
+    <a class="essay-card" href="dashu.html">
+      <h3 class="essay-title">如果一直努力證明自己，你還能好好長成自己嗎？<span class="essay-title-sub">——大樗</span></h3>
+      <div class="essay-footer"><span class="essay-read">閱讀全文 →</span></div>
+    </a>
+    <a class="essay-card" href="wulingchun.html">
+      <h3 class="essay-title">如果有一天，你還是沒有好起來，也沒關係。<span class="essay-title-sub">——武陵春</span></h3>
+      <div class="essay-footer"><span class="essay-read">閱讀全文 →</span></div>
+    </a>
+    <a class="essay-card" href="dingfengbo.html">
+      <h3 class="essay-title">如果雨一直沒有停，你還願意出發嗎？<span class="essay-title-sub">——定風波</span></h3>
+      <div class="essay-footer"><span class="essay-read">閱讀全文 →</span></div>
+    </a>
+  </div>
+</div>
+
+<div class="site-footer">© The Quiet Light · 所有故事版權歸作者所有</div>
 
 <!-- 隱藏式聲音控制面板（與主站共用） -->
 <div class="panel-tab" id="panel-tab" onclick="openPanel()">
@@ -622,20 +309,6 @@
 <script src="../script.js"></script>
 <script>
   document.documentElement.classList.add('js-ready');
-  var cards = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    cards.forEach(function(c){ io.observe(c); });
-  } else {
-    cards.forEach(function(c){ c.classList.add('in-view'); });
-  }
 </script>
 
 </body>
