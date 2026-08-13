@@ -3,339 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
 <title>武陵春｜詩詞裡的心靈風景｜The Quiet Light · 靜謐之光</title>
-<meta name="description" content="李清照的〈武陵春〉裡，眼淚先於理由到達——關於心理學的「自我疼惜」，與那個還沒有好起來，也沒關係的自己。">
+<meta name="description" content="如果有一天，你還是沒有好起來，也沒關係。借李清照〈武陵春〉，重新理解情緒不需要理由才能存在。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=3">
 <style>
-
-
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth; background:#141d29;}
-  body{
-    background-color:#e9e2d0;
-    color:#3a3226;
-    font-family:"Noto Serif TC", serif;
-    line-height:1.9;
-    overflow-x:hidden;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --page:#efe6d1; --paper:#faf5e7;
+    --ink:#2a2318; --ink-soft:rgba(42,35,24,.66); --ink-faint:rgba(42,35,24,.44);
+    --seal:#9c3826; --gold:#bd9455; --gold-soft:rgba(189,148,85,.35);
+    --jade:#55624c; --line:rgba(42,35,24,.11);
+    --shadow: 0 14px 34px rgba(42,35,24,.09), 0 2px 8px rgba(42,35,24,.05);
   }
-  .page-bg{
-    position:fixed; inset:0; z-index:0;
-    background-size:cover;
-    background-position:center 38%;
-  }
+  body{background:var(--page); color:var(--ink); font-family:'Noto Serif TC',serif; line-height:1.9;}
+  a{color:inherit; text-decoration:none;}
   #canvas{
     position:fixed !important; inset:0 !important;
     width:100vw !important; height:100vh !important;
     z-index:1 !important;
     pointer-events:none !important;
   }
-  .page-bg::after{
-    content:"";
-    position:absolute; inset:0;
-    background:rgba(20,17,13,0.16);
-  }
-  .page-content{
-    position:relative; z-index:1;
-  }
-  a{color:inherit; text-decoration:none;}
 
-  header.site-nav{
-    position:absolute; top:0; left:0; right:0; z-index:20;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:28px 6vw;
-  }
-  header.site-nav .brand{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:1.05rem; letter-spacing:0.08em; color:#f4efe2;
-  }
-  header.site-nav .nav-list a{
-    margin-left:2rem; font-size:0.92rem; letter-spacing:0.08em;
-    color:#c3cdd6;
-  }
-  header.site-nav .nav-list a.active{color:#f2c383;}
-
-  .hero{
-    position:relative;
-    height:100vh; min-height:640px; max-height:1000px;
-    display:flex; align-items:flex-end; justify-content:center;
-    overflow:hidden;
-    background-color:#141d29;
-  }
-  .hero-bg{
-    position:absolute; inset:-6%;
-    overflow:hidden;
-  }
-  .hero-bg-layer, .page-bg{
-    background-image:url("../hero-willow.jpg");
-  }
-  .hero-bg-layer{
-    position:absolute; inset:0;
-    background-size:cover;
-    background-position:center 32%;
-    filter:saturate(0.92) brightness(0.82) contrast(1.03);
-    animation:kenburns 42s ease-in-out infinite alternate;
-  }
-  @keyframes kenburns{
-    0%{ transform:scale(1) translate(0,0); }
-    100%{ transform:scale(1.14) translate(-2.2%,-1.4%); }
-  }
-  .hero-overlay{
-    position:absolute; inset:0;
-    background:
-      linear-gradient(180deg, rgba(15,20,28,0.6) 0%, rgba(15,20,28,0.12) 32%, rgba(15,20,28,0.2) 55%, rgba(15,20,28,0.82) 100%),
-      linear-gradient(90deg, rgba(15,20,28,0.35) 0%, rgba(15,20,28,0) 22%, rgba(15,20,28,0) 78%, rgba(15,20,28,0.35) 100%);
-  }
-  .hero-sparkle{
-    position:absolute; inset:0; width:100%; height:100%; display:block;
-    mix-blend-mode:screen; opacity:0.75;
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero-bg-layer{ animation:none; }
-  }
-  .hero-copy{
+  .nav-list{
     position:relative; z-index:5;
-    text-align:center;
-    padding-bottom:9vh;
-    max-width:640px;
-    padding-left:1.2rem; padding-right:1.2rem;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.6rem 3.2rem; background:var(--paper); border-bottom:1px solid var(--gold-soft);
   }
-  .hero-eyebrow{
-    font-size:0.82rem; letter-spacing:0.4em; color:#f2c383;
-    margin-bottom:1.1rem;
-    text-shadow:0 2px 12px rgba(0,0,0,0.5);
-  }
-  .hero h1{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-weight:700;
-    font-size:40px;
-    color:#f4efe2;
-    letter-spacing:0.1em;
-    text-shadow:0 2px 20px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
-  }
-  .hero p.sub{
-    margin-top:1.1rem;
-    font-size:16px;
-    color:#e6ded0;
-    letter-spacing:0.06em;
-    text-shadow:0 2px 14px rgba(0,0,0,0.5);
-  }
+  .nav-brand{font-size:1.05rem; letter-spacing:.14em; font-weight:600;}
+  .nav-links{display:flex; gap:2.4rem;}
+  .nav-links a{font-size:.8rem; letter-spacing:.18em; color:var(--ink-soft);}
+  .nav-links a.active{color:var(--seal);}
 
-  .category-nav{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem;
-    max-width:720px; margin:5vh auto 0;
-    padding:0 6vw;
+  .essay-hero{
+    position:relative; z-index:2;
+    height:66vh; min-height:440px; max-height:640px;
+    display:flex; align-items:flex-end;
+    background-image:url('images/武陵春.png'); background-size:cover; background-position:center 42%;
   }
-  .category-nav a{
-    font-size:0.86rem; letter-spacing:0.14em;
-    color:#3a3226; font-weight:600;
-    padding:0.7rem 1.4rem;
-    background:rgba(247,242,230,0.66);
-    backdrop-filter:blur(18px) saturate(140%);
-    -webkit-backdrop-filter:blur(18px) saturate(140%);
-    border:1px solid rgba(255,255,255,0.55);
-    border-radius:999px;
-    box-shadow:0 10px 26px rgba(60,45,25,0.14);
-    transition:background .3s ease, transform .3s ease;
+  .essay-hero::before{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,16,10,.5) 0%, rgba(20,16,10,.05) 30%, rgba(20,16,10,.2) 55%, rgba(15,12,7,.88) 100%);
   }
-  .category-nav a:hover{
-    background:rgba(247,242,230,0.88);
-    transform:translateY(-2px);
+  .back-link{
+    position:absolute; top:2rem; left:3.2rem; z-index:3;
+    font-size:.84rem; letter-spacing:.06em; color:#f4efe2; font-weight:600;
+    text-shadow:0 2px 12px rgba(0,0,0,.5);
   }
+  .hero-copy{position:relative; z-index:2; max-width:900px; padding:0 3.2rem 3.4rem;}
+  .hero-eyebrow{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.9rem; letter-spacing:.3em; color:#e9c48f; margin-bottom:1.1rem; text-shadow:0 2px 12px rgba(0,0,0,.5);}
+  .hero-copy h1{
+    font-family:'LXGW WenKai TC',serif; font-weight:700; font-size:clamp(1.7rem,3.2vw,2.5rem);
+    color:#faf5e7; line-height:1.6; letter-spacing:.03em;
+    text-shadow:0 3px 18px rgba(0,0,0,.4);
+  }
+  .hero-copy h1 span{display:block; font-size:1.05rem; font-weight:400; color:#e6ded0; margin-top:.6rem; letter-spacing:.06em;}
 
-  .essay-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
-    gap:1.4rem;
-  }
-  .view-all{
-    display:inline-flex; align-items:center; gap:.5rem;
-    margin:0.4rem 0 0.6rem;
-    font-size:0.9rem; letter-spacing:0.1em; color:#a5622a; font-weight:600;
-  }
-
-  .intro{
-    max-width:720px; margin:0 auto;
-    padding:2.8rem 2.2rem;
-    margin-top:4vh; margin-bottom:6vh;
-    text-align:center;
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(26px) saturate(150%);
-    -webkit-backdrop-filter:blur(26px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-top-color:rgba(255,255,255,0.75);
-    border-radius:20px;
-    box-shadow:0 24px 50px rgba(60,45,25,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
-  }
-  .intro .label{
-    font-size:0.8rem; letter-spacing:0.4em; color:#a5622a;
-    font-weight:700;
-    margin-bottom:1.4rem;
-  }
-  .intro p{
-    font-size:1.02rem; color:#4a4030; letter-spacing:0.02em;
-  }
-  .intro p + p{ margin-top:1rem; }
-
-  .essays{
-    max-width:1180px; margin:0 auto;
-    padding:5vh 6vw 14vh;
-    display:flex; flex-direction:column; gap:1.6rem;
-  }
-  .group-title{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:1.55rem;
-    font-weight:700;
-    letter-spacing:0.16em;
-    color:#2e2417;
-    text-shadow:0 1px 10px rgba(255,255,255,0.7), 0 1px 3px rgba(255,255,255,0.5);
-    margin:2.2rem 0 -0.4rem;
-    padding-left:0.2rem;
-    scroll-margin-top:110px;
-  }
-  .group-title:first-child{ margin-top:0.4rem; }
-  .group-title::after{
-    content:"";
-    display:block;
-    width:36px; height:2px;
-    margin-top:0.7rem;
-    background:#b5763a;
-    opacity:0.7;
-  }
-  .essay-card{
-    position:relative;
-    padding:2.6rem 2.2rem;
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(26px) saturate(150%);
-    -webkit-backdrop-filter:blur(26px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-top-color:rgba(255,255,255,0.75);
-    border-radius:20px;
-    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
-    transition:transform .4s ease, box-shadow .4s ease;
-  }
-  .essay-card:not(.upcoming):hover{
-    transform:translateY(-8px);
-    box-shadow:0 32px 64px rgba(60,45,25,0.24), inset 0 1px 0 rgba(255,255,255,0.6);
-  }
-  @media (prefers-reduced-motion: reduce){
-    .essay-card{ transition:none; }
-    .essay-card:not(.upcoming):hover{ transform:none; }
-  }
-
-
-  .article-wrap{
-    max-width:740px; margin:0 auto;
-    padding:2vh 6vw 14vh;
-  }
+  .article-wrap{position:relative; z-index:2; max-width:900px; margin:0 auto; padding:0 1.4rem;}
   .article-card{
-    background:rgba(247,242,230,0.8);
-    backdrop-filter:blur(26px) saturate(150%);
-    -webkit-backdrop-filter:blur(26px) saturate(150%);
-    border:1px solid rgba(255,255,255,0.5);
-    border-top-color:rgba(255,255,255,0.75);
-    border-radius:20px;
-    box-shadow:0 24px 50px rgba(60,45,25,0.16), inset 0 1px 0 rgba(255,255,255,0.5);
-    padding:2.6rem 2.2rem;
+    background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
+    margin-top:-3.4rem; position:relative; z-index:4;
+    padding:2.6rem 1.9rem 3rem;
   }
-  @media (min-width:640px){
-    .article-card{ padding:3.4rem 3.6rem; }
-  }
-  .article-disclosure{
-    font-size:0.84rem; line-height:1.9; color:#6b5f4d;
-    border-left:2px solid #b5763a;
-    padding-left:1.1rem;
-    margin-bottom:2.2rem;
-    font-style:italic;
-  }
-  .article-citation{
-    text-align:center; font-size:0.86rem; color:#8a7c60;
-    font-style:italic; margin-bottom:1.6rem;
-  }
-  .article-pullquote{
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-weight:700;
-    font-size:1.3rem; line-height:1.7;
-    color:#2e2417; text-align:center;
-    margin:0 0 2.4rem;
-  }
-  @media (min-width:640px){
-    .article-pullquote{ font-size:1.55rem; }
-  }
-  .article-body p{
-    margin-bottom:1.5rem;
-    font-size:1.02rem; line-height:2.15;
-    color:#3a3226;
-  }
-  .article-body strong{ color:#a5622a; font-weight:700; }
-  .article-footer-quote{
-    margin-top:2.6rem; padding:1.8rem 1.6rem;
-    text-align:center;
-    background:rgba(181,118,58,0.08);
-    border-left:2px solid #b5763a;
-    border-radius:4px;
-    font-family:"LXGW WenKai TC","Noto Serif TC",serif;
-    font-size:1.05rem; line-height:1.9;
-    color:#4a3a22; font-weight:600;
-  }
-  .article-nextup{
-    margin-top:2.6rem; padding-top:1.8rem;
-    border-top:1px solid rgba(60,45,25,0.15);
-    font-size:0.95rem; color:#4a4030;
-    text-align:center; line-height:1.9;
-  }
-  .article-nextup .next-label{
-    display:block;
-    font-size:0.78rem; letter-spacing:0.3em; color:#a5622a; font-weight:700;
-    margin-bottom:0.9rem;
-  }
-  .article-nextup p{ margin-bottom:0.6rem; }
-  .article-closing{
-    margin-top:2.4rem; padding-top:1.8rem;
-    border-top:1px solid rgba(60,45,25,0.15);
-    font-size:0.85rem; color:#6b5f4d;
-    text-align:center; line-height:2;
-  }
-  .article-closing a{
-    color:#a5622a; text-decoration:none;
-    border-bottom:1px solid rgba(165,98,42,0.4);
+  @media(min-width:640px){ .article-card{padding:3.6rem 3.6rem 4rem;} }
+
+  .article-body p{margin-bottom:1.5rem; font-size:1.03rem; line-height:2.15; color:var(--ink);}
+  .article-body strong{color:var(--seal); font-weight:700;}
+
+  .footer-quote{
+    margin-top:3rem; padding:1.8rem 1.6rem; text-align:center;
+    font-family:'LXGW WenKai TC',serif; font-size:1.05rem; color:var(--ink);
+    background:rgba(189,148,85,.08); border-radius:12px; line-height:2;
   }
 
+  .reading-on{
+    margin-top:3rem; padding-top:1.9rem; border-top:1px solid var(--line);
+    text-align:center; font-size:.92rem; color:var(--ink-soft); line-height:1.95;
+  }
+  .reading-on-label{
+    display:block; font-size:.72rem; letter-spacing:.3em; color:var(--seal); font-weight:700;
+    margin-bottom:1rem; text-transform:uppercase;
+  }
+  .reading-on p{margin-bottom:.5rem;}
+
+  .article-closing{
+    margin-top:3rem; padding-top:1.9rem; border-top:1px solid var(--line);
+    font-size:.85rem; color:var(--ink-soft); text-align:center; line-height:2;
+  }
+  .article-closing a{color:var(--seal); border-bottom:1px solid var(--gold-soft);}
+
+  .nextup{position:relative; z-index:2; max-width:900px; margin:3.4rem auto 5rem; padding:0 1.4rem; display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;}
+  .nextup a{
+    background:var(--paper); border-radius:14px; padding:1.6rem 1.7rem;
+    box-shadow:0 8px 22px rgba(42,35,24,.07);
+    transition:transform .3s, box-shadow .3s;
+  }
+  .nextup a:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+  .nextup .dir{font-size:.72rem; letter-spacing:.2em; color:var(--gold); margin-bottom:.5rem;}
+  .nextup .ttl{font-family:'LXGW WenKai TC',serif; font-weight:700; font-size:1rem; color:var(--ink);}
+
+  .site-footer{position:relative; z-index:2; display:block; text-align:center; padding:2.6rem 1rem 3.4rem; font-size:.82rem; color:var(--ink-faint);}
+
+  @media(max-width:640px){
+    .nav-list{padding:1.4rem 1.4rem;}
+    .back-link,.hero-copy{padding-left:1.4rem; padding-right:1.4rem;}
+    .nextup{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
 <canvas id="canvas"></canvas>
 
-<div class="page-bg"></div>
-
-<div class="page-content">
-<header class="site-nav">
-  <div class="brand">The Quiet Light · 靜謐之光</div>
-  <div class="nav-list">
+<div class="nav-list">
+  <div class="nav-brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-links">
     <a href="../index.html">首頁</a>
     <a href="../stories.html">故事集</a>
     <a href="index.html" class="active">讀古人</a>
     <a href="../about.html">關於</a>
     <a href="../contact.html">聯絡</a>
   </div>
-</header>
+</div>
 
-<section class="page-header">
-  <div class="page-header-inner">
-    <a class="back-link" href="poetry.html">← 詩詞裡的心靈風景</a>
-    <div class="page-header-eyebrow">詩詞裡的心靈風景・之三</div>
-    <h1 class="page-header-title">如果有一天，你還是沒有好起來，也沒關係。<span class="page-header-title-sub">——武陵春</span></h1>
+<div class="essay-hero">
+  <a class="back-link" href="poetry.html">← 詩詞裡的心靈風景</a>
+  <div class="hero-copy">
+    <div class="hero-eyebrow">詩詞裡的心靈風景・之三</div>
+    <h1>如果有一天，你還是沒有好起來，也沒關係。<span>——武陵春</span></h1>
   </div>
-</section>
+</div>
 
-<section class="article-wrap">
+<div class="article-wrap">
   <article class="article-card">
-    <p class="article-disclosure">這系列文章，是我一邊讀古籍、一邊對照自己生命裡的困惑，慢慢寫下來的。心理學的理論對我來說也是陌生的領域，這段梳理的過程裡，我借助了 AI 工具的協助整理資料，但每一句文字，都是我自己的體會與詮釋。</p>
-    <p class="article-citation">選自李清照〈武陵春．風住塵香花已盡〉</p>
-    <p class="article-pullquote">如果有一天，你還是沒有好起來，也沒關係。</p>
     <div class="article-body">
     <p>真正的溫柔，不是告訴自己「不要再難過了」，而是願意在還沒有好起來的日子裡，依然輕輕陪著自己。</p>
     <p><strong>如果眼淚不需要理由，你願意先站在自己這邊嗎？</strong></p>
@@ -362,26 +163,28 @@
     <p>但眼淚從來不需要先通過審核才能存在。「物是人非事事休，欲語淚先流」，李清照沒有逼自己立刻梳好頭、划船出遊、把心情整理妥當，她只是誠實地承認，此刻的自己，載不動那麼多。那不是放棄，是一種溫柔的誠實。</p>
     <p>那麼，你呢？</p>
     <p><strong>下一次眼淚毫無預警地到來，你會急著替自己找一個合理的解釋，還是願意先站在自己這邊，讓它不需要理由，也能被好好接住？</strong></p>
-    </div>
-    <div class="article-nextup">
-      <span class="next-label">延伸閱讀</span>
+        </div>
+
+    <div class="reading-on">
+      <span class="reading-on-label">延伸閱讀</span>
       <p>好好疼惜過那個還在痛的自己之後，眼淚總有一天會流完，雨也總有一天會停。</p>
       <p>如果你準備好了，不妨回頭看看〈定風波〉那篇。風雨來的時候，不必急著躲，也可以學著，在雨裡好好走路。</p>
-      <p style="margin-top:1rem;"><a href="dingfengbo.html"><strong>上一篇｜〈定風波〉：風雨來了，我們如何繼續前行？</strong></a></p>
     </div>
+
     <div class="article-closing">
       文字版權為作者「小小聲」所有。如欲轉載、引用或改作，請先來信取得同意，謝謝。<br>
-      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
+      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://www.instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
       文字 ©小小聲
     </div>
   </article>
-</section>
-
-<footer class="site-footer">
-  © The Quiet Light · 所有故事版權歸作者所有
-</footer>
-
 </div>
+
+<div class="nextup">
+  <a href="dingfengbo.html"><div class="dir">← 上一篇</div><div class="ttl">定風波</div></a>
+  <a href="poetry.html"><div class="dir">回到分類 →</div><div class="ttl">詩詞裡的心靈風景</div></a>
+</div>
+
+<div class="site-footer">© The Quiet Light · 所有故事版權歸作者所有</div>
 
 <!-- 隱藏式聲音控制面板（與主站共用） -->
 <div class="panel-tab" id="panel-tab" onclick="openPanel()">
