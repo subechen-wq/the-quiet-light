@@ -12,6 +12,73 @@
 
 const STORIES = [
    {
+    id: "story-009",
+    title: "藏在針腳裡的時間",
+    titleEn: "Time in the Stitches",
+    date: "2026.08",
+    excerpt: "老城區的裁縫店裡，她帶來一件開了線的旗袍——是奶奶最喜歡的那件。老太太沒有問太多，只是仔細挑了線的顏色，一針一針，把時間也一起縫了回去。",
+    body: `
+      <p>老城區這條街不長，但走起來像是走進了另一個時間。兩側的店面大多拉著鐵門，招牌的油漆都淡了，只有偶爾一兩家還開著，說不清楚是習慣還是捨不得。</p>
+      <p>佳琪在街尾停下來。</p>
+      <p>裁縫店比她記憶裡的還要小。玻璃門有些霧，透進來的光是黃的，裡面掛著幾卷布料，一台老式縫紉機放在窗邊，沒有在動，但看起來像是剛剛才停下來的。</p>
+      <p>她手裡提著一個紙袋，站在門口，沒有立刻推門進去。</p>
+      <p>門鈴響了一聲，停了。老太太沒有抬頭，剪刀繼續走。</p>
+      <p>「來修的還是來做的？」她問，眼睛還在布料上。</p>
+      <p>聲音不大，但在這個安靜的小店裡聽得很清楚。</p>
+      <p>佳琪把紙袋放到櫃台上，從裡頭取出一件疊得很整齊的衣服。是一件旗袍，藏青色，領口和袖口的繡花還在，只是有一處接縫開了線，不長，但看得出來。</p>
+      <p>老太太這才放下剪刀，走過來。她拿起旗袍，沒有先看破損的地方，而是先把整件衣服展開，從領口往下看了一遍，像在看一個她認識的人。</p>
+      <p>「哪裡來的？」她問，說的不是佳琪，是那件旗袍。</p>
+      <p>「是我奶奶的。」佳琪看著旗袍說。</p>
+      <p>老太太沒有回話，而是仔細的看著這件旗袍，靜靜的撫摸上面的紋路，像是在回憶一位故人。</p>
+      <p>「這是她最喜歡的一件衣服，最近在整理她的衣物時，發現這裡的線開了。」佳琪輕聲說。</p>
+      <p>老太太把旗袍翻到背面，找到開線的地方，用拇指輕輕壓了壓。</p>
+      <p>「你奶奶還在？」</p>
+      <p>佳琪沉默了一秒。「在。但她最近身體不太好。」</p>
+      <p>老太太沒有說對不起，也沒有說保重。她只是點了點頭，把旗袍重新疊好，放到工作台上。</p>
+      <p>「這線我來收。繡花這裡我也加固一下，不然再穿幾次又會鬆。」她說，語氣像在說一件很普通的事，「你明天下午來拿。」</p>
+      <p>佳琪點頭，正要道謝，老太太已經轉身去取針線了。</p>
+      <p>她在一排細細的抽屜前站定，拉開第三格，裡頭密密麻麻排著各色絲線。她的手在上面移動，最後停在一卷深藍色的線上，拿出來，對著窗外的光比了比。</p>
+      <p>放回去，又拿了另一卷，再比一次。</p>
+      <p>這一次，她滿意了。</p>
+      <p>隔天下午，佳琪再次推開那扇玻璃門。門鈴響了一聲。</p>
+      <p>老太太已經把旗袍疊好放在櫃台上，用一張薄紙包著。佳琪打開來看，找到昨天開線的地方——完好如初。繡花的邊緣還加固了，針腳細得幾乎看不見，但摸得到。</p>
+      <p>她看著旗袍，眼裡蓄了淚，沒讓它落下來。吸了吸鼻子。</p>
+      <p>「妳是個好孩子，」老太太說，「替我向妳奶奶問好。」</p>
+      <p>佳琪笑了，向老太太道了謝，抱著袋子走出去。門鈴在身後響了一聲，清脆，然後靜了。</p>
+      <p>她走在那條老街上，腳步比來的時候輕了一點。旗袍在袋子裡，她的手臂收得緊了一點，像是抱著什麼不能讓它掉的東西。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The street in the old quarter wasn't long, but walking it felt like stepping into another time. Most of the shopfronts had their shutters down, the paint on their signs long faded. Only the occasional one was still open — out of habit, or out of reluctance, it was hard to say.</p>
+      <p>Jia-Qi stopped at the end of the street.</p>
+      <p>The tailor's shop was smaller than she remembered. The glass door was slightly fogged, the light inside warm and yellow. A few bolts of fabric hung on the wall. An old sewing machine sat by the window, still, but looking as though it had only just stopped.</p>
+      <p>She stood at the door with a paper bag in her hand and didn't go in straight away.</p>
+      <p>The bell above the door rang once and went quiet. The old woman didn't look up. Her scissors kept moving.</p>
+      <p>"Repair or new?" she asked, eyes still on the fabric.</p>
+      <p>Her voice was soft, but the shop was quiet enough to carry it.</p>
+      <p>Jia-Qi set the paper bag on the counter and took out a neatly folded garment. A qipao — midnight blue, the embroidery at the collar and cuffs still intact, but a seam had come apart at one side. Not long, but visible.</p>
+      <p>The old woman set down her scissors and came over. She picked up the qipao, but didn't look at the damage first. Instead she opened the whole garment out, running her eyes from the collar down, the way you might look at someone you once knew.</p>
+      <p>"Where is it from?" she asked. Not to Jia-Qi. To the qipao.</p>
+      <p>"My grandmother's," Jia-Qi said, looking at it.</p>
+      <p>The old woman didn't reply. She studied the garment in silence, her fingers moving slowly over the embroidered pattern, as though tracing the memory of someone.</p>
+      <p>"It was her favourite. I found the seam had come apart when I was going through her things," Jia-Qi said quietly.</p>
+      <p>The old woman turned the qipao over and found the open seam. She pressed her thumb gently against it.</p>
+      <p>"Is your grandmother still with us?"</p>
+      <p>Jia-Qi was quiet for a moment. "Yes. But she hasn't been well lately."</p>
+      <p>The old woman didn't say she was sorry. She didn't say take care. She simply nodded, refolded the qipao, and placed it on her worktable.</p>
+      <p>"I'll close this seam. I'll reinforce the embroidery too — it'll loosen again otherwise." She said it the way you might mention the weather. "Come back tomorrow afternoon."</p>
+      <p>Jia-Qi nodded. She was about to say thank you, but the old woman had already turned toward her thread cabinet.</p>
+      <p>She stopped before a row of small narrow drawers and pulled open the third one. Inside, threads of every colour were arranged in close rows. Her hand moved across them, slowed, and settled on a spool of deep blue. She held it up to the light from the window.</p>
+      <p>She put it back. Took another. Held that one up too.</p>
+      <p>This time, she was satisfied.</p>
+      <p>The next afternoon, Jia-Qi pushed open the glass door again. The bell rang once.</p>
+      <p>The qipao was already folded and waiting on the counter, wrapped in thin paper. Jia-Qi opened it and found where the seam had been — closed now, seamless. The embroidery had been reinforced along the edges, the stitches so fine they were nearly invisible, but she could feel them.</p>
+      <p>She looked at the qipao, and her eyes filled. She didn't let the tears fall. She breathed in through her nose.</p>
+      <p>"You're a good girl," the old woman said. "Give my regards to your grandmother."</p>
+      <p>Jia-Qi smiled, thanked her, and walked out with the bag held close. The bell rang once behind her, clear and bright, then went still.</p>
+      <p>She walked back along the old street, her steps a little lighter than when she'd come. The qipao was in the bag, and she held her arm a little tighter around it — the way you hold something you can't afford to drop.</p>
+    `
+  },
+   {
     id: "story-008",
     title: "左鄰右舍",
     titleEn: "Next Door",
