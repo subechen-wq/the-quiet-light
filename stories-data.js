@@ -12,6 +12,82 @@
 
 const STORIES = [
    {
+    id: "story-010",
+    title: "那個總是在下雨的城市",
+    titleEn: "The City Where It Always Rains",
+    date: "2026.08",
+    excerpt: "她叫林雨，一輩子都在跟雨打交道。那天傍晚，大雨忽然而至，屋簷下一個護著紙袋的男人，讓她停下了腳步——雨還沒停，這場相遇卻先開始了。",
+    body: `
+      <p>她喜歡坐在窗邊，聽雨聲，聞著空氣中濕潤的氣味，總能伴她安然入睡。</p>
+      <p>這個城市常常下雨，時而溫柔，時而猛烈，時而輕如鴻毛。這裡的居民們早已厭倦，但她卻覺得這正是這座城市最美好的地方——能讓人變得真誠。大家都低著頭，撐著傘，不用在路上對陌生人微笑。</p>
+      <p>雨來得猛烈時，放慢的走路步調，能陪自己多一點。走在輕柔的雨裡，能清楚的聽見自己的心跳聲。</p>
+      <p>她叫林雨，這個名字是爸爸取的。爸爸說，她出生那天，雨下了整整一夜。</p>
+      <p>她不知道這算不算一種預兆，但她確實一生都在跟雨打交道。求學、工作、搬家，每一個重要的日子，幾乎都有雨。後來她乾脆不再帶傘——不是忘記，是決定的。</p>
+      <p>她說，淋濕了才算真的到過一個地方。</p>
+      <p>林雨搬到這個城市三年了，她早已習慣這樣時常下雨的日子。今天是禮拜五，林雨決定找一家餐廳來解決晚餐，慰勞自己一週的辛勤。</p>
+      <p>前往餐廳的路上下起了綿綿細雨，不一會兒，雨勢忽然大的令人措手不及。路上的人們匆匆的撐起傘，林雨也從包包裡翻出雨傘撐起來。</p>
+      <p>這時，她被傘遮住了一半的視線撇到了一旁屋簷下的一雙腳——視線往上，是個男人，年紀看起來和她差不多。他沒有傘，頭髮貼在額頭上，外套濕透了，卻把懷裡的東西護得很緊——一個紙袋，淋濕了大半，但他的身體擋著，沒讓雨直接打到。</p>
+      <p>林雨站在雨裡，多看了一眼。</p>
+      <p>紙袋裡隱約露出一本書的書角。</p>
+      <p>她不知道為什麼，腳步停了下來。雨在她的傘面上敲著，那個男人低著頭，還沒有注意到她。</p>
+      <p>林雨把傘舉起，問道：「你要去的地方在這附近嗎？」</p>
+      <p>男人這才注意到站在他面前的林雨，回道：「對，這雨下的太突然了，我今天剛好沒帶傘，真是狼狽。」</p>
+      <p>林雨把傘傾向他一點「前面不遠處有一間文學館。」</p>
+      <p>「謝謝妳。」男人抱緊了胸前的紙袋走進了林雨的傘裡。他們往前走。</p>
+      <p>文學館到了。男人在門口停下來，把紙袋稍微整理了一下，確認書角還完好。</p>
+      <p>「謝謝妳，」他說，「我叫陳以安。」</p>
+      <p>林雨點了點頭。「林雨。」</p>
+      <p>他看了她一眼，像是在確認這個名字是真的。「林雨，」他重複了一遍，「很適合妳。」</p>
+      <p>林雨沒有回答，只是把傘稍微收了收，轉身準備離開。</p>
+      <p>「妳不進去看看嗎？」他問，「這裡今晚有個小型朗讀會，文學館的人讀自己喜歡的段落。不需要票，進來就好。」</p>
+      <p>雨還在下。林雨站在門口，沒有立刻說話。</p>
+      <p>「抱歉，妳剛才應該有原本要去的地方。」陳以安一手摸著頭髮，有些不好意思的說。</p>
+      <p>林雨看了男人一會。「也許我們可以先去吃個晚餐。」林雨說。</p>
+      <p>「好主意。」陳以安笑著回道。</p>
+      <p>同時，雨停了。</p>
+      <p>兩個人並肩走在路上。</p>
+      <p>「我最近剛搬到這裡，還沒習慣這說變就變的天氣。」陳以安說。</p>
+      <p>「會習慣的。」林雨說，「住久了就會發現，這裡的雨其實很誠實。」</p>
+      <p>陳以安看了她一眼，沒有問什麼意思。</p>
+      <p>兩個人走進了街角的一家小餐廳。窗玻璃上還掛著雨水，把外面的街燈拉成一道一道的光。林雨在靠窗的位置坐下來，側臉對著那些光，像她無數個下雨的夜晚一樣。</p>
+      <p>只是今晚，對面有人坐著。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>She liked to sit by the window, listening to the rain, breathing in the damp air. It was the one thing that always helped her sleep.</p>
+      <p>This city rained often — sometimes gentle, sometimes fierce, sometimes so light it was barely there. The residents had long grown tired of it. But she thought it was the most beautiful thing about this place: the rain made people honest. Everyone walked with their heads down, sheltered under umbrellas, freed from having to smile at strangers.</p>
+      <p>When the rain came hard, you slowed your steps, and the extra time was yours alone. When it fell soft, you could hear your own heartbeat clearly.</p>
+      <p>Her name was Lin Yu. Her father had chosen it. He said that on the night she was born, it rained without stopping.</p>
+      <p>She didn't know if that counted as a sign, but rain had followed her through her whole life — school, work, every move to a new place. Nearly every day that mattered had been a rainy one. Eventually she stopped carrying an umbrella. Not because she forgot. Because she decided.</p>
+      <p>She said: you haven't really been somewhere until you've been rained on there.</p>
+      <p>Lin Yu had lived in this city for three years and had long since made peace with its weather. It was a Friday, and she decided to find somewhere to eat — a small reward for the week. On the way, a light drizzle started. Then, without warning, the rain came down hard. People around her hurried to open their umbrellas. Lin Yu dug hers out of her bag and put it up.</p>
+      <p>That's when she noticed, through the half-obscured view her umbrella allowed, a pair of feet standing under the eave of a building nearby. She looked up. A man, roughly her age. No umbrella. His hair was plastered to his forehead, his jacket soaked through — but he was holding something close to his chest, sheltering it carefully. A paper bag, mostly wet, protected by his body from the rain.</p>
+      <p>Lin Yu stood in the rain and looked a moment longer.</p>
+      <p>Through the bag, the corner of a book was just visible.</p>
+      <p>She didn't know why, but she stopped. The rain drummed against her umbrella. The man had his head down and hadn't noticed her yet.</p>
+      <p>Lin Yu raised her umbrella a little. "Are you heading somewhere nearby?"</p>
+      <p>The man looked up, startled to find her there. "Yes — the rain just came out of nowhere. I didn't bring an umbrella today. What a mess."</p>
+      <p>Lin Yu tilted her umbrella toward him. "There's a literary hall not far ahead."</p>
+      <p>"Thank you." He tucked the paper bag tighter against his chest and stepped under her umbrella. They walked.</p>
+      <p>They reached the literary hall. The man stopped at the entrance and adjusted the paper bag, checking that the book inside was still intact.</p>
+      <p>"Thank you," he said. "I'm Chen Yi-An."</p>
+      <p>Lin Yu nodded. "Lin Yu."</p>
+      <p>He looked at her for a moment, as if making sure the name was real. "Lin Yu," he repeated. "It suits you."</p>
+      <p>She didn't answer. She folded her umbrella slightly and turned to leave.</p>
+      <p>"You don't want to come in?" he asked. "There's a small reading night tonight — people from the hall read passages they love. No tickets, just walk in."</p>
+      <p>The rain was still falling. Lin Yu stood at the entrance and didn't say anything right away.</p>
+      <p>"Sorry — you must have had somewhere you were going," Chen Yi-An said, one hand going to his damp hair, a little embarrassed.</p>
+      <p>"Maybe we could get dinner first," Lin Yu said.</p>
+      <p>"Good idea." Chen Yi-An smiled.</p>
+      <p>At that moment, the rain stopped.</p>
+      <p>They walked side by side down the street.</p>
+      <p>"I just moved here recently," Chen Yi-An said. "I'm still not used to the weather changing like this."</p>
+      <p>"You will be," Lin Yu said. "Once you've lived here long enough, you'll find that the rain here is actually very honest."</p>
+      <p>Chen Yi-An glanced at her. He didn't ask what she meant.</p>
+      <p>They went into a small restaurant on the corner. The window glass still held the rain, pulling the street lights outside into long, soft streaks. Lin Yu sat down by the window, her face turned toward that light — the way she had on countless rainy nights before.</p>
+      <p>Only tonight, there was someone sitting across from her.</p>
+    `
+  },
+   {
     id: "story-009",
     title: "藏在針腳裡的時間",
     titleEn: "Time in the Stitches",
