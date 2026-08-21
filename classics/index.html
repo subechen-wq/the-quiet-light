@@ -123,9 +123,11 @@
     font-size:.78rem; letter-spacing:.16em; color:#faf5e7;
     display:inline-flex; align-items:center; gap:.6rem;
     border-bottom:1px solid rgba(250,245,231,.5); padding-bottom:3px;
-    transition:gap .3s;
+    transition:gap .35s, color .35s, border-color .35s, letter-spacing .35s;
   }
-  .category-card:hover .category-link{gap:.9rem;}
+  .category-card:hover .category-link{
+    gap:.9rem; color:#fffaf0; border-color:rgba(250,245,231,.95); letter-spacing:.22em;
+  }
 
   /* ── 文章卡片 ── */
   .essay-section{position:relative; z-index:2; padding:0 3.4rem 6.5rem; max-width:1180px; margin:0 auto;}
