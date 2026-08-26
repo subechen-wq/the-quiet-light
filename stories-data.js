@@ -12,6 +12,57 @@
 
 const STORIES = [
    {
+    id: "story-011",
+    title: "林間的橋",
+    titleEn: "The Bridge in the Woods",
+    date: "2026.08",
+    excerpt: "木棧道不知從哪一步開始消失了，她獨自站在森林深處，手機沒有訊號。直到她放棄尋找出路，靜靜坐下休息——才發現，離回去的路，其實沒有很遠。",
+    body: `
+      <p>原本清楚的步道，不知道從哪一步開始，變得不再清楚了。</p>
+      <p>王詩筠記得自己是跟著地上鋪的木棧道走的，兩旁還有解說牌，寫著蕨類的名字。可是不知道走了多久，木棧道消失了，腳下只剩下濕軟的落葉和裸露的樹根。她停下腳步，回頭看，來時的路也不見了——樹和樹之間，看起來每一條縫隙都像是一條路，又都不是。</p>
+      <p>手機沒有訊號。時間是下午兩點多，但林間的光已經被層層疊疊的樹冠篩得很暗，暗得讓人分不清究竟還有多少白天可以用。</p>
+      <p>最近的工作量一直在增加，報告一份接著一份，她常常覺得自己快要喘不過氣。這個假日是好不容易才排到的，朋友推薦她來走走這片森林，說是能讓人靜下來。一開始，她確實很專注，眼睛盯著木棧道的方向，一步一步走得很仔細。走著走著，不知道是身體開始疲倦，還是心裡那些堆積很久的重量終於找到縫隙慢慢鬆開，她漸漸放任自己的思緒遊走，腳步也跟著感覺走，不再看路標，不再算時間。就這樣，不知不覺，來到了這裡。</p>
+      <p>她深吸一口氣，聞到一種很濃的、混著泥土和腐葉的氣味，潮濕，卻不難聞。風吹過來的時候，樹葉互相摩擦，發出一種很細碎、很綿密的聲音，像是很多人同時在說悄悄話。</p>
+      <p>一股寒意悄悄爬上背脊，她試圖尋找來時的路。心裡一邊想著：森林裡訊號不好，如果真的找不到路該怎麼求救？回去後還得處理堆積的工作，來得及嗎？問題一個接著一個冒出來，心裡焦急著，腳步也快了起來，但四周早已不是她印象中走過的模樣。</p>
+      <p>腳步漸漸慢了下來，她找到一塊橫躺著的樹幹坐在上面。她從背包取出保溫瓶喝了幾口水，伸直了雙腿，決定在原地休息一會兒。她沒有再想任何事，只是靜靜坐著，看著眼前的樹影一點一點被風挪動位置，看了很久，久到她自己也不確定過了多少時間。腦海裡那些接連不斷的問題，不知道從什麼時候開始，已經悄悄地散去了。她閉上眼睛，周圍的聲音開始清晰了起來，蟲鳴、鳥叫聲、風吹過樹葉的沙沙聲響……似乎還有一點水流的聲音。</p>
+      <p>她緩慢起身，腳步放輕，循著水流聲前進。越走，景色越明亮起來，水流聲也大了起來。沒多久，她穿過了樹林，前面是一座湖泊，不大，遠處有一座橋，那座橋的另一端，正是她來時經過的地方。</p>
+      <p>她站在原地看了好一會兒。</p>
+      <p>那座橋很舊，木頭的顏色已經被歲月磨得發灰，但穩穩地橫在湖面上，一端連著她現在站的地方，另一端，隱約可以看見熟悉的木棧道，還有那塊寫著蕨類名字的解說牌。</p>
+      <p>她忽然笑了出來，笑自己剛才那樣慌張。原來這一路走岔了的地方，離回去的路，其實沒有很遠。</p>
+      <p>湖面很平靜，把天空和樹影都收進去，風一吹，才輕輕晃了一下。她在湖邊蹲下來，看著水裡自己的倒影，忽然想起剛才腦子裡那些接連不斷的問題——訊號、求救、工作、來不及——此刻好像都被留在剛才那片密林裡了，一個都沒跟上來。</p>
+      <p>她想，也許不是森林讓她迷路的。是她自己，很久沒有給自己一段可以不用趕路的時間了。</p>
+      <p>風吹過湖面，帶來水草的氣味，混著遠處樹林的濕潤氣息。她深吸一口氣，這一次，吸得比剛才任何一次都要深、都要慢。</p>
+      <p>又待了一會兒，她才緩緩站起身，往那座橋走去。</p>
+      <p>橋板踩上去，發出很輕的、吱呀的聲音，像是這座橋也在跟她打招呼。走到橋中央時，她停下腳步，回頭望了一眼湖面，還有湖面後方那片她剛剛穿越過的、看似茫然卻意外溫柔的樹林。</p>
+      <p>她從背包裡拿出手機，看了一眼——還是沒有訊號。但奇怪的是，這一次，她一點也不著急了。</p>
+      <p>她把手機收回去，繼續往前走。踏上棧道的那一刻，解說牌上的蕨類名字，忽然變得清晰又熟悉。她低頭看了看錶，比原本預計晚了不少，但心裡某個一直繃緊的地方，像剛剛那片密林一樣，被風吹得鬆了開來。</p>
+      <p>走出森林前，她又回頭望了一眼，風正好吹過林梢，葉子沙沙作響，像是在跟她道別，也像是在說：隨時歡迎妳再迷路一次。</p>
+      <p>有些路，要先走岔了，才會找到。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The trail that had been so clear somehow, at some step, stopped being clear at all.</p>
+      <p>Shih-Yun Wang remembered following the wooden boardwalk, with its rows of signs naming the ferns along the way. But at some point — she couldn't say when — the boardwalk was gone, and beneath her feet there was only damp fallen leaves and exposed roots. She stopped and looked back. The path she'd come from was gone too — every gap between the trees looked like a way through, and none of them did.</p>
+      <p>No signal on her phone. It was just past two in the afternoon, but the light in the forest, filtered through layer upon layer of canopy, had already dimmed to something that made it hard to tell how much daylight was left to use.</p>
+      <p>Her workload had been piling up lately, one report after another, and she often felt like she could barely breathe. This day off had been hard-won. A friend had recommended this forest, said it could quiet a person down. At first, she really had been careful — eyes fixed on the boardwalk, each step deliberate. But somewhere along the way, whether from fatigue or from something long-carried finally finding a crack to loosen through, she let her thoughts begin to wander, let her feet follow feeling instead of signs, stopped counting the time. And that was how, without quite noticing, she ended up here.</p>
+      <p>She breathed in deep. The smell was thick — soil and rotting leaves, damp, but not unpleasant. When the wind moved through, the leaves rubbed against each other, a fine, dense sound, like many people whispering at once.</p>
+      <p>A chill crept up her spine. She tried to retrace her steps. Thoughts crowded in, one after another: there's no signal out here — if she really couldn't find her way, how would she call for help? And the work piling up back home — would there be enough time? Her pace quickened, anxious, but everything around her had already stopped looking like anything she remembered.</p>
+      <p>Her steps slowed. She found a fallen trunk lying on its side and sat down. She pulled a thermos from her bag, drank a few sips, stretched her legs out, and decided to rest a while. She stopped thinking about anything. She simply sat, watching the shadows of the trees shift, inch by inch, in the wind — watched for a long time, long enough that she lost track of how much had passed. The questions crowding her mind had quietly drifted away, though she couldn't say when. She closed her eyes, and the sounds around her sharpened — insects, birdsong, the rustle of wind through leaves... and, faintly, something like running water.</p>
+      <p>She rose slowly, softened her steps, and followed the sound. The further she walked, the brighter the scenery grew, the water louder. Before long, she'd crossed through the trees, and there it was — a lake, not large, with a bridge in the distance. The far end of that bridge was exactly where she'd come from.</p>
+      <p>She stood there for a long moment.</p>
+      <p>The bridge was old, its wood weathered grey by time, but it stood firm across the water — one end where she stood now, the other, faintly, leading back to the familiar boardwalk, and that sign with the names of the ferns.</p>
+      <p>She laughed, suddenly, at herself, at how frightened she'd been. The place where she'd wandered off course, it turned out, wasn't far from the way back at all.</p>
+      <p>The lake was still, holding the sky and the shadows of the trees inside it, rippling only slightly when the wind passed. She crouched at the water's edge and looked at her own reflection, and the questions that had crowded her mind before — signal, help, work, running out of time — all of them, it seemed, had been left behind in that thicket. Not one had followed her here.</p>
+      <p>She thought, maybe it wasn't the forest that had made her lose her way. Maybe it was simply that she hadn't given herself, in a long time, a stretch of time where she didn't have to hurry.</p>
+      <p>The wind moved across the lake, carrying the scent of water plants, mixed with the damp air from the trees beyond. She breathed in again, deeper and slower than she had all day.</p>
+      <p>She stayed a while longer before rising and walking toward the bridge.</p>
+      <p>The boards creaked softly beneath her feet, as if the bridge were greeting her too. Halfway across, she paused and looked back — at the lake, and at the forest beyond it, the one she'd just crossed through, which had seemed so bewildering and, somehow, unexpectedly gentle.</p>
+      <p>She took out her phone and checked it — still no signal. But strangely, this time, she wasn't worried at all.</p>
+      <p>She put it away and kept walking. The moment she stepped onto the boardwalk, the names on the fern sign suddenly looked clear and familiar again. She glanced at her watch — later than she'd planned, by quite a bit. But something inside her that had been held tight, like the thicket she'd just walked through, loosened in the wind.</p>
+      <p>Before leaving the forest, she looked back once more. The wind moved through the treetops just then, the leaves rustling, as if saying goodbye — or perhaps saying: come lose your way here again, anytime.</p>
+      <p>Some paths have to be lost before they can be found.</p>
+    `
+  },
+   {
     id: "story-010",
     title: "那個總是在下雨的城市",
     titleEn: "The City Where It Always Rains",
