@@ -12,6 +12,97 @@
 
 const STORIES = [
    {
+    id: "story-012",
+    title: "打烊後的咖啡",
+    titleEn: "What the Rain Left Behind",
+    date: "2026.08",
+    excerpt: "打烊後的咖啡館，一個沒帶傘的女人站在騎樓下躲雨。老闆把已經鎖上的門重新打開，煮了一杯自己想喝的咖啡端給她——「就當作躲雨的租金。」有些溫柔，不需要被記得是誰給的，只需要被好好收下。",
+    body: `
+      <p>打烊的木牌翻到「CLOSED」那一面，已經是一個小時前的事了。</p>
+      <p>陳序坐在吧台後面的高腳椅上，沒有開店裡的大燈，只留了吧台上方那盞暖黃色的小燈，和窗邊那盞。他喜歡這個時間——客人都走了，機器的嗡嗡聲停了，只剩下黑膠唱片轉盤還在轉，放著一張很舊的爵士樂。他一個人，把今天最後一批杯子擦乾，動作很慢，沒有要趕著回家的意思。</p>
+      <p>玻璃門外，雨不知道什麼時候開始下的。</p>
+      <p>他抬起頭，看見一個女人站在騎樓下，沒有帶傘，看著店裡的燈光，又看了看招牌上的「CLOSED」，像是在猶豫要不要走。她的高跟鞋濕了一半，肩上的包包被雨打得有些深色的痕跡。</p>
+      <p>陳序看了她幾秒，站起身，走到門邊，把已經鎖上的門重新打開。</p>
+      <p>「不好意思，」女人先開口，聲音有點啞，「我知道你們打烊了，我只是想躲一下雨，等雨小一點就走。」</p>
+      <p>「進來吧。」陳序側身讓她進來，「外面風大。」</p>
+      <p>「先坐一會兒吧，需要毛巾嗎？」陳序指著窗戶旁的座位說道。</p>
+      <p>女人受寵若驚地回覆道：「不用了，我坐一下就好，謝謝。」</p>
+      <p>陳序沒再說什麼，轉身回到吧台。女人看了眼繼續忙碌的陳序後便轉身看向玻璃窗。陳序準備著咖啡，瞧了眼拘謹著坐在那的女人，她認真地看著窗外，不知道是在看遠處的景色，還是在看滑落的水珠。</p>
+      <p>咖啡機發出細細的蒸氣聲，陳序沒有問她要喝什麼，只是憑著手感，磨了一份豆子，用虹吸壺慢慢煮。壺裡的水滾了，咖啡粉在玻璃球裡翻騰，像一場很小的、無聲的風暴。</p>
+      <p>他其實也不太清楚自己在做什麼。店都打烊了，沒有必要再煮一壺咖啡。但看著她那個樣子——濕透的鞋、僵直的肩膀、盯著窗外一動也不動的側臉——他的手就自己動了起來。</p>
+      <p>咖啡煮好，他倒了一杯，端過去，放在她面前的桌上，沒有多說話，只是那杯子擺放的角度，剛好讓杯把朝著她比較方便拿的那一側。</p>
+      <p>「不好意思，可能有點濃，」他頓了頓，「打烊之後煮的，都是我自己想喝的口味。」</p>
+      <p>女人這才把視線從窗外收回來，看著眼前那杯冒著熱氣的咖啡，愣了一下。「謝謝……但我沒有要——」</p>
+      <p>「沒關係，」陳序已經轉身要回吧台，「就當作躲雨的租金。」</p>
+      <p>他這句話說得很輕，像是怕她想太多，又像是怕她拒絕。</p>
+      <p>女人聽到先是愣了一下，接著輕輕笑了一下，回覆「謝謝」。在陳序眼裡，女人的肩膀似乎也比剛才鬆下來了一點，就像一直豎著尾巴的貓，慢慢的把尾巴放下來。陳序被自己的想法逗得笑了一下，在女人疑惑的眼神中說：「慢慢喝，我去忙了。」說完便走回吧台。</p>
+      <p>女人繼續一口一口的品嘗著還冒著熱氣和香氣的咖啡，覺得整個身體都漸漸溫暖了起來。</p>
+      <p>雨聲不知道什麼時候變小了，從原本打在窗上劈啪作響的聲音，變成了細細的、綿密的雨絲聲。</p>
+      <p>女人捧著杯子，兩隻手圍著杯身取暖，視線又飄向窗外。玻璃上還留著剛剛比較大顆的水珠往下滑的痕跡，一條一條，交錯著。她看著看著，忽然開口，聲音比剛才進來時柔軟了一些。</p>
+      <p>「這杯咖啡，跟我很久以前喝過的一款很像。」她說，沒有轉頭，「那時候我剛出社會，加班到很晚，樓下巷口有一間咖啡館，老闆也會在打烊之後，煮一杯自己想喝的咖啡。」</p>
+      <p>她頓了一下，又補了一句，「已經很多年沒喝到這個味道了。」</p>
+      <p>陳序在吧台後面，手上正在收拾器具的動作停了半拍。他沒有多問，只是說：「那間店，還在嗎？」</p>
+      <p>女人搖搖頭，笑了一下，那個笑裡帶著一點說不清的東西。「拆掉了，蓋了大樓。」</p>
+      <p>她把杯子放回桌上，杯底和桌面碰出很輕的一聲。雨已經幾乎停了，只剩屋簷偶爾滴下的水聲。</p>
+      <p>「這樣啊，真是可惜。」陳序面露失落地回覆道。</p>
+      <p>女人看了一眼陳序，沒說什麼，只是淺淺的笑了一下。</p>
+      <p>陳序也回以一笑，接著說：「也許有一天，那位老闆會在別的地方重新開咖啡店。」</p>
+      <p>女人沒有回覆陳序，她轉過頭看了眼窗外，雨停了。</p>
+      <p>女人起身走到吧台，把已經空了的咖啡杯交給陳序後說：「也許吧，謝謝你的收留和咖啡，我先走了。」女人笑了笑便轉身向門口走去。</p>
+      <p>黑膠唱片還在轉著，換了一首新的曲子。</p>
+      <p>陳序看著她走到門口，伸手把已經停了雨的門推開一半，回頭看了他一眼。</p>
+      <p>「祝你生意興隆。」她說。</p>
+      <p>「謝謝，路上小心。」</p>
+      <p>女人走進了外面濕漉漉的巷子，路燈把地上的積水照出一小片一小片的光。陳序站在門邊，看著她的背影一步步走遠，直到轉過巷口，看不見了。</p>
+      <p>他關上門，把「CLOSED」的木牌轉回原來那面，走回吧台，拿起那只空了的咖啡杯，杯緣還留著一點點淡淡的唇印。他洗了杯子，放回架上，動作和平常沒什麼兩樣。</p>
+      <p>黑膠唱片轉到了下一首，比剛才那首輕快一些。陳序靠在吧台邊，聽著音樂，看著窗外那條已經沒有雨的巷子，忽然想起一件事——他好像忘記問，那杯咖啡，到底像不像她記憶中的味道。</p>
+      <p>他想了想，隨即又笑了笑，把那個念頭放下了。不知道，好像也沒關係。</p>
+      <p>有些溫柔，不需要被記得是誰給的，只需要被好好收下。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The wooden sign had been flipped to "CLOSED" an hour ago.</p>
+      <p>Chen Xu sat on a stool behind the bar, the shop's overhead lights off. He'd left only the warm little lamp above the counter, and the one by the window. He liked this hour — the customers gone, the machines finally quiet, nothing left but the record still turning, some old jazz album he'd played a hundred times. Alone, he dried the last batch of cups, unhurried, in no rush to go home.</p>
+      <p>Outside the glass door, it had started raining. He couldn't say when.</p>
+      <p>He looked up and saw a woman standing under the awning, no umbrella, staring at the light spilling from the shop, then at the "CLOSED" sign, as if deciding whether to walk away. One of her heels was soaked through. Rain had left dark patches across the bag on her shoulder.</p>
+      <p>Chen Xu watched her for a few seconds, then stood, walked to the door, and unlocked what he'd already locked.</p>
+      <p>"Sorry," she said first, her voice a little hoarse. "I know you're closed. I just need to get out of the rain for a bit. I'll go once it lets up."</p>
+      <p>"Come in." He stepped aside to let her through. "It's windy out there."</p>
+      <p>"Sit for a while," he said, nodding toward the seat by the window. "Need a towel?"</p>
+      <p>"No, thank you," she said, startled by the offer. "I'll just sit here a moment. Thanks."</p>
+      <p>He said nothing more, and turned back to the bar. She watched him a moment, then turned to the window instead. As he worked, he glanced at her — sitting stiffly, staring outside — and couldn't tell if she was looking at something far off, or just watching the water slide down the glass.</p>
+      <p>The machine let out a thin hiss of steam. He didn't ask what she wanted. He simply ground a portion of beans by feel and set the siphon going, slow. The water came to a boil, coffee grounds churning inside the glass bulb like a small, silent storm.</p>
+      <p>He wasn't entirely sure what he was doing. The shop was closed. There was no need to brew another pot. But watching her — the soaked shoes, the rigid shoulders, the profile that hadn't moved from the window — his hands had already started on their own.</p>
+      <p>When it was ready, he poured a cup, carried it over, and set it down in front of her without a word — except that he'd turned the handle just slightly, toward the side that would be easiest for her to reach.</p>
+      <p>"Sorry, it might be a little strong," he said, pausing. "Whatever I make after closing is just whatever I feel like drinking."</p>
+      <p>She looked up from the window, startled by the steam rising in front of her. "Thank you — but I didn't mean to —"</p>
+      <p>"It's fine," he said, already turning back toward the bar. "Call it rent for the shelter."</p>
+      <p>He said it lightly, as though worried she'd read too much into it — or worried she'd refuse.</p>
+      <p>She blinked, then let out a small laugh. "Thank you." In Chen Xu's eyes, her shoulders seemed to ease down, just slightly — like a cat slowly lowering a tail it had held stiff and upright. Amused by his own thought, he laughed a little, and at her puzzled look, said, "Take your time," before heading back to the bar.</p>
+      <p>She drank the coffee slowly, one sip at a time, steam and aroma still rising from the cup, and felt warmth spreading through her, little by little.</p>
+      <p>At some point, the rain had softened — no longer clattering against the glass, but a fine, gentle patter.</p>
+      <p>She cupped the mug in both hands for the warmth, her gaze drifting back to the window. Streaks from the heavier drops still lingered on the glass, crossing and overlapping. She watched them for a while, then spoke, her voice softer than when she'd first come in.</p>
+      <p>"This coffee — it tastes like one I had a long time ago." She didn't turn her head. "I'd just started working then, staying late most nights. There was a coffee shop down the alley from my office. The owner used to make himself a cup after closing too."</p>
+      <p>She paused, then added, "I haven't had that taste in years."</p>
+      <p>Behind the bar, Chen Xu's hands stilled mid-motion for half a beat. He didn't press further. He only asked, "Is that shop still there?"</p>
+      <p>She shook her head, a faint smile crossing her face — the kind that carried something hard to name. "Torn down. There's a building there now."</p>
+      <p>She set the cup back on the table. It made a small, soft sound against the wood. The rain had nearly stopped; only the occasional drip from the eaves remained.</p>
+      <p>"That's a shame," Chen Xu said, a trace of disappointment in his voice.</p>
+      <p>She glanced at him, said nothing, just gave a faint smile.</p>
+      <p>He returned the smile. "Maybe someday, that owner will open somewhere else."</p>
+      <p>She didn't answer. She only turned to look out the window. The rain had stopped.</p>
+      <p>She stood, walked to the bar, and handed him the empty cup. "Maybe," she said. "Thank you for the shelter, and the coffee. I should get going." She smiled once more and turned toward the door.</p>
+      <p>The record was still turning, a new song now.</p>
+      <p>Chen Xu watched her reach the door and push it halfway open onto the rain-cleared street. She glanced back at him.</p>
+      <p>"Good luck with the shop," she said.</p>
+      <p>"Thanks. Get home safe."</p>
+      <p>She stepped out into the wet alley, streetlights catching small patches of light in the puddles. He stood by the door, watching her walk away, until she turned the corner and was gone.</p>
+      <p>He closed the door, flipped the "CLOSED" sign back to where it had been, and walked back to the bar. He picked up the empty cup — a faint trace of lipstick still on the rim — washed it, and set it back on the shelf, his movements no different than any other night.</p>
+      <p>The record moved on to the next track, a little brighter than the last. Chen Xu leaned against the bar, listening, looking out at the alley now free of rain. Then it occurred to him — he'd forgotten to ask whether the coffee had actually tasted like the one she remembered.</p>
+      <p>He considered it for a moment, then smiled and let the thought go. Not knowing, it seemed, was fine too.</p>
+      <p>Some kindness doesn't need to be remembered by name. It only needs to be received.</p>
+    `
+  },
+   {
     id: "story-011",
     title: "林間的橋",
     titleEn: "The Bridge in the Woods",
