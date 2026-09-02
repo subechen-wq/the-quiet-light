@@ -14,7 +14,7 @@ const STORIES = [
    {
     id: "story-012",
     title: "打烊後的咖啡",
-    titleEn: "What the Rain Left Behind",
+    titleEn: "The Coffee After Closing",
     date: "2026.08",
     excerpt: "打烊後的咖啡館，一個沒帶傘的女人站在騎樓下躲雨。老闆把已經鎖上的門重新打開，煮了一杯自己想喝的咖啡端給她——「就當作躲雨的租金。」有些溫柔，不需要被記得是誰給的，只需要被好好收下。",
     body: `
