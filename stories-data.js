@@ -12,6 +12,85 @@
 
 const STORIES = [
    {
+    id: "story-013",
+    title: "衣服乾了以後",
+    titleEn: "When the Clothes Were Dry",
+    date: "2026.09",
+    excerpt: "深夜的洗衣店，衣服早就乾了，她卻遲遲沒有拿出來。一個月的固定行程，今晚是最後一次——他先烘好衣服，說了聲「保重」，這一次，他沒有回頭。",
+    body: `
+      <p>洗衣店的日光燈有一盞在閃，明明滅滅，像是隨時會壞掉，卻又撐了很久，一直沒有真的壞掉。</p>
+      <p>周若妤坐在塑膠椅上，前面那台烘衣機的圓窗裡，衣服一直在翻，一直在轉，深色淺色纏在一起，分開，又纏在一起。機器嗡嗡地響著，混著遠處馬路上偶爾經過的車聲，還有店裡冷氣孔洩出的、有點刺鼻的洗衣精味道。</p>
+      <p>已經是這一輪的第二次了。倒數計時走到「00:03」的時候，她投了一枚十元硬幣進去，螢幕又跳回「45:00」，滾筒重新轉了起來。</p>
+      <p>她其實知道，那些衣服早就乾了。第一輪結束的時候，她就摸過，全部都是暖的，蓬鬆的，一點濕氣都沒有。</p>
+      <p>她只是還沒有把它們拿出來的理由。</p>
+      <p>深夜十一點，整間洗衣店只有她一個人。牆上的時鐘走得很慢，慢到她開始懷疑那是不是根本沒在走。</p>
+      <p>一個月前，周若妤因為工作剛搬過來這個小區。因為工作的關係，她總是在這個時間過來洗衣服，常遇到一個也是這時間過來洗衣服的男生，他們會在等衣服洗好的時間一起坐在一旁的椅子上聊天。聊天過程中周若妤知道這個男生剛研究所畢業，準備找工作，男生也和周若妤分享了許多小區附近的美食，並答應她兩人有空時可以一起出去玩。</p>
+      <p>那是一個月前的事了。</p>
+      <p>從那之後，周若妤開始留意時間，總是抓在差不多的時段過來，帶著洗衣籃，走進這間小小的、日光燈會閃的洗衣店。有時候他已經在，隔著兩台機器點頭打招呼；有時候她先到，就坐在慣常那張塑膠椅上，一邊滑手機，一邊留意玻璃門有沒有被推開。</p>
+      <p>他叫什麼名字，她其實記得很清楚，只是心裡一直沒有直接喊出口過，好像喊出口，這件事就會變得太具體，太像是什麼開始了。</p>
+      <p>今晚他也來了，比平常早一點。兩人並肩坐著，聊了半個多小時，比平常都久。他說起找工作的事，語氣比之前輕快很多——他說，他拿到了一份 offer，很不錯的職缺，只是不在這個城市，下個月中就要搬過去了。</p>
+      <p>「到時候應該就不會在這裡洗衣服了吧。」他笑著說，像是在講一件再平常不過的事。</p>
+      <p>周若妤也跟著笑了，說了一句「恭喜」，很自然，很得體。</p>
+      <p>他的衣服先烘好，摺一摺，裝進籃子，跟她說了聲晚安，就先走了。</p>
+      <p>玻璃門在他身後關上，鈴鐺輕輕響了一下。</p>
+      <p>洗衣店裡，又只剩下她一個人，和那台還在轉的烘衣機。</p>
+      <p>「原來他找到工作了。」周若妤在心裡想著，嘴角抿成一條直線。</p>
+      <p>在那之後的日子裡，時間就這樣默默向前走著，他們像平常一樣，在等衣服洗好的同時，聊著彼此的生活趣事。隨著男生搬走的日子越來越近，他的話題裡多了些期待，周若妤也總是笑著回應。</p>
+      <p>而今晚，就是最後一晚。</p>
+      <p>男生說，行李已經收得差不多了，最後一批要洗的，就是身上這幾天換下來的衣服。他一邊說著，一邊把最後幾件塞進洗衣機，動作比平常慢了一點，像是也捨不得這個持續了一個月的固定行程。</p>
+      <p>「明天一早的車，」他說，「所以想說今晚先把東西都弄乾淨。」</p>
+      <p>周若妤點點頭，說了句「這樣啊」，聲音比自己預期的還要平靜。</p>
+      <p>他們最後一次並肩坐著，聊得比平常都少。不是沒有話說，而是有太多話，反而都卡在中間，不知道從哪裡開始。他提起這個月吃過的那幾間店，說有機會要再回來嚐嚐；她點頭附和，說好啊，一定。</p>
+      <p>兩人心裡都清楚，那句「一定」，大概不會兌現。</p>
+      <p>他的衣服先烘好。這一次，他摺衣服的動作特別慢，慢到像是在拖延。摺完，他站起身，看著她，欲言又止了幾秒，最後只是說：「那，保重。」</p>
+      <p>「你也是，」她說，「新工作加油。」</p>
+      <p>他點點頭，拉著行李箱，走向玻璃門。門被推開的瞬間，鈴鐺照樣輕輕響了一聲。</p>
+      <p>只是這一次，他沒有回頭。</p>
+      <p>門關上後，周若妤嘆了口氣。</p>
+      <p>這時她的衣服也烘好了，只是，她沒有急著把衣服拿出來，就這樣站在烘衣機前面看著。滾筒已經停了，衣服靜靜地堆在裡面，不再翻動，不再纏繞。她看著，不知道站了多久，才慢慢把衣服一件件拿出來，疊好，放進袋子裡。</p>
+      <p>洗衣店的日光燈還在閃，明明滅滅，一如往常。</p>
+      <p>她又坐了一會兒，才起身往門口走去。推開門的那一刻，鈴鐺又響了一聲——跟他離開時，一模一樣的聲音。</p>
+      <p>她站在門口，回頭看了一眼那台空了的烘衣機，然後才轉身，走進外面的夜色裡。</p>
+      <p>有些故事，不是被留住的，是被好好摺進袋子裡，然後帶著走的。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The fluorescent light in the laundromat flickered — on, off, on — as though it might die at any moment, yet it had held on this long without ever actually going out.</p>
+      <p>Zhou Ruoyu sat on the plastic chair. In the round window of the dryer in front of her, the clothes kept turning, kept tumbling — dark colors and light colors tangling together, pulling apart, tangling again. The machine hummed, mixing with the occasional sound of a car passing on the road outside, and the faintly sharp smell of detergent leaking from the air vent.</p>
+      <p>This was already the second time this cycle. When the countdown reached "00:03," she'd dropped in another coin, and the screen jumped back to "45:00." The drum started turning again.</p>
+      <p>She already knew the clothes were dry. She'd checked after the first cycle — every piece warm, soft, without a trace of dampness left.</p>
+      <p>She simply didn't have a reason yet to take them out.</p>
+      <p>Eleven at night, and the whole laundromat belonged to her alone. The clock on the wall moved so slowly she'd started to wonder if it was moving at all.</p>
+      <p>A month ago, Zhou Ruoyu had moved to this neighborhood for work. Because of her schedule, she always came to do laundry around this same hour, and often ran into a young man who kept the same routine. While waiting for their washes, they'd sit together on the chairs nearby and talk. Through those conversations, she learned he'd just finished graduate school and was job hunting. He told her about the good food spots around the neighborhood, and promised that sometime, when they both had time, they'd go check them out together.</p>
+      <p>That was a month ago.</p>
+      <p>Since then, Zhou Ruoyu had started paying attention to the time, always arriving around the same hour, laundry basket in hand, walking into this small laundromat with its flickering light. Sometimes he was already there, and they'd nod to each other across the machines; sometimes she arrived first, and sat in her usual chair, scrolling her phone, keeping half an eye on the glass door.</p>
+      <p>She knew his name perfectly well. She just never said it out loud — as if saying it would make the whole thing too concrete, too much like something had actually begun.</p>
+      <p>Tonight he came earlier than usual. They sat together for over half an hour, longer than usual. He talked about the job search, his voice lighter than before — he'd gotten an offer, he said, a good one, just not in this city. He'd be moving next month.</p>
+      <p>"I guess I won't be doing laundry here anymore," he said, laughing, as though it were the most ordinary thing in the world.</p>
+      <p>She laughed along and said "congratulations" — naturally, appropriately.</p>
+      <p>His clothes finished drying first. He folded them, packed the basket, said goodnight, and left.</p>
+      <p>The glass door swung shut behind him. The bell gave a soft ring.</p>
+      <p>The laundromat was empty again, except for her, and the dryer still turning.</p>
+      <p>So he'd found a job, she thought, her lips pressed into a flat line.</p>
+      <p>In the days that followed, time simply kept moving forward. They kept up their routine, chatting about small things in their lives while they waited for the wash. As the day of his move drew closer, his conversations carried more and more anticipation. She kept smiling back, same as always.</p>
+      <p>And tonight was the last night.</p>
+      <p>He said his bags were mostly packed. The last load to wash was just what he'd worn the past few days. As he spoke, he loaded the final pieces into the machine, his movements slower than usual, as if he too were reluctant to let go of this month-long routine.</p>
+      <p>"Early train tomorrow," he said. "So I figured I'd get everything clean tonight."</p>
+      <p>She nodded. "I see," she said, her voice steadier than she'd expected.</p>
+      <p>They sat together one last time, talking less than usual. Not because there was nothing to say — there was too much, and it all got stuck somewhere in the middle, none of it finding a place to start. He mentioned a few restaurants they'd tried this month, said he'd come back to try them again sometime. She nodded along. Sure, definitely.</p>
+      <p>They both knew that "definitely" probably wouldn't happen.</p>
+      <p>His clothes finished first again. This time, he folded them especially slowly, as if stalling. When he finished, he stood, looked at her, seemed about to say something and then didn't. In the end, all he said was, "Well. Take care."</p>
+      <p>"You too," she said. "Good luck with the new job."</p>
+      <p>He nodded, pulled up the handle of his suitcase, and walked toward the glass door. The moment it swung open, the bell gave its usual soft ring.</p>
+      <p>Only this time, he didn't look back.</p>
+      <p>After the door closed, Zhou Ruoyu let out a breath.</p>
+      <p>Her clothes were dry by then too, but she wasn't in a hurry to take them out. She just stood in front of the dryer, looking. The drum had stopped; the clothes sat still inside, no longer tumbling, no longer tangled. She stood there — she didn't know for how long — before slowly taking them out, one piece at a time, folding each one, placing them into her bag.</p>
+      <p>The fluorescent light kept flickering, on and off, same as always.</p>
+      <p>She sat a while longer before finally rising and walking to the door. The moment she pushed it open, the bell rang once more — the exact same sound as when he'd left.</p>
+      <p>She paused at the door, glanced back once at the empty dryer, then turned and walked out into the night.</p>
+      <p>Some stories aren't meant to be held onto. They're meant to be folded carefully into a bag, and carried forward.</p>
+    `
+  },
+   {
     id: "story-012",
     title: "打烊後的咖啡",
     titleEn: "The Coffee After Closing",
