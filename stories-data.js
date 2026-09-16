@@ -12,6 +12,59 @@
 
 const STORIES = [
    {
+    id: "story-014",
+    title: "頂樓的熊童子",
+    titleEn: "The Bear's Paw on the Rooftop",
+    date: "2026.09",
+    excerpt: "會議室的冷氣太強，數字疊著數字，卻一個字都沒聽進去。她推開很少人用的樓梯間，一路走到頂樓，卻在水塔邊，發現一盆被細心照顧著的熊童子。",
+    body: `
+      <p>會議室的冷氣開得太強，她坐在最後一排，聽著簡報一頁一頁地翻，數字疊著數字，卻一個字都沒真正聽進去。</p>
+      <p>散會的時候，已經過了下午兩點。她沒有跟著同事一起走進電梯，而是推開了樓梯間那扇很少人用的門，一路往上，走到頂樓。</p>
+      <p>天台的門沒有鎖，只是有點卡，她用肩膀頂了一下才推開。</p>
+      <p>外頭的陽光比她想像中更刺眼，她瞇起眼睛，站在原地適應了幾秒，才看清楚眼前的畫面——水塔的影子斜斜地拉長，地上還留著昨晚下雨的水漬，幾隻鴿子在水塔邊的鐵欄杆上縮著脖子，曬著太陽。</p>
+      <p>風比樓下大得多，吹得她額前的頭髮亂了。她走到女兒牆邊，雙手扶著粗糙的水泥邊緣，往下看了一眼——車子小得像玩具，人小得像螞蟻，剛剛讓她坐立難安的那間會議室，此刻連個影子都看不見。</p>
+      <p>她收回視線，轉身，才發現天台角落，靠著水塔的地方，擺著一個她從來沒注意過的東西。</p>
+      <p>她走近一看，發現是一盆植物。如果她沒記錯的話，她曾在圖鑑上看過，這是一盆叫做熊童子的多肉植物，厚厚的有絨毛、葉尖微微紅色，像熊掌一樣。土壤微乾，沒有腐葉，看起來被人細心照顧著。</p>
+      <p>盆栽旁邊，還放著一個小小的、已經生鏽的灑水壺，壺嘴上還掛著一滴沒滴落的水珠，看起來才剛被使用過不久。</p>
+      <p>她蹲下身，仔細看著那盆熊童子。葉片肥厚，帶著細細的絨毛，尖端那一點暗紅色，被陽光照著，透出一種近乎透明的光澤。有幾片葉子微微朝上翹起，真的像極了一隻小熊舉起掌心，討著什麼似的。</p>
+      <p>她忽然想到，自己上一次好好蹲下來，仔細看一株植物、一朵花，是什麼時候的事了。</p>
+      <p>好像很久了。久到她已經想不起來。</p>
+      <p>這幾個月，她的生活被切成一格一格的行事曆，開會、交件、開會、交件，中間偶爾夾雜著幾頓來不及好好吃的午餐。她像是活在一個不斷往前滾動的畫面裡，卻很少真正停下來，看清楚畫面裡有什麼。</p>
+      <p>風吹過，熊童子的葉片輕輕晃了一下，像是在跟她打招呼。</p>
+      <p>她伸出手指，很輕地碰了碰那片帶著絨毛的葉子，觸感比她想像中更柔軟。</p>
+      <p>她在心底問自己：「如果是我，會有能力好好照顧一盆植物嗎？」</p>
+      <p>工作忙，但工作不應該占據全部的生活。這樣一想，她發現，自己確實很久沒有為了「喜歡」這件事，好好做點什麼了。</p>
+      <p>蹲了一會兒，她伸手把那滴還沒落下的水珠，輕輕撥進了盆栽的土裡，像是幫那個沒見過面的人，把這件小事完成得更徹底一點。</p>
+      <p>風還在吹，鴿子拍著翅膀飛起，又落下。她站起身，拍了拍膝蓋，看著那盆熊童子，忽然覺得，自己好像沒有那麼急著回到樓下了。</p>
+      <p>下樓前，她掏出手機，把熊童子拍了下來，存進一個新建的相簿，取名叫「想做的事」。</p>
+      <p>回到座位上，會議室的冷氣依舊很強，行事曆上還是滿滿的待辦事項。只是她在便利貼上，多寫了一行小字：這個週末，去花市看看。</p>
+      <p>有些角度，只需要往上走幾層樓梯，就能重新看見。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The air conditioning in the meeting room was turned up too high. She sat in the back row, listening to the slides flip by, page after page, numbers stacked on numbers, none of it actually landing.</p>
+      <p>By the time the meeting ended, it was already past two in the afternoon. She didn't follow her coworkers into the elevator. Instead, she pushed open the rarely used stairwell door and walked up, all the way to the rooftop.</p>
+      <p>The door to the rooftop wasn't locked, just a little stuck. She had to shove it with her shoulder to get it open.</p>
+      <p>The sunlight outside was sharper than she'd expected. She squinted, standing still for a few seconds to adjust, before the scene came into focus — the water tower's shadow stretched long and slanted, puddles from last night's rain still lingered on the ground, and a few pigeons huddled on the railing beside the tank, sunning themselves.</p>
+      <p>The wind up here was much stronger than downstairs, tousling the hair at her forehead. She walked to the parapet, resting both hands on the rough concrete edge, and looked down — the cars looked toy-sized, the people looked like ants, and the meeting room that had left her so restless was, from up here, nowhere to be seen.</p>
+      <p>She pulled her gaze back, turned around, and that was when she noticed something in the corner of the rooftop, leaning against the water tower — something she'd never noticed before.</p>
+      <p>She walked closer. It was a plant. If she remembered correctly from a field guide she'd once seen, this was a succulent called a "bear's paw" — thick, fuzzy leaves, tips faintly tinged red, shaped just like a bear's paw. The soil was slightly dry, no rotting leaves in sight. It looked well cared for.</p>
+      <p>Beside the pot sat a small, rusted watering can, a single drop still clinging to its spout, not yet fallen — as if it had been used only recently.</p>
+      <p>She crouched down to look more closely. The leaves were thick and plump, covered in fine fuzz, the faint red at their tips catching the sunlight in an almost translucent glow. A few leaves curled slightly upward, looking exactly like a little bear lifting its paw, asking for something.</p>
+      <p>It suddenly occurred to her — when was the last time she'd crouched down like this, really looking at a plant, a flower?</p>
+      <p>It felt like a long time. Long enough that she couldn't quite remember.</p>
+      <p>These past few months, her life had been chopped into neat little boxes on a calendar — meetings, deadlines, meetings, deadlines, with the occasional rushed lunch squeezed in between. She'd been living inside a scene that kept scrolling forward, rarely stopping long enough to actually see what was in it.</p>
+      <p>The wind passed through, and the bear's paw leaves swayed gently, as if greeting her.</p>
+      <p>She reached out and lightly touched one of the fuzzy leaves. It was softer than she'd expected.</p>
+      <p>She asked herself, silently: "If it were me — would I actually be capable of taking care of a plant?"</p>
+      <p>Work was busy, but work shouldn't take up her whole life. Thinking that, she realized — it really had been a long time since she'd done anything just because she liked it.</p>
+      <p>She crouched there a moment longer, then reached out and gently nudged the still-clinging drop of water into the soil — as if helping the stranger who tended this plant finish the small task a little more completely.</p>
+      <p>The wind kept blowing. The pigeons flapped their wings and lifted off, then settled again. She stood up, brushed off her knees, and looked at the bear's paw plant, suddenly realizing she wasn't in such a hurry to go back downstairs anymore.</p>
+      <p>Before heading down, she took out her phone and photographed the plant, saving it into a newly created album titled "Things I Want to Do."</p>
+      <p>Back at her desk, the air conditioning was still too strong, and her calendar was still packed with things to do. But on a sticky note, she added one more line: This weekend, visit the flower market.</p>
+      <p>Some perspectives only take a few flights of stairs to find again.</p>
+    `
+  },
+   {
     id: "story-013",
     title: "衣服乾了以後",
     titleEn: "When the Clothes Were Dry",
