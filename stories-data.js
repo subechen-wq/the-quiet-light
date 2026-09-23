@@ -12,6 +12,67 @@
 
 const STORIES = [
    {
+    id: "story-015",
+    title: "暗房裡的日出",
+    titleEn: "Sunrise in the Darkroom",
+    date: "2026.09",
+    excerpt: "抽屜裡放了兩年的底片，終於被拿去沖洗。紅色安全燈下，他認出了那個日出的形狀，也想起一個當時沒有多想的細節——她怎麼會知道，太陽差不多幾點會升起？",
+    body: `
+      <p>沖印店的門口掛著一塊小小的牌子，寫著「暗房使用中，請稍候」。</p>
+      <p>老闆從櫃檯後面探出頭，看了他一眼，沒多問什麼，只是朝裡面那道厚重的黑色布簾努了努下巴，「進去吧，機器我已經幫你架好了。」</p>
+      <p>林知遠掀開布簾，裡面的光線瞬間暗了下來，只剩牆角一盞紅色的安全燈，幽幽地亮著。他花了幾秒鐘讓眼睛適應，才看清楚桌上排開的三個藥水盤——顯影、停影、定影，還有一夾一夾的曬乾夾，垂在頭頂的繩子上。</p>
+      <p>空氣裡有一股酸酸的、帶著化學藥劑的味道，混著一點點潮濕。</p>
+      <p>他把手裡那捲底片，很小心地從盒子裡拿出來。這捲底片，他放在抽屜裡，已經放了快兩年。</p>
+      <p>兩年前，是他和前女友分手前最後一次一起出遠門。那趟旅行，他特地借了一台老式的底片相機，說想留下一點「不一樣的」紀念。回來之後，感情很快就出了狀況，吵架、冷戰、最後很平淡地分開。那捲底片，就這樣被塞進抽屜最底層，跟其他雜物放在一起，一放，就是兩年。</p>
+      <p>他也不是沒想過乾脆丟掉。可是每次伸手要拿，手指碰到那個小小的黑色塑膠盒，又縮了回來。</p>
+      <p>直到上個星期，他搬家整理東西，那捲底片又從抽屜深處滾了出來，躺在他腳邊。他蹲下來，把它撿起來，看了很久，最後決定：沖了它，看看裡面到底拍了什麼，然後，也許就可以真正把這件事放下了。</p>
+      <p>老闆教過他基本的步驟，他按照記憶，把底片捲上沖片罐，鎖緊蓋子，倒進顯影液，開始計時。手錶的秒針一格一格地走，他輕輕搖晃著沖片罐，讓藥水均勻地流過每一格底片。</p>
+      <p>三分半鐘，說長不長，說短不短，他卻覺得像是過了很久。</p>
+      <p>倒掉顯影液，換上停影液，再換上定影液，每一個步驟，他都做得比老闆教他的還要慢，還要小心，好像在拖延最後打開沖片罐、看到底片的那一刻。</p>
+      <p>終於，該做的步驟都做完了。他深吸一口氣，打開沖片罐的蓋子，把那條濕漉漉、還捲曲著的底片，輕輕拉了出來，對著紅色的安全燈，瞇起眼睛，想看清楚上面到底是什麼。</p>
+      <p>日出的輪廓，在負片的反色裡看起來有點陌生——原本該是金黃的光，此刻在底片上暈染成一片深藍與墨綠交織的漸層，可是那個形狀、那種光從四面八方慢慢滲出來的感覺，他一眼就認出來了。</p>
+      <p>他忽然想起來了。那天清晨，他是被輕輕搖醒的。女友蹲在帳篷口，聲音壓得很低：「快起來，太陽要出來了。」他當時睡眼惺忪，一邊抱怨著怎麼這麼早，一邊還是鑽出了睡袋，跟著她走到外面。</p>
+      <p>直到現在，看著這張底片，他才想起一個當時沒有多想的細節——她怎麼會知道，太陽差不多幾點會升起？</p>
+      <p>後來，他才後知後覺地拼湊起來：她一定是自己先設了鬧鐘，先爬出帳篷，走到外面確認過天色，算準了時間，才回來叫醒他的。而這一切，她從來沒有主動說過，他也從來沒有問過。</p>
+      <p>那天，他們並肩坐在草地上，看著太陽一點一點爬上山稜線，金色的光線由遠而近，慢慢淹沒了整片天空。他還記得，自己當時說了一句「好美」，卻沒有想過，這份美，其實是有人特地為他準備的。</p>
+      <p>他捏著那張還沒乾透的底片，指尖微微顫抖。</p>
+      <p>那些爭吵、冷戰，還有最後平淡到有點倉促的分開，這兩年裡他反覆想起的，好像都是這些不好的部分。他幾乎忘記了，兩人之間也曾經有過這樣一個，安靜卻用心良苦的清晨。</p>
+      <p>底片還在滴水，他小心地用夾子把它夾起來，掛在頭頂的曬乾繩上，跟其他還在等待的照片並排在一起。</p>
+      <p>他把剩下的照片一張張沖洗出來，回憶像影片一樣，一幕幕在眼前播放。和她在一起的時光，並不總是愉快平和，但對他來說，每一段都很深刻。</p>
+      <p>走出暗房前，他把所有照片一張張仔細看過。有些畫面已經模糊，有些卻依然鮮明如昨。他沒有把日出那張特別挑出來，也沒有把它藏起來，就讓它跟其他照片一起，掛在繩子上，安靜地風乾。</p>
+      <p>掀開布簾，走出暗房，外頭的光線刺得他微微瞇眼。老闆抬頭看了他一眼，沒多問結果如何，只是說：「照片放著晾一晚，明天再來取。」</p>
+      <p>他點點頭，走出店門。夜色已經深了，路燈把街道照得昏黃。他沒有拿出手機，沒有想著要不要傳訊息給誰，只是把這份重新想起的溫柔，安靜地放進心裡。</p>
+      <p>有些答案，不需要被誰知道，只需要自己看清楚就好。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>A small sign hung by the shop's entrance: "Darkroom in use — please wait."</p>
+      <p>The owner poked his head up from behind the counter, glanced at him, and asked nothing. He just tilted his chin toward the heavy black curtain at the back. "Go on in. I've already got the equipment set up for you."</p>
+      <p>Lin Zhiyuan lifted the curtain, and the light dimmed instantly — only a red safety lamp glowed faintly in the corner. It took him a few seconds for his eyes to adjust before he could make out the three trays lined up on the table — developer, stop bath, fixer — and rows of drying clips hanging from a line above his head.</p>
+      <p>The air carried a faint sourness, chemical and slightly damp.</p>
+      <p>He carefully took the roll of film out of its case. It had sat in his drawer for almost two years.</p>
+      <p>Two years ago, it had been the last trip he'd taken with his ex-girlfriend before they broke up. He'd borrowed an old film camera specially for that trip, saying he wanted to keep something "different" as a keepsake. Not long after they got back, things had started falling apart — arguments, silence, and finally a quiet, almost anticlimactic end. The roll of film had gotten shoved to the bottom of a drawer along with other odds and ends, and stayed there for two years.</p>
+      <p>It wasn't that he'd never thought about just throwing it away. But every time he reached for it, his fingers would brush the little black plastic case, then pull back.</p>
+      <p>Then, last week, while packing to move, the roll had rolled out from the back of the drawer and landed by his foot. He'd crouched down, picked it up, looked at it for a long while, and finally decided: he'd develop it, see what was actually on it, and maybe then he could really let this go.</p>
+      <p>The owner had once shown him the basics. Working from memory, he loaded the film into the developing tank, sealed the lid, poured in the developer, and started the timer. The second hand ticked forward, notch by notch, as he gently rocked the tank, letting the chemicals wash evenly over every frame.</p>
+      <p>Three and a half minutes — not particularly long, not particularly short — but it felt like a great deal of time had passed.</p>
+      <p>He poured out the developer, added the stop bath, then the fixer. He moved through each step more slowly, more carefully than the owner had shown him, as if stalling the moment he'd finally open the tank and see the film.</p>
+      <p>At last, every step was done. He took a breath, opened the lid, and gently drew out the wet, curling strip of film, holding it up to the red safety light, squinting to make out what was on it.</p>
+      <p>The outline of a sunrise — strange, in the reversed colors of the negative. What should have been gold light bloomed instead into a gradient of deep blue and dark green. But the shape, the way the light seeped in from every direction — he recognized it instantly.</p>
+      <p>It came back to him all at once. That morning, someone had gently shaken him awake. His girlfriend, crouched at the tent flap, voice low: "Get up. The sun's about to rise." Half-asleep, grumbling about the early hour, he'd still crawled out of the sleeping bag and followed her outside.</p>
+      <p>Only now, looking at this film, did a detail he'd never thought twice about surface — how had she known exactly when the sun would rise?</p>
+      <p>Piecing it together, belatedly, he understood: she must have set her own alarm first, crawled out alone, checked the sky, timed it precisely — and only then come back to wake him. She'd never once mentioned any of it. He'd never once asked.</p>
+      <p>That morning, they'd sat side by side on the grass, watching the sun climb slowly over the ridgeline, gold light spreading closer and closer until it swallowed the whole sky. He remembered saying, "It's beautiful" — never once considering that this beauty had been prepared, specially, just for him.</p>
+      <p>He held the still-wet film between his fingers, which trembled slightly.</p>
+      <p>The arguments, the silence, the quiet, almost hurried ending — those were the parts he'd kept returning to these past two years. He'd nearly forgotten that between them, there had also been a morning like this — quiet, and quietly thoughtful.</p>
+      <p>The film was still dripping. He carefully clipped it to the line above, hanging it alongside the other photos still waiting their turn.</p>
+      <p>He developed the rest of the roll, frame by frame, memories playing back like a film reel. The time he'd spent with her hadn't always been easy or peaceful — but to him, it had been deep all the same.</p>
+      <p>Before leaving the darkroom, he looked over every photo carefully, one by one. Some images had already faded; others remained as vivid as yesterday. He didn't pull the sunrise photo out to set it apart, and he didn't hide it either — he simply let it hang there with the rest, drying quietly.</p>
+      <p>He lifted the curtain and stepped out. The light outside made him squint. The owner looked up but didn't ask how it had gone — just said, "Leave the photos to dry overnight. Come back tomorrow."</p>
+      <p>He nodded and walked out of the shop. Night had already settled in, the streetlights casting a dim yellow glow over the road. He didn't take out his phone. He didn't think about whether to send anyone a message. He simply carried this rediscovered tenderness quietly with him, and kept it close.</p>
+      <p>Some answers don't need to be known by anyone else. They only need to be seen clearly by yourself.</p>
+    `
+  },
+   {
     id: "story-014",
     title: "頂樓的熊童子",
     titleEn: "The Bear's Paw on the Rooftop",
