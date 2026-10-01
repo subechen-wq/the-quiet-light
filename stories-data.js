@@ -12,6 +12,77 @@
 
 const STORIES = [
    {
+    id: "story-016",
+    title: "告別前的書籤",
+    titleEn: "The Bookmark Before Closing",
+    date: "2026.10",
+    excerpt: "閉館的廣播響起，她沒有像平常一樣起身借書——這是她在這間圖書館的最後一天。管理員遞來一個限定版書籤，和一句「圖書館會一直在這裡」，讓這場告別，多了一點不一樣的重量。",
+    body: `
+      <p>閉館的廣播準時在五點五十分響起，還是那段用了不知道幾年的音樂，前奏一下，整層樓的人都下意識抬起頭。</p>
+      <p>「本館即將於六點閉館，請讀者盡快辦理借閱手續⋯」廣播小姐的聲音一如往常地平穩，聽不出任何情緒，卻讓周懿芯的心裡莫名地揪了一下。</p>
+      <p>她坐在靠窗的位子上，闔上手裡那本已經看了大半的書，卻沒有像平常一樣，立刻起身去排隊借書。她只是坐著，看著窗外的天色一點一點暗下來，看著書架之間的人影，一個一個收拾東西，往出口的方向移動。</p>
+      <p>這是最後一次了。下個月，她就要搬到國外，開始新的生活。這間圖書館，她已經來了七年，從高中晚自習後繞過來翻雜誌，到大學論文寫不出來時窩在角落，到現在每個週末固定報到，成了她生活裡一個很穩定的座標。</p>
+      <p>管理員開始一排一排地熄燈，靠窗這一區，還亮著。</p>
+      <p>周懿芯站起身，最後一次走向書架，指尖劃過熟悉的書背，停在她這七年來，不知道借過多少次的那一本前面。</p>
+      <p>「還想借那本書啊？」管理員不知道什麼時候看向了這裡。</p>
+      <p>懿芯愣了一下。「沒有⋯我只是看看。」</p>
+      <p>「猶豫的話就借回去看吧！我要熄燈啦！」管理員笑著說。</p>
+      <p>「不用了，我也要離開了。謝謝。」懿芯收回摸著書背的手，肩上的帆布背袋滑落了些，她抬腳朝門口走去。</p>
+      <p>「對了！妳到櫃檯等我一下，有個東西給妳。」管理員邊說，邊巡視著最後一排書架。</p>
+      <p>「好。」懿芯心裡疑惑，仍走到了櫃檯。</p>
+      <p>「以後大概不太會來這裡了吧⋯」在櫃檯等待的懿芯，環視著這間圖書館，心裡想著。</p>
+      <p>不久，管理員小跑著來到櫃檯。「不好意思，讓妳久等了。」</p>
+      <p>「沒關係。」懿芯回過神來。</p>
+      <p>「這個給妳，是書商給的限定版喔！打開看看！」管理員從抽屜拿出一個信封袋，遞到懿芯手上。</p>
+      <p>懿芯小心翼翼地撕開信封袋，拿出裡面的東西——是一個落地鐘造型的書籤，古銅色的黃銅材質，繫著一條金色緞帶。她捧著書籤，看得出神。</p>
+      <p>「是妳剛才看的那本書，書商送的喔！剛才看妳在看那本書，突然想起來今天剛收到它。只有一個，想著妳是我們圖書館的長期讀者，這個就給妳吧！」管理員看著正認真欣賞書籤的懿芯說。</p>
+      <p>「謝謝⋯真的太謝謝你了，我很喜歡，很開心能收到這個書籤。」懿芯受寵若驚地回覆。</p>
+      <p>「妳喜歡就好。好了，時間也不早了，趕快回家吧，我也要關門了。」管理員笑著說。</p>
+      <p>「謝謝你，其實⋯今天是我最後一天來這裡了。」懿芯把書籤仔細地收進信封袋。</p>
+      <p>「咦？為什麼？妳要搬家嗎？」</p>
+      <p>「是要搬家沒錯，確切地說，是要搬到別的國家了。」</p>
+      <p>「原來如此，沒關係，有機會隨時歡迎妳回來，圖書館會一直在這裡。」</p>
+      <p>心口忽然被什麼輕輕撞了一下，懿芯的鼻尖有點發酸。</p>
+      <p>「好的，謝謝你。」她抓緊了手裡的信封袋，笑著說。</p>
+      <p>走出圖書館後，天已經黑了，月光灑在石板路上。</p>
+      <p>「圖書館會一直在這裡。」管理員的話，似乎還在耳邊。</p>
+      <p>「是啊，這座圖書館會一直在這裡，以後還是可以回來的。」懿芯對著自己說，慢慢走進夜色裡。</p>
+      <p><strong>有些告別不需要眼淚，因為有些地方，一直都會在原地，等妳想起的時候。</strong></p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The closing announcement rang out right on time at five-fifty, the same tune they'd used for who-knew-how-many years. At the first few notes, everyone on the floor instinctively looked up.</p>
+      <p>"The library will be closing at six. Please complete your borrowing procedures shortly..." The announcer's voice was as steady as ever, giving nothing away — yet something about it made Zhou Yixin's chest tighten, inexplicably.</p>
+      <p>She sat by the window, closed the book she'd been most of the way through, but didn't get up to join the line at the counter the way she usually did. She just sat there, watching the sky outside darken bit by bit, watching the figures between the shelves pack up, one by one, and drift toward the exit.</p>
+      <p>This was the last time. Next month, she'd be moving abroad, starting a new life. She'd been coming to this library for seven years — from stopping by to flip through magazines after night study in high school, to hiding in a corner when she couldn't get her thesis to come together, to now, showing up every weekend like clockwork. It had become a fixed point in her life.</p>
+      <p>The librarian began switching off the lights, row by row. The section by the window was still lit.</p>
+      <p>Zhou Yixin stood up and walked toward the shelves one last time, her fingers trailing across familiar spines, stopping at the one book she'd borrowed more times than she could count over these seven years.</p>
+      <p>"Still thinking about borrowing that one?" The librarian had somehow already turned to look her way.</p>
+      <p>Yixin startled slightly. "No... I'm just looking."</p>
+      <p>"If you're on the fence, take it home. I'm about to turn off the lights!" the librarian said, laughing.</p>
+      <p>"It's fine — I'm leaving too. Thank you." Yixin pulled her hand back from the spine, the canvas bag slipping a little on her shoulder, and turned toward the door.</p>
+      <p>"Oh, wait! Come wait for me at the counter — I have something for you." The librarian kept talking while making one last round of the shelves.</p>
+      <p>"Okay." Puzzled, Yixin walked over to the counter anyway.</p>
+      <p>I probably won't be coming back here much after this, she thought, standing at the counter, looking around the library.</p>
+      <p>Before long, the librarian jogged over. "Sorry to keep you waiting."</p>
+      <p>"It's fine," Yixin said, snapping out of her thoughts.</p>
+      <p>"Here — it's a limited edition from the book distributor. Go on, open it!" The librarian pulled an envelope from a drawer and handed it over.</p>
+      <p>Yixin carefully tore it open and took out what was inside — a bookmark shaped like a grandfather clock, cast in antique bronze, tied with a gold ribbon. She held it, transfixed.</p>
+      <p>"It's from the distributor of the book you were just looking at. I saw you reading it and remembered we'd just gotten this in today. There's only one, and I thought — since you've been reading here for so long — it should go to you."</p>
+      <p>"Thank you... thank you so much. I really love it. I'm so happy to have this," Yixin said, startled and touched all at once.</p>
+      <p>"I'm glad you like it. Well, it's getting late — you should head home. I need to lock up too." The librarian smiled.</p>
+      <p>"Thank you. Actually... today's my last day coming here." Yixin carefully tucked the bookmark back into its envelope.</p>
+      <p>"Wait, what? Are you moving?"</p>
+      <p>"I am. To another country, actually."</p>
+      <p>"I see. Well, don't worry — you're always welcome back whenever you get the chance. The library will always be here."</p>
+      <p>Something knocked gently against her chest. Her eyes stung.</p>
+      <p>"Okay. Thank you," she said, gripping the envelope tightly, and smiled.</p>
+      <p>Outside, the sky had gone fully dark. Moonlight spilled across the stone path.</p>
+      <p>The library will always be here. The librarian's words seemed to linger in her ears.</p>
+      <p>"That's right," Yixin said to herself. "This library will always be here. I can always come back." She walked slowly into the night.</p>
+      <p><strong>Some goodbyes don't need tears — because some places stay exactly where they are, waiting for you to remember them.</strong></p>
+    `
+  },
+   {
     id: "story-015",
     title: "暗房裡的日出",
     titleEn: "Sunrise in the Darkroom",
