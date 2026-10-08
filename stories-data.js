@@ -12,6 +12,61 @@
 
 const STORIES = [
    {
+    id: "story-017",
+    title: "花店裡的洋甘菊",
+    titleEn: "The Chamomile at the Flower Shop",
+    date: "2026.10",
+    excerpt: "女孩紅著眼睛走進花店，老闆娘沒有多問一句「妳怎麼了」，只是遞上一枝洋甘菊，說了句「要不要進來待一會兒」。有些溫暖，不需要答案，只需要一個可以停留的地方。",
+    body: `
+      <p>社區轉角的花店開了快十年，店面不大，卻總是被各種顏色的花填得滿滿的，連走道都只夠一個人側身通過。</p>
+      <p>老闆娘蔡雪梅每天早上六點半就會到店裡，先去花市挑貨，回來後一朵一朵整理，剪去多餘的葉子，插進水桶裡。她做這件事已經做了很久，動作熟練得不用思考，手卻總是很輕，像是怕弄疼了誰。</p>
+      <p>店裡有個熟客，是隔壁棟的女孩，每個星期三下班後都會經過。她從來不買花，只是站在門口，看一看，有時候會走進來，聞一聞某幾種花的味道，然後說聲謝謝，就離開了。</p>
+      <p>蔡雪梅從來沒有多問過什麼，只是每次那個女孩經過，她都會停下手邊的事，抬頭看她一眼，笑一笑。</p>
+      <p>這個星期三，女孩又來了，站在門口，眼睛卻紅紅的，像是剛哭過，又努力忍住的樣子。</p>
+      <p>蔡雪梅放下寫到一半的筆，順手從旁邊的花筒中剪下一枝洋甘菊，走到門口。「妳好呀！今天太陽特別曬，要不要進來待一會兒？」</p>
+      <p>女孩正看著門口的向日葵出神，被老闆娘突如其來的問候嚇了一跳。</p>
+      <p>「喔⋯好，謝謝！」</p>
+      <p>「今天新進了許多花，妳可以慢慢逛。」蔡雪梅笑著說。</p>
+      <p>蔡雪梅把那枝洋甘菊遞到女孩面前。「送妳的，不用錢。」</p>
+      <p>女孩愣了一下，下意識地接過來。「這是⋯洋甘菊嗎？」</p>
+      <p>「對啊，妳認得花呢。」蔡雪梅笑著，轉身走回櫃檯，一邊整理著手邊還沒剪完的花材，一邊隨口說著：「洋甘菊的花語，是『在逆境中的堅強』。之前有客人跟我說過，覺得每次心情不好的時候，看到這種花，就會覺得，好像事情沒有想像中那麼糟。」</p>
+      <p>她說得很輕描淡寫，像是在講一件很普通的小知識，眼睛卻沒有看向女孩，只是低頭繼續手邊的工作，沒有多問女孩今天怎麼了，也沒有追問她的眼睛為什麼紅紅的。</p>
+      <p>女孩捏著那枝洋甘菊，指尖有點顫抖，她低下頭，深吸了一口氣，才把眼眶裡打轉的水氣逼了回去。</p>
+      <p>「謝謝妳。」她說，聲音有點啞。</p>
+      <p>「不客氣，」蔡雪梅頭也沒抬，「妳可以在店裡多待一會兒，不用急著走。外面風大，這裡暖一點。」</p>
+      <p>女孩在店裡逛了一會兒，身體看起來比剛進來時放鬆了一點。</p>
+      <p>「老闆娘，謝謝妳。」女孩對蔡雪梅說。</p>
+      <p>「不客氣，這裡隨時歡迎妳來。」正在打包花束的蔡雪梅抬起頭來，笑著對女孩說。</p>
+      <p>女孩也回以微笑，走出花店，步伐似乎也比剛進來時輕盈了一點。</p>
+      <p>蔡雪梅看著女孩的背影消失在轉角，才低下頭，繼續手邊還沒打包完的花束。她沒有問女孩發生了什麼事，也沒有留下聯絡方式，只是像平常一樣，把店裡的花，一朵一朵，照顧得好好的。</p>
+      <p><strong>有些溫暖，不需要問「妳怎麼了」，只需要說「妳可以在這裡待一會兒」。</strong></p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The flower shop on the corner had been open for nearly ten years. The space was small, always packed full of flowers in every color, the aisle barely wide enough for one person to slip through sideways.</p>
+      <p>The owner, Cai Xuemei, arrived every morning at six-thirty, first heading to the flower market to pick out stock, then coming back to arrange each bloom one by one — trimming away extra leaves, setting them into buckets of water. She'd been doing this for so long that her hands moved without thinking, yet always gently, as if afraid of hurting someone.</p>
+      <p>There was a regular — a girl from the building next door, who passed by every Wednesday after work. She never bought anything. She'd just stand at the door, look for a moment, sometimes step inside to smell a few of the flowers, say a quiet thank you, and leave.</p>
+      <p>Cai Xuemei never asked her anything. She just paused whatever she was doing whenever the girl passed, glanced up at her, and smiled.</p>
+      <p>This Wednesday, the girl came again. She stood at the door, her eyes red, as if she'd been crying and was working hard to hold the rest of it back.</p>
+      <p>Cai Xuemei set down the pen she'd been writing with, reached over and snipped a stem of chamomile from a nearby bucket, and walked to the door. "Hi there! The sun's really strong today — want to come in and rest a while?"</p>
+      <p>The girl had been staring blankly at the sunflowers by the entrance, startled by the sudden greeting.</p>
+      <p>"Oh... sure, thank you!"</p>
+      <p>"Lots of new flowers came in today. Take your time looking around," Cai Xuemei said, smiling.</p>
+      <p>She held out the chamomile to the girl. "This is for you. No charge."</p>
+      <p>The girl blinked, then took it without quite meaning to. "Is this... chamomile?"</p>
+      <p>"That's right. You know your flowers." Cai Xuemei smiled and turned back toward the counter, continuing to trim the stems she hadn't finished, speaking almost offhandedly as she worked: "The meaning behind chamomile is 'strength in adversity.' A customer once told me that whenever she was feeling low, seeing this flower made her feel like things weren't quite as bad as they seemed."</p>
+      <p>She said it lightly, as though sharing an ordinary little fact, her eyes never quite meeting the girl's. She kept her head down, working, never asking what had happened today, never pressing about the redness in her eyes.</p>
+      <p>The girl held the chamomile, fingers trembling slightly. She lowered her head and took a deep breath, forcing back the moisture gathering at the edges of her eyes.</p>
+      <p>"Thank you," she said, her voice a little hoarse.</p>
+      <p>"Don't mention it," Cai Xuemei said, not looking up. "Feel free to stay a while longer, no need to rush off. It's windy outside — it's warmer in here."</p>
+      <p>The girl wandered the shop for a while, her body looking noticeably more relaxed than when she'd first walked in.</p>
+      <p>"Thank you," the girl said to Cai Xuemei.</p>
+      <p>"You're welcome. You're always welcome here," Cai Xuemei said, looking up from the bouquet she was wrapping, smiling at her.</p>
+      <p>The girl smiled back, and walked out of the shop, her steps seeming a little lighter than before.</p>
+      <p>Cai Xuemei watched the girl's figure disappear around the corner before lowering her head again, returning to the bouquet still waiting to be finished. She never asked what had happened. She never took down a phone number. She simply went on, as always, tending to the flowers in her shop, one by one, with care.</p>
+      <p><strong>Some warmth doesn't need to ask "What's wrong?" It only needs to say, "You're welcome to stay a while."</strong></p>
+    `
+  },
+   {
     id: "story-016",
     title: "告別前的書籤",
     titleEn: "The Bookmark Before Closing",
