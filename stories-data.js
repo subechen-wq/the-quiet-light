@@ -12,6 +12,65 @@
 
 const STORIES = [
    {
+    id: "story-018",
+    title: "阿虎的球",
+    titleEn: "A-Hu's Ball",
+    date: "2026.10",
+    excerpt: "收容所角落，住著一隻戒備心很重的退役緝毒犬阿虎。志工沒有勉強靠近，只是日復一日安靜地陪伴。直到某一天，阿虎叼著球，主動碰了碰他的手臂。",
+    body: `
+      <p>收容所後排的籠舍，最角落那一間，住著一隻叫「阿虎」的老犬。</p>
+      <p>牠的資料卡上寫著：傑克羅素㹴犬，推測年紀十歲，退役緝毒犬，右耳因公受傷，個性戒備、不易親近，建議由資深志工照顧。</p>
+      <p>許子謙已經連續來了三個月。喜歡小動物的他，找到可以擔任動物收容所志工的位置。</p>
+      <p>每個星期二和星期五的下午，他會準時出現在阿虎的籠舍前，搬一張小板凳坐下，不特別做什麼，就只是安靜地待著。剛開始，阿虎會整隻縮進籠舍最裡面的角落，耳朵壓低，眼睛卻死死盯著他，一動也不動，像是隨時準備防禦。</p>
+      <p>許子謙不勉強牠，也不刻意伸手去摸。他只是說著話——今天天氣怎麼樣、路上遇到什麼事、收容所今天又來了幾隻新的貓——語氣很平淡，像是在跟一個老朋友閒聊，不特別期待回應。</p>
+      <p>慢慢地，阿虎不再整隻縮在角落，牠開始會趴在籠舍中間，跟他保持著一段固定的、安全的距離，眼神卻會隨著他的動作移動。</p>
+      <p>每次要離開前，許子謙都會做同一件事：把飼料盆裡添滿水，把牠的睡墊拉平，然後說一句「阿虎，我先走了，星期五見。」</p>
+      <p>阿虎從來沒有回應過，只是耳朵會輕輕動一下。</p>
+      <p>星期五，許子謙下課後，照慣例來到了阿虎的籠舍。阿虎正縮在角落，一動也不動。許子謙喊了幾聲，卻不見牠有反應。他心裡覺得奇怪，靠近一看，才發現阿虎閉著眼睛，身體微微顫抖，喉嚨裡發出細細的、輕到快聽不見的嗚咽聲。許子謙意識到不對勁，立刻抱起阿虎，直奔醫務室。</p>
+      <p>「是腸胃炎，這幾天我開點藥給牠，觀察一下就好。」醫師看完阿虎的狀況後說。</p>
+      <p>「好的，麻煩您了，謝謝。」許子謙這才放下懸著的心。</p>
+      <p>「你很關心阿虎呢，牠之前一直不太親近人。」醫師看著一臉擔心的許子謙，笑著說。</p>
+      <p>「是啊，牠最近終於願意搭理我一點了，沒想到卻生病了。」許子謙苦笑了一下。</p>
+      <p>「沒事的，不嚴重，按時餵藥，治療一段時間就會好的。你帶牠回籠舍休息吧。」</p>
+      <p>「那太好了，謝謝您。」許子謙抱起阿虎，回到籠舍。</p>
+      <p>那段時間，許子謙每天都來陪伴阿虎，阿虎的身體也慢慢恢復了健康。</p>
+      <p>這天，許子謙帶了一顆玩具球，想送給康復的阿虎。他把球放在趴著的阿虎旁邊，像往常一樣，坐下來和牠說話。</p>
+      <p>說著說著，突然有什麼輕輕碰了他的手臂一下。他轉過頭。</p>
+      <p>阿虎正叼著那顆玩具球，觸碰著他的手臂，眼睛專注地望著他。</p>
+      <p>許子謙愣了一下，眼眶微微發熱。「你想玩球嗎？」他笑著接過球，往旁邊一丟。</p>
+      <p>阿虎立刻跑過去，叼著球，又跑回來找他。</p>
+      <p>許子謙蹲下身，伸出手，這一次，阿虎沒有後退，反而慢慢湊近，用頭輕輕蹭了蹭他的掌心。</p>
+      <p>那一刻，許子謙沒有說話，只是輕輕摸著阿虎的頭，感覺到牠身體裡，某個緊繃了很久的地方，好像終於，慢慢地鬆開了。</p>
+      <p><strong>有些信任，不是靠一次呼喚就能換來的，而是日復一日，靜靜地待在原地，直到牠願意靠近的那一天。</strong></p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>In the back row of kennels at the shelter, in the very last corner, lived an old dog named A-Hu.</p>
+      <p>His record card read: Jack Russell Terrier, estimated age ten, retired narcotics-detection dog, right ear injured on duty, wary temperament, not easily approachable, recommended for experienced volunteers only.</p>
+      <p>Xu Ziqian had been coming for three months straight. He loved animals, and had found himself a spot as a volunteer at the shelter.</p>
+      <p>Every Tuesday and Friday afternoon, he'd show up right on time in front of A-Hu's kennel, set up a small folding stool, and sit down — not doing anything in particular, just staying quietly. At first, A-Hu would curl himself all the way into the farthest corner of the kennel, ears flattened, eyes locked on him without moving, as if braced to defend himself at any moment.</p>
+      <p>Xu Ziqian never pushed him, never reached out to touch him. He just talked — about the weather, something that had happened on the way over, how many new cats had come into the shelter that day — his tone easy and unhurried, like chatting with an old friend, never expecting a response.</p>
+      <p>Slowly, A-Hu stopped curling into the corner entirely. He began lying in the middle of the kennel instead, keeping a fixed, safe distance from Xu Ziqian, though his eyes would track every movement.</p>
+      <p>Before leaving each time, Xu Ziqian did the same thing: topped off the water in the food bowl, smoothed out the sleeping mat, and said, "A-Hu, I'm heading out. See you Friday."</p>
+      <p>A-Hu never once responded — only his ears would give a small twitch.</p>
+      <p>On a Friday, Xu Ziqian came to A-Hu's kennel after class, same as always. A-Hu was curled in the corner, not moving at all. Xu Ziqian called out to him a few times, but got no response. Something felt off, so he moved closer — and found A-Hu with his eyes shut, body trembling faintly, a thin, barely audible whimper coming from his throat. Realizing something was wrong, Xu Ziqian scooped him up immediately and rushed to the clinic.</p>
+      <p>"It's gastroenteritis. I'll give him some medicine for the next few days — just keep an eye on him," the vet said, after examining A-Hu.</p>
+      <p>"Okay. Thank you so much." Xu Ziqian finally let out the breath he'd been holding.</p>
+      <p>"You really care about him, don't you? He's never been easy to get close to," the vet said, smiling at Xu Ziqian's worried expression.</p>
+      <p>"Yeah. He'd finally started warming up to me a little — and then this happens." Xu Ziqian gave a small, rueful laugh.</p>
+      <p>"It's alright, it's nothing serious. Give him his medicine on schedule, and he'll be better after some treatment. Go ahead and take him back to rest."</p>
+      <p>"That's a relief. Thank you." Xu Ziqian carried A-Hu back to the kennel.</p>
+      <p>Over the days that followed, Xu Ziqian came to sit with A-Hu every single day, and A-Hu's health gradually returned.</p>
+      <p>One day, Xu Ziqian brought a tennis ball, meaning to give it to A-Hu now that he'd recovered. He set the ball down beside A-Hu, who was lying there as usual, and sat down to talk to him like always.</p>
+      <p>Mid-sentence, something brushed lightly against his arm. He turned his head.</p>
+      <p>A-Hu was holding the ball in his mouth, nudging it against Xu Ziqian's arm, his eyes fixed intently on him.</p>
+      <p>Xu Ziqian froze for a moment, his eyes warming with sudden heat. "You want to play?" he said, laughing, and took the ball, tossing it aside.</p>
+      <p>A-Hu bolted after it immediately, then trotted back with the ball in his mouth, straight to him.</p>
+      <p>Xu Ziqian crouched down and reached out his hand. This time, A-Hu didn't back away. Instead, he leaned in slowly and gently pressed his head against Xu Ziqian's palm.</p>
+      <p>In that moment, Xu Ziqian said nothing. He simply stroked A-Hu's head, and felt something inside the dog — something that had been held tight for a very long time — finally, slowly, begin to loosen.</p>
+      <p><strong>Some trust can't be won by calling out just once. It's built day after day, quietly staying in place, until the day it finally decides to come closer.</strong></p>
+    `
+  },
+   {
     id: "story-017",
     title: "花店裡的洋甘菊",
     titleEn: "The Chamomile at the Flower Shop",
