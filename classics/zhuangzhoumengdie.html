@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>莊周夢蝶｜與莊子的靜夜絮語｜The Quiet Light · 靜謐之光</title>
+<meta name="description" content="如果一個人，可以同時是莊周，也可以是蝴蝶，那麼，我們是不是也從來不只有一種樣子？借《莊子．齊物論》莊周夢蝶，看見「自我複雜度」（Self-Complexity）——真正的自己，不是只能挑出一種樣子，而是在每一個當下，都願意完整地成為那個當下的自己。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Noto+Serif+TC:wght@400;500;600;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=3">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --page:#efe6d1; --paper:#faf5e7;
+    --ink:#2a2318; --ink-soft:rgba(42,35,24,.66); --ink-faint:rgba(42,35,24,.44);
+    --seal:#9c3826; --gold:#bd9455; --gold-soft:rgba(189,148,85,.35);
+    --jade:#55624c; --line:rgba(42,35,24,.11);
+    --shadow: 0 14px 34px rgba(42,35,24,.09), 0 2px 8px rgba(42,35,24,.05);
+  }
+  body{background:var(--page); color:var(--ink); font-family:'Noto Serif TC',serif; line-height:1.9;}
+  a{color:inherit; text-decoration:none;}
+  #canvas{
+    position:fixed !important; inset:0 !important;
+    width:100vw !important; height:100vh !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+
+  .nav-list{
+    position:relative; z-index:5;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.6rem 3.2rem; background:var(--paper); border-bottom:1px solid var(--gold-soft);
+  }
+  .nav-brand{font-size:1.05rem; letter-spacing:.14em; font-weight:600;}
+  .nav-links{display:flex; gap:2.4rem;}
+  .nav-links a{font-size:.8rem; letter-spacing:.18em; color:var(--ink-soft);}
+  .nav-links a.active{color:var(--seal);}
+
+  .essay-hero{
+    position:relative; z-index:2;
+    height:66vh; min-height:440px; max-height:640px;
+    display:flex; align-items:flex-end;
+    background-image:url('images/莊周夢蝶.png'); background-size:cover; background-position:center 42%;
+  }
+  .essay-hero::before{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,16,10,.5) 0%, rgba(20,16,10,.05) 30%, rgba(20,16,10,.2) 55%, rgba(15,12,7,.88) 100%);
+  }
+  .back-link{
+    position:absolute; top:2rem; left:3.2rem; z-index:3;
+    font-size:.84rem; letter-spacing:.06em; color:#f4efe2; font-weight:600;
+    text-shadow:0 2px 12px rgba(0,0,0,.5);
+  }
+  .hero-copy{position:relative; z-index:2; max-width:900px; padding:0 3.2rem 3.4rem;}
+  .hero-eyebrow{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:.9rem; letter-spacing:.3em; color:#e9c48f; margin-bottom:1.1rem; text-shadow:0 2px 12px rgba(0,0,0,.5);}
+  .hero-copy h1{
+    font-family:'LXGW WenKai TC',serif; font-weight:700; font-size:clamp(1.7rem,3.2vw,2.5rem);
+    color:#faf5e7; line-height:1.6; letter-spacing:.03em;
+    text-shadow:0 3px 18px rgba(0,0,0,.4);
+  }
+  .hero-copy h1 span{display:block; font-size:1.05rem; font-weight:400; color:#e6ded0; margin-top:.6rem; letter-spacing:.06em;}
+
+  .article-wrap{position:relative; z-index:2; max-width:900px; margin:0 auto; padding:0 1.4rem;}
+  .article-card{
+    background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
+    margin-top:-3.4rem; position:relative; z-index:4;
+    padding:2.6rem 1.9rem 3rem;
+  }
+  @media(min-width:640px){ .article-card{padding:3.6rem 3.6rem 4rem;} }
+
+  .opening-quote{
+    text-align:center; padding:0 1rem 2.4rem; margin-bottom:2.4rem;
+    border-bottom:1px solid var(--line);
+    font-family:'LXGW WenKai TC',serif; font-style:italic;
+    font-size:1.05rem; color:var(--ink-soft); line-height:2;
+  }
+  .opening-quote-source{
+    display:block; margin-top:1rem; font-family:'Noto Serif TC',serif; font-style:normal;
+    font-size:.78rem; letter-spacing:.15em; color:var(--seal);
+  }
+
+  .article-body p{margin-bottom:1.5rem; font-size:1.03rem; line-height:2.15; color:var(--ink);}
+  .article-body strong{color:var(--seal); font-weight:700;}
+
+  .article-closing{
+    margin-top:3rem; padding-top:1.9rem; border-top:1px solid var(--line);
+    font-size:.85rem; color:var(--ink-soft); text-align:center; line-height:2;
+  }
+  .article-closing a{color:var(--seal); border-bottom:1px solid var(--gold-soft);}
+
+  .nextup{position:relative; z-index:2; max-width:900px; margin:3.4rem auto 5rem; padding:0 1.4rem; display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;}
+  .nextup a{
+    background:var(--paper); border-radius:14px; padding:1.6rem 1.7rem;
+    box-shadow:0 8px 22px rgba(42,35,24,.07);
+    transition:transform .3s, box-shadow .3s;
+  }
+  .nextup a:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
+  .nextup .dir{font-size:.72rem; letter-spacing:.2em; color:var(--gold); margin-bottom:.5rem;}
+  .nextup .ttl{font-family:'LXGW WenKai TC',serif; font-weight:700; font-size:1rem; color:var(--ink);}
+
+  .site-footer{position:relative; z-index:2; display:block; text-align:center; padding:2.6rem 1rem 3.4rem; font-size:.82rem; color:var(--ink-faint);}
+
+  @media(max-width:640px){
+    .nav-list{padding:1.4rem 1.4rem;}
+    .back-link,.hero-copy{padding-left:1.4rem; padding-right:1.4rem;}
+    .nextup{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div class="nav-list">
+  <div class="nav-brand">The Quiet Light · 靜謐之光</div>
+  <div class="nav-links">
+    <a href="../index.html">首頁</a>
+    <a href="../stories.html">故事集</a>
+    <a href="index.html" class="active">讀古人</a>
+    <a href="../about.html">關於</a>
+    <a href="../contact.html">聯絡</a>
+  </div>
+</div>
+
+<div class="essay-hero">
+  <a class="back-link" href="zhuangzi.html">← 與莊子的靜夜絮語</a>
+  <div class="hero-copy">
+    <div class="hero-eyebrow">看見更大的世界，才看得清自己・之三</div>
+    <h1>我是誰，從來不是只有一個答案<span>——莊周夢蝶</span></h1>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <article class="article-card">
+    <div class="opening-quote">
+      <p>那一夜，莊周夢見自己是一隻蝴蝶，飛得那樣自在，忘了自己是誰。<br>醒來後，他沒有急著分辨夢是真是假，而是留下了一個兩千多年都沒有答案的問題：<br>如果一個人，可以同時是莊周，也可以是蝴蝶，那麼，我們是不是也從來不只有一種樣子？</p>
+      <span class="opening-quote-source">選自《莊子．齊物論》</span>
+    </div>
+
+    <div class="article-body">
+    <p>那一夜，莊周做了一個夢。</p>
+    <p>夢裡，他變成了一隻蝴蝶。一下停在花上，一下迎著風飛向另一朵花，飛得那樣自在，那樣輕盈，完全沉浸在蝴蝶的快樂裡。</p>
+    <p>那一刻，他沒有想起自己是誰，也沒有想起「莊周」這個名字。他不是夢見一隻蝴蝶，而是他就是蝴蝶。一切都那麼自然，沒有絲毫懷疑。</p>
+    <p>後來，他醒了。</p>
+    <p>醒來的那一刻，他很清楚，自己好端端地躺在那裡，是莊周，不是蝴蝶。他沒有恍惚，也沒有混淆，正因如此，接著浮現在心裡的那個念頭，才顯得格外耐人尋味。</p>
+    <p>剛才，到底是莊周做了一場夢，夢見自己變成蝴蝶；還是此刻醒著的莊周，其實只是蝴蝶做的一場夢？</p>
+    <p>莊周是莊周，蝴蝶是蝴蝶，兩者之間當然有所分別，他並沒有否認這件事。只是，那一刻，他忽然發現，原來自己一直以為清清楚楚的界線，似乎沒有想像中那麼牢固。</p>
+    <p>兩千多年來，人們不停猜測這場夢究竟是真是假。但也許，莊子真正想留下的，從來不是答案，而是那個直到今天仍值得我們反覆思索的問題：如果「我是誰」並不像自己以為的那樣只有一種可能，那麼，我們又該如何理解自己？</p>
+    <p>顧沛晴站在會議室的白板前，語速很快，一句接一句，把三個部門的爭執點拆開、排序、收攏成兩個選項，全場安靜聽她說完。散會後，她走回座位，手機震動，是女兒傳來的訊息，只有一張照片——今天在安親班畫的畫，歪歪扭扭的太陽跟一隻不知道是狗還是貓的東西。顧沛晴看著螢幕，嘴角不自覺鬆下來，手指在螢幕上打字：「好可愛喔寶貝，這是什麼呀？」打完，她愣了一下，重新看了一遍自己剛剛打的字——那種語氣，那種用詞，跟十分鐘前在白板前的自己，完全是兩個人。她想起昨天晚上，她一個人坐在陽台，把白天積住的話寫進手機備忘錄裡，那些句子很慢，很繞，跟開會時的俐落也完全不像。她想不起來，自己到底哪一個時刻，才是「真正的」顧沛晴——是白板前那個，是陽台上那個，還是現在，對著女兒的畫，笑出來的這個。</p>
+    <p>或許，顧沛晴真正愣住的，不是自己用了不同的語氣，而是她忽然發現——原來在不同的人面前，自己竟然會有這麼不同的樣子。</p>
+    <p>我們也常以為，一個人應該只有一個真正的樣子。可是心理學家 Patricia Linville 卻有另一種看法，她提出了一個叫「自我複雜度」（Self-Complexity）的概念。她發現，一個人心裡，其實同時住著好幾個「自己」——在會議室裡的自己，在家人面前的自己，獨處時的自己，彼此不太一樣，甚至用著不同的語氣、不同的節奏。有趣的是，這些自己愈是分明、愈是各自獨立，一個人反而愈不容易因為某一處的挫折，就把整個人都否定掉。顧沛晴不知道 Patricia Linville 是誰，莊周當然也不知道。</p>
+    <p>一位是二十世紀的心理學家，一位是兩千多年前的哲學家。他們沒有得到同一個答案，卻都把目光停在同一個問題上：一個人，真的只能有一種樣子嗎？</p>
+    <p>也許問題從來不是「哪一個才是真正的我」；白板前俐落的顧沛晴，是真的；陽台上安靜寫字的顧沛晴，是真的；對著女兒的畫笑出來的她，也是真的。這些樣子，不是彼此競爭，而是共同拼成了一個完整的人。如果一定要從中間挑出唯一一個才算真正的自己，其他那些不同的樣子，便只能被迫退到旁邊。可是，也許真正遺漏的，正是一個人原本就能擁有的完整。</p>
+    <p>莊周分得清自己是周，還是蝶。顧沛晴也分得清，此刻的自己，是在白板前，還是在女兒的畫前。分得清，不代表只能選一個。也許真正重要的，從來不是急著找出唯一的自己，而是在每一個當下，都願意完整地成為那個當下的自己。</p>
+    <p>那麼，你呢？</p>
+    <p>從河伯望見北海的那一刻，到濠梁上分不清魚樂與己樂，再到夢裡分不清周與蝶——一路走來，莊子問的，看似是三個不同的問題，卻都在輕輕鬆開一件事：那些我們以為早已看清楚的人、世界與自己，也許都還能再看深一點，再看遠一點。答案或許沒有終點。但每一次願意重新看一眼，世界便比昨天寬了一點；而我們，也比昨天，更靠近自己一點。</p>
+        </div>
+
+    <div class="article-closing">
+      文字版權為作者「小小聲」所有。如欲轉載、引用或改作，請先來信取得同意，謝謝。<br>
+      📩 <a href="mailto:subechen@gmail.com">subechen@gmail.com</a>　📷 IG: <a href="https://www.instagram.com/a_light_left_on" target="_blank" rel="noopener">a_light_left_on</a><br>
+      文字 ©小小聲
+    </div>
+  </article>
+</div>
+
+<div class="nextup">
+  <a href="haoliangzhibian.html"><div class="dir">← 上一篇</div><div class="ttl">濠梁之辯</div></a>
+  <a href="zhuangzi.html"><div class="dir">回到分類 →</div><div class="ttl">與莊子的靜夜絮語</div></a>
+</div>
+
+<div class="site-footer">© The Quiet Light · 所有故事版權歸作者所有</div>
+
+<!-- 隱藏式聲音控制面板（與主站共用） -->
+<div class="panel-tab" id="panel-tab" onclick="openPanel()">
+  <span class="panel-tab-icon">♪</span>
+  <span class="panel-tab-text">聲音</span>
+</div>
+<aside class="sound-panel" id="sound-panel" aria-label="聲音控制面板">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div class="panel-header">
+    <p class="panel-title">環境音效</p>
+    <p class="panel-subtitle">音樂盒 · Music Box</p>
+  </div>
+  <div class="now-playing" id="now-playing">
+    <div class="np-dot"></div>
+    <span class="np-text" id="np-text"></span>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">背景音樂</p>
+    <div id="music-list"></div>
+    <button class="play-btn" id="play-btn" onclick="togglePlay()">
+      <span id="play-icon">▶</span>
+      <span id="play-label">播放音樂</span>
+    </button>
+    <div class="slider-group">
+      <div class="slider-label-row">
+        <span class="slider-name">音樂音量</span>
+        <span class="slider-value" id="music-vol-val">60%</span>
+      </div>
+      <input type="range" class="panel-range" min="0" max="100" value="60" oninput="updateSlider(this,'music-vol-val')">
+    </div>
+  </div>
+  <div class="panel-section">
+    <p class="panel-section-label">環境氛圍</p>
+    <button class="ambient-btn" id="btn-rain" onclick="toggleAmbient('rain',this)">
+      <span class="ambient-icon">🌧</span>
+      <span class="ambient-label">雨聲</span>
+      <span class="ambient-tag" id="tag-rain">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-rain">
+      <div id="rain-list" style="padding:.2rem .5rem .4rem;"></div>
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">雨聲音量</span>
+          <span class="slider-value" id="rain-vol-val">50%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="50" oninput="updateSlider(this,'rain-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-white" onclick="toggleAmbient('white',this)">
+      <span class="ambient-icon">🌊</span>
+      <span class="ambient-label">白噪音</span>
+      <span class="ambient-tag" id="tag-white">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-white">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">白噪音音量</span>
+          <span class="slider-value" id="white-vol-val">40%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="40" oninput="updateSlider(this,'white-vol-val')">
+      </div>
+    </div>
+    <button class="ambient-btn" id="btn-fire" onclick="toggleAmbient('fire',this)">
+      <span class="ambient-icon">🕯</span>
+      <span class="ambient-label">壁爐火聲</span>
+      <span class="ambient-tag" id="tag-fire">關閉</span>
+    </button>
+    <div class="ambient-slider-section" id="section-fire">
+      <div class="slider-group" style="padding:.2rem .75rem .6rem;">
+        <div class="slider-label-row">
+          <span class="slider-name" style="font-size:.68rem;">火聲音量</span>
+          <span class="slider-value" id="fire-vol-val">35%</span>
+        </div>
+        <input type="range" class="panel-range" min="0" max="100" value="35" oninput="updateSlider(this,'fire-vol-val')">
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <p class="panel-footer-text">所有音樂為免費授權作品<br>適合深夜靜讀使用</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="../script.js"></script>
+<script>
+  document.documentElement.classList.add('js-ready');
+</script>
+
+</body>
+</html>
