@@ -11,6 +11,63 @@
    ============================================ */
 
 const STORIES = [
+     {
+    id: "story-019",
+    title: "分你一半巧克力",
+    titleEn: "The Chocolate We Shared",
+    date: "2026.10",
+    excerpt: "凌晨的自習室，她把一盒巧克力放到從沒說過話的隔壁男生桌上。兩人一顆一顆分著吃，直到最後一顆，手不約而同碰在一起。有些溫暖，不需要認識彼此。",
+    body: `
+      <p>自習室的白光燈整晚都亮著，二十四小時，從不熄滅。</p>
+      <p>凌晨一點多，整層樓只剩零星幾個位子還有人。林芷晴坐在靠牆的位子上，桌上攤開一疊做到一半的簡報，螢幕的光映在她臉上，襯得她的臉色更蒼白。她已經數不清這是本週第幾個熬夜的晚上了，眼睛乾澀，卻不敢閉上——明天一早九點，就要跟客戶提案。</p>
+      <p>隔壁位子的男生，她見過很多次，卻從來沒說過話。他總是戴著耳機，安靜地打著字，偶爾停下來，揉一揉眼睛，再繼續。她不知道他在忙什麼，只知道他跟她一樣，總是待到很晚。</p>
+      <p>滑鼠點了幾下，簡報又跳出一個錯誤訊息，林芷晴閉上眼睛，深深吸了一口氣，才把湧上來的煩躁壓下去。</p>
+      <p>她揉了揉太陽穴，抬頭看了一眼牆上的時鐘。一點四十分。</p>
+      <p>明天還要早起，她準備收拾，打算明天一早再處理。把電腦放進包裡的手突然摸到了什麼，林芷晴從包裡將它拿出來。是一盒巧克力。她想起來是早上出門前隨手放進包裡的，原本打算當作下午果腹的零食，忙了一天早已忘記這件事。林芷晴用手摩挲著巧克力盒，轉頭看了下依然專注敲著字的男生，猶豫了一秒，她把巧克力盒放到男生桌子上。</p>
+      <p>男生愣了一下，摘下一邊耳機，看著桌上那盒突然出現的巧克力，又抬頭看向林芷晴，眼神裡帶著困惑。</p>
+      <p>「這個巧克力給你。」林芷晴指了指巧克力盒，聲音因為太久沒說話，有點沙啞，「看你好像也忙很晚了，提神一下。」</p>
+      <p>「謝謝，」他愣了兩秒才反應過來，笑了笑，「妳自己不留著吃嗎？」</p>
+      <p>「我等等要回家了，」林芷晴一邊收拾東西，一邊說，「留著也是浪費，你比較需要。」</p>
+      <p>男生拆開巧克力盒，拿出一顆，放進嘴裡，然後把盒子推回桌子中間，剛好在兩人座位之間的位置。「一起吃吧，反正也吃不完。」</p>
+      <p>林芷晴愣了一下，笑了，拿起一顆放進嘴裡。甜味在舌尖散開，混著一點苦，是她很喜歡的黑巧克力口味。</p>
+      <p>兩人沒有再多說什麼，各自低頭做著自己的事，只是那盒巧克力，就這樣安靜地放在兩人中間，誰想吃，就伸手拿一顆。</p>
+      <p>巧克力越來越少，直到最後一顆，兩人不約而同伸出的手碰到了一起。空氣安靜了幾秒。</p>
+      <p>「抱歉，妳吃吧。」男生先開口。</p>
+      <p>「不，你吃吧，我吃不下了。」林芷晴收回手。</p>
+      <p>男生聳聳肩吃掉最後一顆巧克力。「謝謝妳的巧克力，很好吃。」</p>
+      <p>林芷晴背起包，靠上椅子。「不客氣，謝謝你幫我一起消滅它，我回去的包包變輕了。」</p>
+      <p>男生笑了出來，摘下另一邊耳機，像是終於決定暫時放下手邊的工作。「妳明天的提案，加油。」</p>
+      <p>林芷晴愣了一下，隨即也笑了。「你怎麼知道我在準備提案？」</p>
+      <p>「猜的，」他聳聳肩，「妳皺眉頭皺了快兩個小時。」</p>
+      <p>她笑著搖搖頭，背起包，往門口走去。走到自習室門口時，她回頭看了一眼，男生已經重新戴上耳機，繼續低頭打字，桌上那個空了的巧克力盒，被他推到螢幕旁邊，沒有丟掉。</p>
+      <p><strong>有些溫暖，不需要認識彼此，只需要在同一盞燈下，恰好分享了一盒巧克力。</strong></p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The fluorescent lights in the study room stayed on all night, twenty-four hours, never switching off.</p>
+      <p>Past one in the morning, only a scattering of seats on the whole floor were still occupied. Lin Zhiqing sat by the wall, a half-finished presentation spread across her desk, the glow of her screen lighting her face, making her look even paler than she was. She'd lost count of how many all-nighters this made this week. Her eyes were dry and stinging, but she didn't dare close them — she had a pitch to a client at nine the next morning.</p>
+      <p>The guy at the next desk — she'd seen him many times, but they'd never spoken. He always had his headphones on, typing quietly, occasionally pausing to rub his eyes before continuing. She didn't know what he was working on, only that, like her, he always stayed late.</p>
+      <p>A few clicks of the mouse, and the presentation threw up another error message. Lin Zhiqing closed her eyes and took a deep breath, pushing down the frustration rising in her chest.</p>
+      <p>She rubbed her temples and glanced up at the clock on the wall. One-forty.</p>
+      <p>She had to be up early the next morning, so she started packing up, deciding to deal with the rest first thing. As she slid her laptop into her bag, her hand brushed against something. She pulled it out — a box of chocolates. She remembered now: she'd tossed it into her bag that morning on her way out, meaning it as an afternoon snack, then forgotten about it entirely in the rush of the day. She turned the box over in her hands, glanced over at the guy still typing away with total focus, hesitated for a second, then set the box of chocolates down on his desk.</p>
+      <p>He startled slightly, pulled off one earbud, looked at the chocolates that had suddenly appeared, then looked up at Lin Zhiqing, confusion in his eyes.</p>
+      <p>"This... it's for you," Lin Zhiqing said, gesturing at the box, her voice a little hoarse from not speaking for so long. "You look like you've been at this pretty late too. Something to keep you going."</p>
+      <p>"Thanks," he said, taking a second to register it, then smiled. "You don't want to keep it for yourself?"</p>
+      <p>"I'm heading home soon," Lin Zhiqing said, gathering her things. "No point letting it go to waste. You need it more."</p>
+      <p>He opened the box, took out a piece, popped it in his mouth, then slid the box back to the middle of the desk — right at the boundary between their two seats. "Let's share it. Neither of us is going to finish the whole thing alone."</p>
+      <p>Lin Zhiqing paused for a moment, then smiled, taking a piece and putting it in her mouth. Sweetness spread across her tongue, laced with a touch of bitterness — dark chocolate, her favorite kind.</p>
+      <p>Neither of them said much after that. They each went back to their own work, the box of chocolate simply sitting there quietly between them — whoever wanted one just reached over and took it.</p>
+      <p>The chocolates dwindled, piece by piece, until only one remained. Their hands reached for it at the same moment and brushed against each other. The air went quiet for a few seconds.</p>
+      <p>"Sorry — you have it," he said first.</p>
+      <p>"No, you take it. I can't eat any more," Lin Zhiqing said, pulling her hand back.</p>
+      <p>He shrugged and ate the last piece. "Thanks for the chocolate. It was really good."</p>
+      <p>Lin Zhiqing slung her bag over her shoulder, leaning back in her chair. "Don't mention it. Thanks for helping me finish it off — my bag's lighter now on the way home."</p>
+      <p>He laughed, pulled off his other earbud, as if finally deciding to set his work aside for a moment. "Good luck with your pitch tomorrow."</p>
+      <p>Lin Zhiqing blinked, then laughed too. "How did you know I was working on a pitch?"</p>
+      <p>"Just a guess," he said, shrugging. "You've been frowning for like two hours straight."</p>
+      <p>She shook her head, laughing, and slung her bag over her shoulder, heading for the door. At the threshold, she glanced back — he'd already put his headphones back on, head down, typing again. The empty chocolate box sat pushed to the side of his screen. He hadn't thrown it away.</p>
+      <p><strong>Some warmth doesn't require knowing each other. It just needs two people, under the same light, happening to share a box of chocolate.</strong></p>
+    `
+  },
    {
     id: "story-018",
     title: "阿虎的球",
