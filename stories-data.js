@@ -11,6 +11,65 @@
    ============================================ */
 
 const STORIES = [
+      {
+    id: "story-020",
+    title: "多加的那顆蛋",
+    titleEn: "The Extra Egg",
+    date: "2026.10",
+    excerpt: "熬夜趕完報告的早晨，他照常到早餐店點了蛋餅加蛋。阿珠姨沒多說什麼，只是又多打了一顆蛋，蓋在蛋餅上頭，說：「算我請的，補一下精神。」有些力氣，是被別人悄悄補進去的。",
+    body: `
+      <p>早餐店的鐵捲門，每天清晨五點半準時拉開，比整條街的路燈熄滅得還早。</p>
+      <p>老闆娘阿珠姨站在鐵板前，油溫已經燒得剛剛好，麵糊倒下去，滋滋地響。她一個人打理這間店十幾年了，手腳俐落，煎蛋餅的時候幾乎不用看，眼睛卻總是有一半留意著門口，看誰進來了。</p>
+      <p>七點整，鐵門外準時出現一個年輕人的身影。他叫吳承翰，在附近的公司上班，這半年來，幾乎每個上班日都會來。</p>
+      <p>「阿珠姨早，蛋餅加蛋，豆漿去冰。」他一邊說，一邊在騎樓下的塑膠椅坐下。</p>
+      <p>阿珠姨連問都不用問，手上的動作已經在做了。「知道啦，跟平常一樣。」</p>
+      <p>她一邊煎著蛋餅，一邊隨口聊了幾句——今天天氣、附近哪條路又在施工、隔壁豆花店最近生意特別好。吳承翰偶爾應個兩聲，大部分時間只是安靜地滑手機，等著早餐。</p>
+      <p>這天，鐵門外的身影出現得比平常晚了十分鐘，腳步也比平常拖沓。</p>
+      <p>「早阿！今天也是一樣蛋餅加蛋，豆漿去冰對嗎？」阿珠姨看著門口沒什麼精神的吳承翰問道。</p>
+      <p>「對。」吳承翰嘆了口氣，坐到一旁的塑膠椅上。</p>
+      <p>「昨晚沒睡好嗎？怎麼垂頭喪氣的？」阿珠姨一邊準備早餐一邊問。</p>
+      <p>「唉，昨晚臨時接到今早要開會的通知，趕了一整晚的專案報告。」吳承翰揉了揉眼睛，打了個哈欠。</p>
+      <p>阿珠姨聽了，沒多說什麼，只是把蛋餅翻面的動作停了半秒。</p>
+      <p>「這麼辛苦喔，」她把煎好的蛋餅捲起來，切成幾段，裝進紙袋，又順手多打了一顆蛋，煎成一片薄薄的荷包蛋，蓋在蛋餅上頭，「今天加碼一顆蛋，算我請的，補一下精神。」</p>
+      <p>吳承翰愣了一下。「阿珠姨，這樣要另外加錢啦，不好意思一直讓妳請。」</p>
+      <p>「講什麼傻話，」阿珠姨把紙袋遞給他，順手又倒了一杯豆漿，比平常裝得更滿一點，「開會加油，別在會議上打瞌睡就好。」</p>
+      <p>吳承翰接過早餐，忽然覺得眼眶有點熱，可能是太累了，也可能不是。</p>
+      <p>「謝謝阿珠姨。」他說，聲音比平常更小聲一點。</p>
+      <p>「謝什麼，快去上班啦，遲到了。」阿珠姨揮揮手，轉身招呼下一個客人，語氣一如往常地爽朗。</p>
+      <p>「那我走囉！謝謝！」吳承翰咧開嘴笑著和阿珠姨道別後往門口走去。</p>
+      <p>吳承翰走出騎樓，陽光正好從巷口那頭斜斜地照過來，把整條街染成一層淡淡的金黃色。他咬了一口蛋餅，荷包蛋的蛋黃還帶著溫度，混著醬油膏的香氣，在嘴裡散開。</p>
+      <p>他一邊走，一邊想著等等的會議、還沒改完的簡報，卻覺得肩膀好像沒有出門前那麼沉了。</p>
+      <p>手機震動了一下，是主管傳來的訊息，語氣有點緊繃地問報告進度。吳承翰看著訊息，深吸一口氣，回了一句「已經準備好了，等等會議見」，語氣意外地平穩。</p>
+      <p>他低頭看了一眼手上那份還冒著熱氣的早餐，忽然覺得，今天這場硬仗，好像也沒有那麼難撐過去。</p>
+      <p><strong>有些力氣，不是自己撐出來的，是被一顆多加的蛋，悄悄地補進去的。</strong></p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The metal shutter of the breakfast shop rolled up every morning at five-thirty sharp — earlier than the streetlights along the whole road switched off.</p>
+      <p>Auntie A-Zhu stood in front of the griddle, the oil already at just the right temperature. She poured the batter down, and it sizzled. She'd run this shop alone for over a decade, her hands quick and practiced — she barely needed to look while frying her egg pancakes, her eyes always half on the door, watching who came in.</p>
+      <p>At exactly seven, a young man's figure appeared outside the shutter, right on schedule. His name was Wu Chenghan. He worked at a company nearby, and for the past six months, he'd shown up almost every workday.</p>
+      <p>“Morning, Auntie A-Zhu. Egg pancake with extra egg, soy milk with no ice,” he said, settling into a plastic chair under the awning.</p>
+      <p>Auntie A-Zhu didn't even need to ask. Her hands were already moving. “I know, I know — the usual.”</p>
+      <p>As she fried the pancake, she chatted idly — the weather today, which road was under construction again, how the tofu pudding shop next door had been doing especially well lately. Wu Chenghan gave the occasional response, but mostly just scrolled his phone quietly, waiting for his breakfast.</p>
+      <p>That day, his figure appeared outside the shutter ten minutes later than usual, his steps dragging more than they normally did.</p>
+      <p>“Morning! Same as always — egg pancake with extra egg, soy milk no ice, right?” Auntie A-Zhu asked, looking at the listless Wu Chenghan by the door.</p>
+      <p>“Yeah.” He let out a sigh and sank into the plastic chair beside him.</p>
+      <p>“Didn't sleep well? Why the long face?” she asked, already preparing his breakfast.</p>
+      <p>“Ugh, got a last-minute notice about a meeting this morning. Had to scramble all night on a project report.” He rubbed his eyes and yawned.</p>
+      <p>Auntie A-Zhu said nothing at first, just paused mid-flip for half a second.</p>
+      <p>“That's rough,” she said, rolling up the finished pancake, cutting it into pieces, and slipping it into a paper bag. Then, almost without thinking, she cracked one more egg and fried it into a thin sunny-side-up, laying it on top of the pancake. “Extra egg today, on the house. Get your energy back up.”</p>
+      <p>Wu Chenghan blinked. “Auntie A-Zhu, you should charge me extra for that — I feel bad, you always treating me.”</p>
+      <p>“Don't talk nonsense,” she said, handing him the paper bag, then pouring him a cup of soy milk, filled a little fuller than usual. “Good luck at your meeting. Just don't fall asleep in there.”</p>
+      <p>Wu Chenghan took the breakfast, and suddenly felt a warmth prickling behind his eyes. Maybe it was just exhaustion. Maybe not.</p>
+      <p>“Thank you, Auntie A-Zhu,” he said, his voice a little quieter than usual.</p>
+      <p>“Thank me for what? Go on, you'll be late,” she said, waving him off, already turning to greet the next customer, her voice as brisk and cheerful as ever.</p>
+      <p>“Alright, I'm off! Thanks!” Wu Chenghan grinned, said his goodbyes, and headed for the door.</p>
+      <p>Stepping out from under the awning, he found the sun slanting in from the end of the alley, painting the whole street a soft gold. He took a bite of the pancake — the yolk of the fried egg still warm, mixing with the savory sweetness of the soy sauce paste, spreading across his tongue.</p>
+      <p>As he walked, thinking about the meeting ahead, the presentation he still hadn't finished revising, he realized his shoulders somehow didn't feel as heavy as they had before he left the house.</p>
+      <p>His phone buzzed — a message from his manager, tense in tone, asking about the report's progress. Wu Chenghan looked at it, took a deep breath, and typed back, “All set, see you at the meeting” — his tone surprisingly steady.</p>
+      <p>He glanced down at the still-steaming breakfast in his hand, and suddenly felt like today's uphill battle might not be so hard to get through after all.</p>
+      <p><strong>Some strength isn’t something you dig up on your own. Sometimes, it’s quietly slipped in, one extra egg at a time.</strong></p>
+    `
+  },
      {
     id: "story-019",
     title: "分你一半巧克力",
