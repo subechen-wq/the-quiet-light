@@ -12,6 +12,53 @@
 
 const STORIES = [
       {
+    id: "story-021",
+    title: "一起看星星",
+    titleEn: "Together, Under the Stars",
+    date: "2026.11",
+    excerpt: "風大雲多的夜晚，頂樓的鐵門被推開，一個陌生女生提著一袋熱地瓜走了進來。一台撿來的老望遠鏡、一顆織女星，兩個各自想找地方躲一躲的人，並肩看著同一片看不清楚的天空。",
+    body: `
+      <p>頂樓的鐵門總是鎖著，但何知遠有一把鑰匙——大樓管理員退休前偷偷塞給他的，說反正沒人上來，不如留給「那個常常一個人待到很晚的年輕人」。他把老式望遠鏡架好，鏡筒有點鏽，是撿來的，調焦環轉起來會發出細微的喀喀聲。今晚風有點大，他正想放棄，樓梯間的門卻被推開了，一個他從沒見過的女生探出頭來，手裡還提著一袋還冒著熱氣的地瓜。</p>
+      <p>「咦？我還以為沒人會來這裡。」女生抱緊了手裡的地瓜，瞪大眼睛，似乎被嚇了一跳。</p>
+      <p>「妳好。」何知遠尷尬地摸摸鼻子，向女生打招呼。</p>
+      <p>「你好，你是來看星星的嗎？」女生自然地走過來，目光落在何知遠身旁那架老式望遠鏡上。</p>
+      <p>「喔對，只不過今天風大，雲也多，看不太清楚。」何知遠碰了碰一旁的老式望遠鏡，看向遠處的天空說。</p>
+      <p>「這樣啊，能借我看一下嗎？這個地瓜分你吃。」女生把手裡的地瓜遞給何知遠。</p>
+      <p>何知遠愣了一下，隨手接過那袋還溫熱的地瓜，才把望遠鏡讓到旁邊。「小心腳架有點晃，站穩一點。」他一邊說，一邊伸手扶住鏡筒，深怕女生一靠近，這台撿來的老古董就整個往前栽。</p>
+      <p>女生湊上前，瞇著一隻眼睛看了好一陣子，忽然「啊」了一聲。「雲飄過去了！我看到一顆星星，是不是那個很亮的？」她轉頭看向何知遠，眼睛裡有種藏不住的興奮，像是撿到什麼寶物一樣。</p>
+      <p>何知遠笑了笑，沒有立刻回答，反而低頭剝開手裡的地瓜，熱氣騰騰的香氣飄了出來。「那顆是織女星啦，這個時間很好找。」他咬了一口，含糊地說：「妳一個人上來，不怕嗎？」</p>
+      <p>「怕什麼？」女生從望遠鏡上抬起頭，理所當然地說：「頂樓又沒有鬼，只有你。」</p>
+      <p>「咳咳……」何知遠噎了一下。</p>
+      <p>「你還好嗎？地瓜有點乾吧，這裡沒有水，你吃慢一點。」女生轉頭看了何知遠一眼，又繼續盯著星星看。</p>
+      <p>「妳也喜歡看星星嗎？之前沒在這裡見過妳。」何知遠順過氣後，看著認真觀星的女生問。</p>
+      <p>「今天開始喜歡，可以嗎？」女生認真地轉過頭，看向何知遠。</p>
+      <p>何知遠被這句話問得一時語塞，耳根莫名有點發燙，只好裝作認真地調整望遠鏡的角度來掩飾。「這樣啊……那歡迎加入，這裡的星星每天都在，不嫌棄的話。」</p>
+      <p>女生笑了，重新湊回目鏡前，卻沒再說話，只是靜靜看著。過了一會兒，她才低聲說：「其實我今天是被主管罵了一頓，跑上來透透氣，隨便找個沒人的地方躲一下而已。沒想到會遇到你，還有這個。」她拍拍望遠鏡的鏡筒，像在跟一個老朋友打招呼。</p>
+      <p>何知遠沒有追問細節，只是把剩下的地瓜遞回去一半。「那妳今天運氣不錯，躲對地方了。」他頓了頓，「這台望遠鏡是我撿來修好的，本來也是想找個地方躲一躲——躲人多的地方。結果躲著躲著，就變成每天都會上來的習慣了。」</p>
+      <p>風還是有點大，雲又慢慢飄了過來，把星星再次遮住。但兩人誰都沒有要下樓的意思，就這樣並肩站著，看著同一片什麼都看不清楚的天空。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The rooftop door was always locked, but Ho Chih-Yuan had a key — slipped to him by the building manager before he retired, who said no one else ever came up here anyway, so it might as well go to "that young man who always stays up here so late." He set up the old telescope, its barrel slightly rusted, picked up secondhand somewhere; the focus ring gave a faint click each time he turned it. Tonight the wind was strong, and he was about to give up when the stairwell door swung open. A girl he'd never seen before poked her head out, holding a bag of still-steaming sweet potatoes.</p>
+      <p>"Oh? I didn't think anyone else came up here." She hugged the bag of sweet potatoes closer, eyes wide, as if startled.</p>
+      <p>"Hi." Ho Chih-Yuan rubbed his nose awkwardly and said hello.</p>
+      <p>"Hi, are you here to look at the stars?" She walked over naturally, her gaze landing on the old telescope beside him.</p>
+      <p>"Oh, yeah — but it's pretty windy tonight, and cloudy too, so it's hard to see much." He touched the telescope and looked up at the distant sky.</p>
+      <p>"I see. Can I take a look? I'll give you some sweet potato for it."</p>
+      <p>Ho Chih-Yuan blinked, taking the still-warm bag before stepping aside to make room. "Careful, the tripod wobbles a little — stand steady." He kept a hand on the barrel as she leaned in, afraid this old antique he'd fixed up might just tip right over.</p>
+      <p>She leaned close, squinting through the eyepiece for a while, then suddenly gasped. "The clouds moved! I can see a star — is that the bright one?" She turned to him, eyes lit with an excitement she couldn't hide, as though she'd just found treasure.</p>
+      <p>He smiled but didn't answer right away, instead peeling open the sweet potato in his hand, steam curling up with its warm smell. "That's Vega," he said, mouth half full. "Easy to spot this time of year." He took a bite. "You're not scared, coming up here alone?"</p>
+      <p>"Scared of what?" She looked up from the telescope, matter-of-fact. "There's no ghost on this rooftop. Just you."</p>
+      <p>"Cough — cough—" He choked.</p>
+      <p>"You okay? The sweet potato's a bit dry, and there's no water up here — eat slower." She glanced at him, then went back to watching the stars.</p>
+      <p>"Do you like stargazing too? I've never seen you up here before."</p>
+      <p>"I started liking it today. Is that okay?" She turned to look at him, perfectly serious.</p>
+      <p>The question caught him off guard, and his ears went warm for no reason he could explain. He busied himself adjusting the telescope's angle to cover it. "I see... well, welcome, then. The stars are here every night, if you don't mind."</p>
+      <p>She smiled, leaning back toward the eyepiece without another word, just watching quietly. After a while, she said, low, "Actually, my boss chewed me out today. I just came up to get some air, find somewhere with no one around. Didn't expect to run into you — or this." She patted the telescope's barrel, like greeting an old friend.</p>
+      <p>He didn't ask for details, just handed half of what was left of the sweet potato back to her. "Then you got lucky today — you hid in the right place." He paused. "I fixed this telescope up myself. I was hiding too, at first — hiding from crowds. Guess it just became a habit, coming up here every day."</p>
+      <p>The wind picked up again, and the clouds drifted back over, hiding the stars once more. But neither of them moved to go downstairs. They just stood there, side by side, looking up at the same sky where nothing could be seen clearly.</p>
+    `
+  },
+      {
     id: "story-020",
     title: "多加的那顆蛋",
     titleEn: "The Extra Egg",
