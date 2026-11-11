@@ -12,6 +12,45 @@
 
 const STORIES = [
       {
+    id: "story-022",
+    title: "巷子裡的第二樂章",
+    titleEn: "Second Movement, Down the Alley",
+    date: "2026.11",
+    excerpt: "巷子深處的唱片行，老唱機放起一張舊黑膠，封底寫著：「聽第二樂章，會想家。」門口的男人被旋律留住了腳步。一杯咖啡、一段熟悉的樂章，把兩個陌生人各自帶回了遙遠的地方。",
+    body: `
+      <p>唱片行開在巷子最深處，招牌早就褪了色，老闆陸子謙也懶得換，反正認得路的人自然會找來。他蹲在角落整理一箱剛收來的舊黑膠，指尖沾了灰，忽然停在一張封面泛黃的唱片上——德弗札克的《新世界交響曲》，封底還留著前一任主人用鉛筆寫的小字：「聽第二樂章，會想家。」他猶豫了一下，還是把它抽出來，放上店裡那台用了十幾年的老唱機。針尖落下，沙沙聲後，緩慢的旋律流洩出來時，門口的風鈴恰好響了——一個男人站在門口，像是被這段旋律拉住了腳步，久久沒有走進來。</p>
+      <p>佇立在門口的賀以翔吸引了陸子謙的目光——從他一站到巷口，陸子謙就注意到了。沒想到把這一櫃唱片擺放好之後，他竟然還站在原地，看起來聽得很認真。</p>
+      <p>第二樂章結束，陸子謙忍不住笑著走過去搭話：「進來聽嗎？看你聽得很認真。」</p>
+      <p>「謝謝，我只是突然聽到這首曲子，覺得很熟悉，不知不覺就聽完了。」賀以翔撓撓後腦杓的頭髮。</p>
+      <p>「這麼巧，這首曲子是我剛從一批最近整理的舊箱子裡翻出來的，德弗札克的《新世界交響曲》，你感興趣嗎？」</p>
+      <p>「喔，我只是突然想到國小的時候，常常聽到學校放這首曲子，就知道要放學回家了。從沒聽過完整的曲子，沒想到整首蠻讓人感動的。」</p>
+      <p>陸子謙從架上抽出唱片封套，遞到賀以翔面前。「要不要坐一下？後面有張舊沙發，音響效果比站在門口好多了。」他說著，順手把封套上那行鉛筆字轉過去給賀以翔看：「而且這張還有點故事——上一任主人寫的，說聽第二樂章會想家。」</p>
+      <p>賀以翔接過封套，指尖摩挲著那行有些模糊的字跡，沉默了幾秒。「說的沒錯。」他低聲笑了一下，在沙發坐下。「我離開老家念書之後，很少再聽到這種老歌了，都市裡放的都是新歌，沒什麼人在聽交響樂。」</p>
+      <p>「那你今天怎麼會經過這裡？」陸子謙一邊問，一邊把唱針重新放回唱片開頭。</p>
+      <p>「說也奇怪，我本來只是想找間店喝杯咖啡，走著走著就到這條巷子了。」賀以翔抬頭看向牆上掛著的老照片和泛黃海報，「這裡感覺，比外面的時間慢很多。」</p>
+      <p>陸子謙笑了笑，沒有反駁。他喜歡這句話，因為這正是他開店時最想留住的東西——那種被城市遺忘、卻剛好被某些人需要的緩慢。</p>
+      <p>他笑了笑，轉身走向櫃檯後方的小工作台。「既然曲子留住了你，正好我這裡也在泡咖啡，不介意的話，試試我新買的豆子吧。」</p>
+      <p>賀以翔愣了一下，隨即也笑了。「好啊，謝謝。」</p>
+      <p>咖啡香很快混進黑膠特有的舊紙味裡，唱針還在轉，第二樂章又輕輕地繞回了開頭。兩人誰都沒有再開口，只是靜靜聽著，任那段熟悉的旋律，把彼此各自拉回了某個遙遠的地方。</p>
+      <div style="margin: 3rem 0; height: 1px; background: rgba(217,165,92,0.2);"></div>
+      <p style="font-size:.75rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(217,165,92,0.5); margin-bottom:1.5rem;">English</p>
+      <p>The record shop sat at the very end of the alley, its sign long faded, though Lu Tzu-Chien never bothered to replace it — anyone who knew the way would find it anyway. He was crouched in a corner, sorting through a box of old vinyl he'd just taken in, fingers dusted with grime, when he paused on a record with a yellowed cover — Dvořák's New World Symphony. On the back, in pencil, a previous owner had written a small note: "Listen to the second movement — it'll make you homesick." He hesitated, then pulled it out anyway and set it on the shop's old turntable, well over a decade in service. The needle dropped, a soft crackle followed, and as the slow melody drifted out, the doorbell chimed right on cue — a man stood in the doorway, as though caught by the melody, unable to step inside for a long while.</p>
+      <p>The man lingering in the doorway — Ho Yi-Hsiang — had already caught Lu Tzu-Chien's attention the moment he'd stopped at the mouth of the alley. And even after Lu Tzu-Chien finished shelving the crate of records, the man was still standing there, listening with what looked like real attention.</p>
+      <p>When the second movement ended, Lu Tzu-Chien couldn't help walking over with a smile. "Coming in? You looked like you were really listening."</p>
+      <p>"Thanks. I just suddenly heard this piece and it felt so familiar — I ended up listening to the whole thing without realizing." Ho Yi-Hsiang scratched the back of his head.</p>
+      <p>"What a coincidence — I just pulled this out of a box of records I was recently sorting through. Dvořák's New World Symphony. Are you interested in it?"</p>
+      <p>"Oh, it just reminded me of elementary school — they used to play this over the loudspeakers, and that's how we knew it was time to go home. I'd never actually heard the whole thing before. Turns out it's pretty moving."</p>
+      <p>Lu Tzu-Chien pulled the record sleeve from the shelf and held it out. "Want to sit down? There's an old couch in the back — sounds a lot better than standing by the door." As he spoke, he turned the sleeve around to show him the pencil note on the back. "And this one's got a bit of a story — the last owner wrote that, said the second movement makes you homesick."</p>
+      <p>Ho Yi-Hsiang took the sleeve, running his fingers over the faded handwriting, quiet for a moment. "That's true, actually." He gave a low laugh and sat down on the couch. "I haven't heard anything like this since I left home for school — the city only plays new songs, nobody really listens to symphonies anymore."</p>
+      <p>"So what brought you by here today?" Lu Tzu-Chien asked, setting the needle back to the start of the record.</p>
+      <p>"Funny enough, I was just looking for somewhere to get a coffee, and somehow I ended up in this alley." Ho Yi-Hsiang looked up at the old photographs and yellowed posters on the wall. "It feels like time moves a lot slower in here than outside."</p>
+      <p>Lu Tzu-Chien smiled and didn't argue. He liked that line — it was exactly what he'd hoped to hold onto when he opened this shop: a kind of slowness the city had forgotten, but that some people still needed.</p>
+      <p>He smiled and turned toward the small workstation behind the counter. "Since the music kept you here, I happen to be making coffee too — if you don't mind, you should try the new beans I just got."</p>
+      <p>Ho Yi-Hsiang blinked, then smiled as well. "Sure, thanks."</p>
+      <p>The smell of coffee soon mixed with the old paper scent of the vinyl. The needle was still turning, and the second movement gently circled back to its beginning. Neither of them said anything more — they just listened quietly, letting the familiar melody carry each of them back to somewhere far away.</p>
+    `
+  },
+      {
     id: "story-021",
     title: "一起看星星",
     titleEn: "Together, Under the Stars",
